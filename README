@@ -1,6 +1,8 @@
-BugFixes for DATE2019
+Modifications for DATE2019
 ==========================
-1.) 
+1.) Perl Compatability Changes, check replace-perl-compatibility.sh file
+2.) Compatibility changes 
+3.) Hooks Infrastructure augmented to support CPU Topology detection and architecture adaptive affining
 PARSEC Benchmark Suite 3.0
 ==========================
 
