@@ -103,6 +103,14 @@ void printLen()
 
 int main(int argc, char **argv)
 {
+#ifdef ECOLABKNL_HOOKS
+    /* detect CPU */
+    cpu_topology_t topo;
+    detect_cpu();
+    detect_topology(&topo);
+    ecolab_set_cpu_affinity(ECOLABKNL_MASTERTHREAD_AFFINITY);
+#endif /* ECOLABKNL_HOOKS */
+
 	double tstart, tdatap, tend;
 	int workingthread=omp_get_max_threads();
 	int i;

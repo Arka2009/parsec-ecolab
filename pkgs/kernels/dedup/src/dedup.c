@@ -43,6 +43,13 @@ usage(char* prog)
 }
 /*--------------------------------------------------------------------------*/
 int main(int argc, char** argv) {
+#ifdef ECOLABKNL_HOOKS
+    /* detect CPU */
+    cpu_topology_t topo;
+    detect_cpu();
+    detect_topology(&topo);
+    ecolab_set_cpu_affinity(ECOLABKNL_MASTERTHREAD_AFFINITY);
+#endif /* ECOLABKNL_HOOKS */
 #ifdef PARSEC_VERSION
 #define __PARSEC_STRING(x) #x
 #define __PARSEC_XSTRING(x) __PARSEC_STRING(x)

@@ -168,6 +168,10 @@ private:
   static void* threadFunc(void* _id) {
     long long int id = (long long int)_id;
 
+#ifdef ECOLABKNL_HOOKS
+    ecolab_set_cpu_affinity(tid+1);
+#endif //ECOLABKNL_HOOKS
+
     _mm_setcsr(_mm_getcsr() | /*FTZ:*/ (1<<15) | /*DAZ:*/ (1<<6));
 
     // First time...

@@ -1691,7 +1691,7 @@ void* localSearchSub(void* arg_) {
 
   pkmedian_arg_t* arg= (pkmedian_arg_t*)arg_;
 #ifdef ECOLABKNL_HOOKS
-  ecolab_set_cpu_affinity(arg->pid);
+  ecolab_set_cpu_affinity(arg->pid+1);
 #endif
   pkmedian(arg->points,arg->kmin,arg->kmax,arg->kfinal,arg->pid,arg->barrier);
 
@@ -1962,6 +1962,13 @@ void streamCluster( PStream* stream,
 
 int main(int argc, char **argv)
 {
+#ifdef ECOLABKNL_HOOKS
+  /* detect CPU */
+	cpu_topology_t topo;
+	detect_cpu();
+	detect_topology(&topo);
+	ecolab_set_cpu_affinity(ECOLABKNL_MASTERTHREAD_AFFINITY);
+#endif
   char *outfilename = new char[MAXNAMESIZE];
   char *infilename = new char[MAXNAMESIZE];
   long kmin, kmax, n, chunksize, clustersize;

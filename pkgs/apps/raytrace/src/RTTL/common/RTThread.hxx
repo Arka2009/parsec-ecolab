@@ -78,8 +78,7 @@ _INLINE int atomic_dec(atomic_t *v)
 #endif
 
 /* class should have the right alignment to prevent cache trashing */
-class AtomicCounter
-{
+class AtomicCounter {
 private:
   atomic_t m_counter;
   char dummy[64-sizeof(atomic_t)]; // (iw) to make sure it's the only

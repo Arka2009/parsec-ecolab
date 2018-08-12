@@ -85,7 +85,7 @@ void * worker(void *arg){
   FTYPE pdSwaptionPrice[2];
 
 #ifdef ECOLABKNL_HOOKS
-  ecolab_set_cpu_affinity(tid);
+  ecolab_set_cpu_affinity(tid+1);
 #endif
 
   int beg, end, chunksize;
@@ -136,6 +136,13 @@ void print_usage(char *name) {
 
 int main(int argc, char *argv[])
 {
+#ifdef ECOLABKNL_HOOKS
+	/* detect CPU */
+	cpu_topology_t topo;
+	detect_cpu();
+	detect_topology(&topo);
+    ecolab_set_cpu_affinity(ECOLABKNL_MASTERTHREAD_AFFINITY);
+#endif /* ECOLABKNL_HOOKS */
 	int iSuccess = 0;
 	int i,j;
 	

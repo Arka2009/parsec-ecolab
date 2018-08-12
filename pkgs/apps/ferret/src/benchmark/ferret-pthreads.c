@@ -410,6 +410,14 @@ void *t_out (void *dummy)
 
 int main (int argc, char *argv[])
 {
+#ifdef ECOLABKNL_HOOKS
+	/* detect CPU */
+	cpu_topology_t topo;
+	detect_cpu();
+	detect_topology(&topo);
+    ecolab_set_cpu_affinity(ECOLABKNL_MASTERTHREAD_AFFINITY);
+#endif /* ECOLABKNL_HOOKS */
+
 	stimer_t tmr;
 
 	tdesc_t *t_load_desc;
