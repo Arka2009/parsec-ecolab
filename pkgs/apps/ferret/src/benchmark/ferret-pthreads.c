@@ -207,6 +207,9 @@ int scan_dir (const char *dir, char *head)
 /* ------ The Stages ------ */
 void *t_load (void *dummy)
 {
+#ifdef ECOLABKNL_HOOKS
+    ecolab_set_cpu_affinity2(0,"ECOLAB.parsec.ferret : Load Stage"); /* Where to Affine this ? */
+#endif //ECOLABKNL_HOOKS
 	const char *dir = (const char *)dummy;
 
 	path[0] = 0;
@@ -228,6 +231,10 @@ void *t_seg (void *dummy)
 {
 	struct seg_data *seg;
 	struct load_data *load;
+#ifdef ECOLABKNL_HOOKS
+	unsigned int *tid = (unsigned int*)dummy;
+    ecolab_set_cpu_affinity2(*tid,"ECOLAB.parsec.ferret : Seg Stage");
+#endif //ECOLABKNL_HOOKS
 
 	while(1)
 	{
@@ -259,6 +266,10 @@ void *t_extract (void *dummy)
 {
 	struct seg_data *seg;
 	struct extract_data *extract;
+#ifdef ECOLABKNL_HOOKS
+	unsigned int *tid = (unsigned int*)dummy;
+    ecolab_set_cpu_affinity2(*tid,"ECOLAB.parsec.ferret : Extract Stage");
+#endif //ECOLABKNL_HOOKS
 
 	while (1)
 	{
@@ -285,6 +296,10 @@ void *t_extract (void *dummy)
 
 void *t_vec (void *dummy)
 {
+#ifdef ECOLABKNL_HOOKS
+	unsigned int *tid = (unsigned int*)dummy;
+    ecolab_set_cpu_affinity2(*tid,"ECOLAB.parsec.ferret : Vec Stage");
+#endif //ECOLABKNL_HOOKS
 	struct extract_data *extract;
 	struct vec_query_data *vec;
 	cass_query_t query;
@@ -326,6 +341,10 @@ void *t_vec (void *dummy)
 
 void *t_rank (void *dummy)
 {
+#ifdef ECOLABKNL_HOOKS
+	unsigned int *tid = (unsigned int*)dummy;
+    ecolab_set_cpu_affinity2(*tid,"ECOLAB.parsec.ferret : Rank Stage");
+#endif //ECOLABKNL_HOOKS
 	struct vec_query_data *vec;
 	struct rank_data *rank;
 	cass_result_t *candidate;
@@ -374,6 +393,10 @@ void *t_rank (void *dummy)
 
 void *t_out (void *dummy)
 {
+#ifdef ECOLABKNL_HOOKS
+	unsigned int *tid = (unsigned int*)dummy;
+    ecolab_set_cpu_affinity2(*tid,"ECOLAB.parsec.ferret : Out Stage");
+#endif //ECOLABKNL_HOOKS
 	struct rank_data *rank;
 	while (1)
 	{
@@ -408,8 +431,7 @@ void *t_out (void *dummy)
 	return NULL;
 }
 
-int main (int argc, char *argv[])
-{
+int main (int argc, char *argv[]) {
 #ifdef ECOLABKNL_HOOKS
 	/* detect CPU */
 	cpu_topology_t topo;
@@ -516,39 +538,57 @@ int main (int argc, char *argv[])
 	t_rank_desc = (tdesc_t *)calloc(NTHREAD_RANK, sizeof(tdesc_t));
 	t_out_desc = (tdesc_t *)calloc(NTHREAD_OUT, sizeof(tdesc_t));
 
-	t_load_desc[0].attr = NULL;
-	t_load_desc[0].start_routine = t_load;
-	t_load_desc[0].arg = query_dir;
+	/* load pipe stage (Containing only 1 thread) */
+	for (i = 0; i < NTHREAD_LOAD; i++) {
+		t_load_desc[i].attr 			= NULL;
+		t_load_desc[i].start_routine 	= t_load;
+		t_load_desc[i].arg 				= query_dir; 
+	}
 
-	for (i = 1; i < NTHREAD_LOAD; i++) t_load_desc[i] = t_load_desc[0];
+	/* seg pipe stage */
+	unsigned int seg_thr_id[NTHREAD_SEG];
+	for (i = 0; i < NTHREAD_SEG; i++) {
+		seg_thr_id[i]				= i+1;
+		t_seg_desc[i].attr 			= NULL;
+		t_seg_desc[i].start_routine = t_seg;
+		t_seg_desc[i].arg 			= (void *)&(seg_thr_id[i]);
+	}
 
-	t_seg_desc[0].attr = NULL;
-	t_seg_desc[0].start_routine = t_seg;
-	t_seg_desc[0].arg = NULL;
+	/* extract pipe stage */
+	unsigned int extract_thr_id[NTHREAD_EXTRACT];
+	for (i = 0; i < NTHREAD_EXTRACT; i++) {
+		extract_thr_id[i]				= i+1;
+		t_extract_desc[i].attr 			= NULL;
+		t_extract_desc[i].start_routine = t_extract;
+		t_extract_desc[i].arg 			= (void *)&(extract_thr_id[i]);
+	}
 
-	for (i = 1; i < NTHREAD_SEG; i++) t_seg_desc[i] = t_seg_desc[0];
+	/* vec pipe stage */
+	unsigned int vec_thr_id[NTHREAD_VEC];
+	for (i = 0; i < NTHREAD_VEC; i++) {
+		vec_thr_id[i]				= i+1;
+		t_vec_desc[i].attr 			= NULL;
+		t_vec_desc[i].start_routine = t_vec;
+		t_vec_desc[i].arg 			= (void *)&(vec_thr_id[i]);
+	}
 
-	t_extract_desc[0].attr = NULL;
-	t_extract_desc[0].start_routine = t_extract;
-	t_extract_desc[0].arg = NULL;
+	/* rank pipe stage */
+	unsigned int rank_thr_id[NTHREAD_VEC];
+	for (i = 0; i < NTHREAD_RANK; i++) {
+		rank_thr_id[i]					= i+1;
+		t_rank_desc[i].attr 			= NULL;
+		t_rank_desc[i].start_routine 	= t_rank;
+		t_rank_desc[i].arg 				= (void *)&(rank_thr_id[i]);
+	}
 
-	for (i = 1; i < NTHREAD_EXTRACT; i++) t_extract_desc[i] = t_extract_desc[0];
-
-	t_vec_desc[0].attr = NULL;
-	t_vec_desc[0].start_routine = t_vec;
-	t_vec_desc[0].arg = NULL;
-	for (i = 1; i < NTHREAD_VEC; i++) t_vec_desc[i] = t_vec_desc[0];
-
-	t_rank_desc[0].attr = NULL;
-	t_rank_desc[0].start_routine = t_rank;
-	t_rank_desc[0].arg = NULL;
-	for (i = 1; i < NTHREAD_RANK; i++) t_rank_desc[i] = t_rank_desc[0];
-
-
-	t_out_desc[0].attr = NULL;
-	t_out_desc[0].start_routine = t_out;
-	t_out_desc[0].arg = NULL;
-	for (i = 1; i < NTHREAD_OUT; i++) t_out_desc[i] = t_out_desc[0];
+    /* out pipe stage */
+	unsigned int out_thr_id[NTHREAD_VEC];
+	for (i = 0; i < NTHREAD_OUT; i++) {
+		out_thr_id[i]					= i+1;
+		t_out_desc[i].attr 				= NULL;
+		t_out_desc[i].start_routine 	= t_out;
+		t_out_desc[i].arg 				= (void *)&(out_thr_id[i]);
+	}
 
 	cnt_enqueue = cnt_dequeue = 0;
 

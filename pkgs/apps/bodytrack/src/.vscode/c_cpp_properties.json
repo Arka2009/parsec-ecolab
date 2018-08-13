@@ -3,7 +3,8 @@
         {
             "name": "Linux",
             "includePath": [
-                "${workspaceFolder}/**"
+                "${workspaceFolder}/**",
+                "/home/amaity/Desktop/parsec-3.0/pkgs/libs/hooks/src/include"
             ],
             "defines": [],
             "compilerPath": "/usr/bin/gcc",

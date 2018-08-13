@@ -26,6 +26,10 @@
 #include "threads/TicketDispenser.h"
 #include "threads/Barrier.h"
 
+#ifdef ENABLE_PARSEC_HOOKS
+#include <hooks.h>
+#endif
+
 
 //Define if functions are to be executed with only a single thread (for debugging)
 //#define SINGLE_THREADED
@@ -216,7 +220,11 @@ bool TrackingModelPthread::GetObservation(float timeval)
 	{	imageLoader.SetNumCameras(mNCameras);
 		imageLoader.SetNumFrames(nFrames);
 		imageLoader.SetPath(mPath);
+#ifdef ECOLABKNL_HOOKS
+		IOthread = new threads::Thread(imageLoader,0);      /* Where Should the IOThreads be affined ??*/
+#else
 		IOthread = new threads::Thread(imageLoader);
+#endif
 		IOthreadStarted = true;
 	}
 

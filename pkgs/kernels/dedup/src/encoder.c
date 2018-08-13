@@ -396,6 +396,9 @@ void sub_Compress(chunk_t *chunk) {
 #ifdef ENABLE_PTHREADS
 void *Compress(void * targs) {
   struct thread_args *args = (struct thread_args *)targs;
+#ifdef ECOLABKNL_HOOKS
+    ecolab_set_cpu_affinity2(args->tid+1,"ECOLAB.parsec.dedup : Compress Stage");
+#endif //ECOLABKNL_HOOKS
   const int qid = args->tid / MAX_THREADS_PER_QUEUE;
   chunk_t * chunk;
   int r;
@@ -519,8 +522,11 @@ int sub_Deduplicate(chunk_t *chunk) {
  *  - Route resulting package either to compression stage or to reorder stage, depending on deduplication status
  */
 #ifdef ENABLE_PTHREADS
-void * Deduplicate(void * targs) {
+void *Deduplicate(void * targs) {
   struct thread_args *args = (struct thread_args *)targs;
+#ifdef ECOLABKNL_HOOKS
+    ecolab_set_cpu_affinity2(args->tid+1,"ECOLAB.parsec.dedup : Deduplicate Stage");
+#endif //ECOLABKNL_HOOKS
   const int qid = args->tid / MAX_THREADS_PER_QUEUE;
   chunk_t *chunk;
   int r;
@@ -620,6 +626,9 @@ void * Deduplicate(void * targs) {
 #ifdef ENABLE_PTHREADS
 void *FragmentRefine(void * targs) {
   struct thread_args *args = (struct thread_args *)targs;
+#ifdef ECOLABKNL_HOOKS
+    ecolab_set_cpu_affinity2(args->tid+1,"ECOLAB.parsec.dedup : FragmentRefine Stage");
+#endif //ECOLABKNL_HOOKS
   const int qid = args->tid / MAX_THREADS_PER_QUEUE;
   ringbuffer_t recv_buf, send_buf;
   int r;
@@ -978,6 +987,9 @@ void *SerialIntegratedPipeline(void * targs) {
 #ifdef ENABLE_PTHREADS
 void *Fragment(void * targs){
   struct thread_args *args = (struct thread_args *)targs;
+#ifdef ECOLABKNL_HOOKS
+    ecolab_set_cpu_affinity2(args->tid+1,"ECOLAB.parsec.dedup : Fragment Stage");
+#endif //ECOLABKNL_HOOKS
   size_t preloading_buffer_seek = 0;
   int qid = 0;
   int fd = args->fd;
@@ -1192,6 +1204,9 @@ void *Fragment(void * targs){
 #ifdef ENABLE_PTHREADS
 void *Reorder(void * targs) {
   struct thread_args *args = (struct thread_args *)targs;
+#ifdef ECOLABKNL_HOOKS
+    ecolab_set_cpu_affinity2(args->tid+1,"ECOLAB.parsec.dedup : Reorder Stage");
+#endif //ECOLABKNL_HOOKS
   int qid = 0;
   int fd = 0;
 

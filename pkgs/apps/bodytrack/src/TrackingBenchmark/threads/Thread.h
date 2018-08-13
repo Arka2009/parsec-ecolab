@@ -21,6 +21,10 @@
 
 #include <exception>
 
+#ifdef ENABLE_PARSEC_HOOKS
+#include <hooks.h>
+#endif
+
 
 namespace threads {
 
@@ -48,18 +52,36 @@ class ThreadCreationException: public std::exception {
     virtual const char *what() const throw() {return "Error creating thread";}
 };
 
+
+#ifdef ECOLABKNL_HOOKS
+typedef struct __ecolab_bodytrack_t {
+  unsigned int tid;
+  Runnable &tobj;
+} ecolab_bodytrack_thread_t;
+#endif 
+
 //A thread
 class Thread {
   private:
+#ifdef ECOLABKNL_HOOKS
+    ecolab_bodytrack_thread_t targ;       /* punch tid (in order to obtain CPU affining) to tobj */
+#else
     Runnable &tobj;
+#endif
+
 #if defined(HAVE_LIBPTHREAD)
     pthread_t t;
+    //
 #else //default: winthreads
     void *t;
     unsigned int t_id;
 #endif //HAVE_LIBPTHREAD
   public:
+#ifdef ECOLABKNL_HOOKS
+    Thread(Runnable &, unsigned int tid) throw(ThreadCreationException);
+#else
     Thread(Runnable &) throw(ThreadCreationException);
+#endif
 
     //Wait until Thread object has finished
     void Join();

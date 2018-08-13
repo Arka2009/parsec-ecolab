@@ -15,6 +15,9 @@
 #include "Thread.h"
 #include "ThreadGroup.h"
 
+#ifdef ENABLE_PARSEC_HOOKS
+#include <hooks.h>
+#endif
 
 namespace threads {
 
@@ -29,8 +32,12 @@ ThreadGroup::~ThreadGroup() {
 
 //Create a new thread and add it to the group
 void ThreadGroup::CreateThread(Runnable &tobj) {
+  //tobj.tid = 1; /* Set its tid to 1 */
+#ifdef ECOLABKNL_HOOKS
+  Thread *temp = new Thread(tobj,15);
+#else
   Thread *temp = new Thread(tobj);
-
+#endif
   threads.push_front(temp);
 }
 
@@ -40,7 +47,12 @@ void ThreadGroup::CreateThreads(int n, Runnable &tobj) {
   Thread *temp;
 
   for(i=0; i<n; i++) {
+     //tobj.tid = i+1; /* Set its tid to 1 */
+#ifdef ECOLABKNL_HOOKS
+     temp = new Thread(tobj,i+1);
+#else
      temp = new Thread(tobj);
+#endif
      threads.push_front(temp);
   }
 }

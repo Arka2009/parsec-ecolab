@@ -223,6 +223,7 @@ int  detect_topology(cpu_topology_t*);
 int affinity_set_cpu(int _id, bool ht_enable);
 
 void ecolab_set_cpu_affinity(int);
+void ecolab_set_cpu_affinity2(int, const char*);
 #endif /* ECOLABKNL_HOOKS */
 
 #ifdef __cplusplus

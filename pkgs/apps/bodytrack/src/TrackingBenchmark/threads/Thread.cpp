@@ -18,8 +18,12 @@
 #endif //HAVE_LIBPTHREAD
 
 #include <typeinfo>
+#include <iostream>
 #include "Thread.h"
 
+#ifdef ENABLE_PARSEC_HOOKS
+#include <hooks.h>
+#endif
 
 namespace threads {
 
@@ -35,6 +39,17 @@ extern "C" {
 
     return NULL;
   }
+#ifdef ECOLABKNL_HOOKS
+  static void *thread_entry_wrapper(void *arg) {
+    ecolab_bodytrack_thread_t *targ = static_cast<ecolab_bodytrack_thread_t *>(arg);
+    /* Add the ECOLAB CPU Affinity Code here (tobj->tid)*/
+    //std::cout << "[DATE2019-BodyTrack] : Creating Thread@"<<targ->tid<<std::endl;
+    ecolab_set_cpu_affinity(targ->tid);
+    thread_entry((void *)&targ->tobj);
+
+    return NULL;
+  }
+#endif
 }
 #else //default: winthreads
 extern "C" {
@@ -48,9 +63,21 @@ extern "C" {
 
 
 //Constructor, expects a threadable object as argument
+#ifdef ECOLABKNL_HOOKS
+Thread::Thread(Runnable &_tobj, unsigned int tid) throw(ThreadCreationException) : targ{.tid = tid, .tobj = _tobj} {
+#else
 Thread::Thread(Runnable &_tobj) throw(ThreadCreationException) : tobj(_tobj) {
+#endif
 #if defined(HAVE_LIBPTHREAD)
-  if(pthread_create(&t, NULL, &thread_entry, (void *)&tobj)) {
+#ifdef ECOLABKNL_HOOKS
+  targ.tid  = tid;
+  targ.tobj = _tobj;
+  int rc = pthread_create(&t, NULL, &thread_entry_wrapper, (void *)&targ);
+#else
+  int rc = pthread_create(&t, NULL, &thread_entry, (void *)&tobj);
+#endif
+  
+  if(rc) {
     ThreadCreationException e;
     throw e;
   }
@@ -70,7 +97,11 @@ void Thread::Join() {
 
   //call Stop() function if implemented
   try {
+#ifdef ECOLABKNL_HOOKS
+    _tobj = &dynamic_cast<Stoppable &>(targ.tobj);
+#else
     _tobj = &dynamic_cast<Stoppable &>(tobj);
+#endif
   } catch(std::bad_cast e) {
     isStoppable = false;
   }

@@ -618,4 +618,13 @@ void ecolab_set_cpu_affinity(int _id) {
   sprintf(log,"Finished Spinning, thr@%d<------->@%d,actually running on cpu@%d",_id,cpuid,sched_getcpu());
   PRINTTOPO(log);
 }
+
+void ecolab_set_cpu_affinity2(int _id, const char *msg) {
+  int cpuid  = affinity_set_cpu(_id,true);
+  char log[BUFSIZ];
+
+  sprintf(log,"%s : Finished Spinning, thr@%d<------->@%d,actually running on cpu@%d",msg,_id,cpuid,sched_getcpu());
+  PRINTTOPO(log);
+}
+
 #endif /* ECOLABKNL_HOOKS */
