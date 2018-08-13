@@ -3,6 +3,7 @@ Modifications for DATE2019
 1.) Perl Compatability Changes, check replace-perl-compatibility.sh file
 2.) Compatibility changes 
 3.) Hooks Infrastructure augmented to support CPU Topology detection and architecture adaptive affining
+4.) Please set the PARSECROOT in your ~/.bashrc
 PARSEC Benchmark Suite 3.0
 ==========================
 

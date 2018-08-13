@@ -423,14 +423,23 @@ int detect_topology(cpu_topology_t *topo) {
 	if (model < 0) {
 		PRINTERROR("Ivalid CPU Model");
 	}
+
+	char *dir = getenv("PARSECROOT");
+    if(!dir) {
+        PRINTERROR("Please set PARSECROOT!!!\n");
+    }
+	char command[BUFSIZ];
 	
 	/* Obtain The Topology Information from lscpu */
 	if(system("lscpu -p > topology.txt") < 0) {
 		PRINTERROR("Unable to obtain topology Information");
 	}
 	PRINTTOPO("Topology.txt created");
+
 	/* Obtain The static mapping Information */
-	if(system("cp /home/amaity/Desktop/thrd_cpu_map.csv static_thr2cpu_map.csv")) {
+	strcat(dir,"/scripts/thrd_cpu_map.csv");
+	sprintf(command,"cp %s static_thr2cpu_map.csv",dir);
+	if(system(command)) {
 		PRINTERROR("Unable to obtain the static map");	
 	}
 	PRINTTOPO("Static map created");
