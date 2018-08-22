@@ -65,3 +65,6 @@ inputs/
 *.swp
 *.swo
 *.svp
+
+# Ignore dump files
+scripts/dump/
