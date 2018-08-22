@@ -3,8 +3,8 @@
 # Runs the facesim benchmarks on KNL 
 parsec_dir=${PARSECROOT}
 benchmark="parsec.facesim"
-nthreads=4
-input=native
+nthreads=1
+input="native"
 
 
 # Run the benchmark natively

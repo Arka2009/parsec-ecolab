@@ -1,0 +1,215 @@
+void alloc1() {
+    PRINTSCHED("Welcome");
+    char log[BUFSIZ];
+    cpu_topology_t cpu_top;
+    detect_topology(&cpu_top);
+
+    unsigned int i;
+    int status; /* Child status */
+    int rc;
+    app_info_t app[MAX_APPS];
+    char *map_file2 = "/home/amaity/Desktop/parsec-3.0/scripts/static_maps/alloc_1/app_0_map.csv";
+
+    /* Launch applications (This can be done concurrently by a separate thread that generates the application) */
+    init_app_info(&app[0]);
+    launch_blackscholes(3,&app[0],map_file2);
+    schedule_affine_map(app,1);
+    PRINTSCHED("blackscholes finished - Alloc1");
+
+    // init_app_info(&app[0]);
+    // launch_bodytrack(3,&app[0],map_file2);
+    // schedule_affine_map(app,1);
+    // PRINTSCHED("bodytrack finished - Alloc1");
+
+    init_app_info(&app[0]);
+    launch_canneal(3,&app[0],map_file2);
+    schedule_affine_map(app,1);
+    PRINTSCHED("canneal finished - Alloc1");
+
+    // init_app_info(&app[0]);
+    // launch_dedup(3,&app[0],map_file2);
+    // schedule_affine_map(app,1);
+    // PRINTSCHED("dedup finished - Alloc1");
+
+    // init_app_info(&app[0]);
+    // launch_ferret(3,&app[0],map_file2);
+    // schedule_affine_map(app,1);
+    // PRINTSCHED("ferret finished - Alloc1");
+
+    // init_app_info(&app[0]);
+    // launch_fluidanimate(3,&app[0],map_file2);
+    // schedule_affine_map(app,1);
+    // PRINTSCHED("fluidanimate finished - Alloc1");
+
+    init_app_info(&app[0]);
+    launch_streamcluster(3,&app[0],map_file2);
+    schedule_affine_map(app,1);
+    PRINTSCHED("streamcluster finished - Alloc1");
+
+    init_app_info(&app[0]);
+    launch_swaptions(3,&app[0],map_file2);
+    schedule_affine_map(app,1);
+    PRINTSCHED("swaptions finished - Alloc1");
+}
+
+void alloc2() {
+    PRINTSCHED("Welcome");
+    char log[BUFSIZ];
+    cpu_topology_t cpu_top;
+    detect_topology(&cpu_top);
+
+    unsigned int i;
+    int status; /* Child status */
+    int rc;
+    app_info_t app[MAX_APPS];
+
+    /* Launch applications (This can be done concurrently by a separate thread that generates the application) */
+    char *map_file2 = "/home/amaity/Desktop/parsec-3.0/scripts/static_maps/alloc_2/app_0_map.csv";
+    init_app_info(&app[0]);
+    launch_blackscholes(3,&app[0],map_file2);
+    schedule_affine_map(app,1);
+    PRINTSCHED("blackscholes finished - Alloc2");
+
+    // init_app_info(&app[0]);
+    // launch_bodytrack(3,&app[0],map_file2);
+    // schedule_affine_map(app,1);
+    // PRINTSCHED("bodytrack finished - Alloc2");
+
+    init_app_info(&app[0]);
+    launch_canneal(3,&app[0],map_file2);
+    schedule_affine_map(app,1);
+    PRINTSCHED("canneal finished - Alloc2");
+
+    // init_app_info(&app[0]);
+    // launch_dedup(3,&app[0],map_file2);
+    // schedule_affine_map(app,1);
+    // PRINTSCHED("dedup finished - Alloc2");
+
+    // init_app_info(&app[0]);
+    // launch_ferret(3,&app[0],map_file2);
+    // schedule_affine_map(app,1);
+    // PRINTSCHED("ferret finished - Alloc2");
+
+    // init_app_info(&app[0]);
+    // launch_fluidanimate(3,&app[0],map_file2);
+    // schedule_affine_map(app,1);
+    // PRINTSCHED("fluidanimate finished - Alloc2");
+
+    init_app_info(&app[0]);
+    launch_streamcluster(3,&app[0],map_file2);
+    schedule_affine_map(app,1);
+    PRINTSCHED("streamcluster finished - Alloc2");
+
+    init_app_info(&app[0]);
+    launch_swaptions(3,&app[0],map_file2);
+    schedule_affine_map(app,1);
+    PRINTSCHED("swaptions finished - Alloc2");
+}
+
+void alloc3() {
+    PRINTSCHED("Welcome");
+    char log[BUFSIZ];
+    cpu_topology_t cpu_top;
+    detect_topology(&cpu_top);
+
+    unsigned int i;
+    int status; /* Child status */
+    int rc;
+    app_info_t app[MAX_APPS];
+
+    /* Launch applications (This can be done concurrently by a separate thread that generates the application) */
+    char *map_file2 = "/home/amaity/Desktop/parsec-3.0/scripts/static_maps/alloc_3/app_0_map.csv";
+    init_app_info(&app[0]);
+    launch_blackscholes(3,&app[0],map_file2);
+    schedule_affine_map(app,1);
+    PRINTSCHED("blackscholes finished - Alloc3");
+
+    // init_app_info(&app[0]);
+    // launch_bodytrack(3,&app[0],map_file2);
+    // schedule_affine_map(app,1);
+    // PRINTSCHED("bodytrack finished - Alloc3");
+
+    init_app_info(&app[0]);
+    launch_canneal(3,&app[0],map_file2);
+    schedule_affine_map(app,1);
+    PRINTSCHED("canneal finished - Alloc3");
+
+    // init_app_info(&app[0]);
+    // launch_dedup(3,&app[0],map_file2);
+    // schedule_affine_map(app,1);
+    // PRINTSCHED("dedup finished - Alloc3");
+
+    // init_app_info(&app[0]);
+    // launch_ferret(3,&app[0],map_file2);
+    // schedule_affine_map(app,1);
+    // PRINTSCHED("ferret finished - Alloc3");
+
+    // init_app_info(&app[0]);
+    // launch_fluidanimate(3,&app[0],map_file2);
+    // schedule_affine_map(app,1);
+    // PRINTSCHED("fluidanimate finished - Alloc3");
+
+    init_app_info(&app[0]);
+    launch_streamcluster(3,&app[0],map_file2);
+    schedule_affine_map(app,1);
+    PRINTSCHED("streamcluster finished - Alloc3");
+
+    init_app_info(&app[0]);
+    launch_swaptions(3,&app[0],map_file2);
+    schedule_affine_map(app,1);
+    PRINTSCHED("swaptions finished - Alloc3");
+}
+
+void alloc4() {
+    PRINTSCHED("Welcome");
+    char log[BUFSIZ];
+    cpu_topology_t cpu_top;
+    detect_topology(&cpu_top);
+
+    unsigned int i;
+    int status; /* Child status */
+    int rc;
+    app_info_t app[MAX_APPS];
+
+    /* Launch applications (This can be done concurrently by a separate thread that generates the application) */
+    char *map_file2 = "/home/amaity/Desktop/parsec-3.0/scripts/static_maps/alloc_4/app_0_map.csv";
+    init_app_info(&app[0]);
+    launch_blackscholes(3,&app[0],map_file2);
+    schedule_affine_map(app,1);
+    PRINTSCHED("blackscholes finished - Alloc4");
+
+    // init_app_info(&app[0]);
+    // launch_bodytrack(3,&app[0],map_file2);
+    // schedule_affine_map(app,1);
+    // PRINTSCHED("bodytrack finished - Alloc4");
+
+    init_app_info(&app[0]);
+    launch_canneal(3,&app[0],map_file2);
+    schedule_affine_map(app,1);
+    PRINTSCHED("canneal finished - Alloc4");
+
+    // init_app_info(&app[0]);
+    // launch_dedup(3,&app[0],map_file2);
+    // schedule_affine_map(app,1);
+    // PRINTSCHED("dedup finished - Alloc4");
+
+    // init_app_info(&app[0]);
+    // launch_ferret(3,&app[0],map_file2);
+    // schedule_affine_map(app,1);
+    // PRINTSCHED("ferret finished - Alloc4");
+
+    // init_app_info(&app[0]);
+    // launch_fluidanimate(3,&app[0],map_file2);
+    // schedule_affine_map(app,1);
+    // PRINTSCHED("fluidanimate finished - Alloc4");
+
+    init_app_info(&app[0]);
+    launch_streamcluster(3,&app[0],map_file2);
+    schedule_affine_map(app,1);
+    PRINTSCHED("streamcluster finished - Alloc4");
+
+    init_app_info(&app[0]);
+    launch_swaptions(3,&app[0],map_file2);
+    schedule_affine_map(app,1);
+    PRINTSCHED("swaptions finished - Alloc4");
+}

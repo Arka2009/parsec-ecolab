@@ -56,6 +56,9 @@ typedef struct __ecolanknl_canneal_targ {
 	void* thr_data;
 } ecolabknl_canneal_targ_t;
 
+#ifndef ENABLE_PARSEC_HOOKS
+#define MAX_CPUS   256
+#endif
 ecolabknl_canneal_targ_t wrapped_thr_arg[MAX_CPUS];
 void* entry_pt_wrapper(void*);
 #endif /* ECOLABKNL_HOOKS */
@@ -63,11 +66,7 @@ void* entry_pt_wrapper(void*);
 
 int main (int argc, char * const argv[]) {
 #ifdef ECOLABKNL_HOOKS
-	/* detect CPU */
-	cpu_topology_t topo;
-	detect_cpu();
-	detect_topology(&topo);
-	ecolab_set_cpu_affinity(ECOLABKNL_MASTERTHREAD_AFFINITY);
+	//ecolab_set_cpu_affinity(0);
 #endif
 #ifdef PARSEC_VERSION
 #define __PARSEC_STRING(x) #x
@@ -78,6 +77,10 @@ int main (int argc, char * const argv[]) {
 #endif //PARSEC_VERSION
 #ifdef ENABLE_PARSEC_HOOKS
 	__parsec_bench_begin(__parsec_canneal);
+#endif
+/*********************New ROI start*****************************************/	
+#ifdef ENABLE_PARSEC_HOOKS
+	__parsec_roi_begin();
 #endif
 
 	srandom(3);
@@ -116,15 +119,11 @@ int main (int argc, char * const argv[]) {
 		cout << "number of temperature steps: " << number_temp_steps << endl;
         }
 
-/*********************New ROI start*****************************************/	
 	//now that we've read in the commandline, run the program
 	netlist my_netlist(filename);
 	annealer_thread a_thread(&my_netlist,num_threads,swaps_per_temp,start_temp,number_temp_steps);
 
 /*********************Original ROI start*****************************************/
-#ifdef ENABLE_PARSEC_HOOKS
-	__parsec_roi_begin();
-#endif
 
 #ifdef ENABLE_THREADS
 	std::vector<pthread_t> threads(num_threads);
@@ -153,6 +152,7 @@ int main (int argc, char * const argv[]) {
 
 #ifdef ENABLE_PARSEC_HOOKS
 	__parsec_bench_end();
+	PRINTECO("canneal finished");
 #endif
 
 	return 0;
@@ -169,7 +169,7 @@ void* entry_pt(void* data)
 void* entry_pt_wrapper(void* arg) {
 	ecolabknl_canneal_targ_t *targ = static_cast<ecolabknl_canneal_targ_t*>(arg);
 	//printf("       Canneal.Thr_id@%d\n",targ->tid);
-	ecolab_set_cpu_affinity(targ->tid);
+	//ecolab_set_cpu_affinity(targ->tid);
 	entry_pt(targ->thr_data);
 }
 #endif /* ECOLABKNL_HOOKS */

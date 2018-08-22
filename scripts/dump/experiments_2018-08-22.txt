@@ -1,0 +1,343 @@
+PARSEC Benchmark Suite Version 3.0-beta-20150206
+[HOOKS]-20363 : PARSEC Hooks Version 1.2
+[HOOKS]-20363 : Entering ROI
+Num of Options: 10000000
+Num of Runs: 100
+Size of data: 400000000
+[HOOKS]-20363 : Leaving ROI
+[HOOKS]-20363 : Total time spent in ROI: 1006.421s
+[HOOKS]-20363 : Terminating
+[ECO-HOOKS]-20363 : blackscholes finished
+PARSEC Benchmark Suite Version 3.0-beta-20150206
+[HOOKS]-20615 : PARSEC Hooks Version 1.2
+[HOOKS]-20615 : Entering ROI
+Threading with Posix Threads
+Number of threads : 1
+Using dataset : /home/amaity/Desktop/parsec-3.0/pkgs/apps/bodytrack/inputs/sequenceB_261/
+4000 particles with 5 annealing layers
+
+Processing frame 0
+Processing frame 1
+Processing frame 2
+Processing frame 3
+Processing frame 4
+Processing frame 5
+Processing frame 6
+Processing frame 7
+Processing frame 8
+Processing frame 9
+Processing frame 10
+Processing frame 11
+Processing frame 12
+Processing frame 13
+Processing frame 14
+Processing frame 15
+Processing frame 16
+Processing frame 17
+Processing frame 18
+Processing frame 19
+Processing frame 20
+Processing frame 21
+Processing frame 22
+Processing frame 23
+Processing frame 24
+Processing frame 25
+Processing frame 26
+Processing frame 27
+Processing frame 28
+Processing frame 29
+Processing frame 30
+Processing frame 31
+Processing frame 32
+Processing frame 33
+Processing frame 34
+Processing frame 35
+Processing frame 36
+Processing frame 37
+Processing frame 38
+Processing frame 39
+Processing frame 40
+Processing frame 41
+Processing frame 42
+Processing frame 43
+Processing frame 44
+Processing frame 45
+Processing frame 46
+Processing frame 47
+Processing frame 48
+Processing frame 49
+Processing frame 50
+Processing frame 51
+Processing frame 52
+Processing frame 53
+Processing frame 54
+Processing frame 55
+Processing frame 56
+Processing frame 57
+Processing frame 58
+Processing frame 59
+Processing frame 60
+Processing frame 61
+Processing frame 62
+Processing frame 63
+Processing frame 64
+Processing frame 65
+Processing frame 66
+Processing frame 67
+Processing frame 68
+Processing frame 69
+Processing frame 70
+Processing frame 71
+Processing frame 72
+Processing frame 73
+Processing frame 74
+Processing frame 75
+Processing frame 76
+Processing frame 77
+Processing frame 78
+Processing frame 79
+Processing frame 80
+Processing frame 81
+Processing frame 82
+Processing frame 83
+Processing frame 84
+Processing frame 85
+Processing frame 86
+Processing frame 87
+Processing frame 88
+Processing frame 89
+Processing frame 90
+Processing frame 91
+Processing frame 92
+Processing frame 93
+Processing frame 94
+Processing frame 95
+Processing frame 96
+Processing frame 97
+Processing frame 98
+Processing frame 99
+Processing frame 100
+Processing frame 101
+Processing frame 102
+Processing frame 103
+Processing frame 104
+Processing frame 105
+Processing frame 106
+Processing frame 107
+Processing frame 108
+Processing frame 109
+Processing frame 110
+Processing frame 111
+Processing frame 112
+Processing frame 113
+Processing frame 114
+Processing frame 115
+Processing frame 116
+Processing frame 117
+Processing frame 118
+Processing frame 119
+Processing frame 120
+Processing frame 121
+Processing frame 122
+Processing frame 123
+Processing frame 124
+Processing frame 125
+Processing frame 126
+Processing frame 127
+Processing frame 128
+Processing frame 129
+Processing frame 130
+Processing frame 131
+Processing frame 132
+Processing frame 133
+Processing frame 134
+Processing frame 135
+Processing frame 136
+Processing frame 137
+Processing frame 138
+Processing frame 139
+Processing frame 140
+Processing frame 141
+Processing frame 142
+Processing frame 143
+Processing frame 144
+Processing frame 145
+Processing frame 146
+Processing frame 147
+Processing frame 148
+Processing frame 149
+Processing frame 150
+Processing frame 151
+Processing frame 152
+Processing frame 153
+Processing frame 154
+Processing frame 155
+Processing frame 156
+Processing frame 157
+Processing frame 158
+Processing frame 159
+Processing frame 160
+Processing frame 161
+Processing frame 162
+Processing frame 163
+Processing frame 164
+Processing frame 165
+Processing frame 166
+Processing frame 167
+Processing frame 168
+Processing frame 169
+Processing frame 170
+Processing frame 171
+Processing frame 172
+Processing frame 173
+Processing frame 174
+Processing frame 175
+Processing frame 176
+Processing frame 177
+Processing frame 178
+Processing frame 179
+Processing frame 180
+Processing frame 181
+Processing frame 182
+Processing frame 183
+Processing frame 184
+Processing frame 185
+Processing frame 186
+Processing frame 187
+Processing frame 188
+Processing frame 189
+Processing frame 190
+Processing frame 191
+Processing frame 192
+Processing frame 193
+Processing frame 194
+Processing frame 195
+Processing frame 196
+Processing frame 197
+Processing frame 198
+Processing frame 199
+Processing frame 200
+Processing frame 201
+Processing frame 202
+Processing frame 203
+Processing frame 204
+Processing frame 205
+Processing frame 206
+Processing frame 207
+Processing frame 208
+Processing frame 209
+Processing frame 210
+Processing frame 211
+Processing frame 212
+Processing frame 213
+Processing frame 214
+Processing frame 215
+Processing frame 216
+Processing frame 217
+Processing frame 218
+Processing frame 219
+Processing frame 220
+Processing frame 221
+Processing frame 222
+Processing frame 223
+Processing frame 224
+Processing frame 225
+Processing frame 226
+Processing frame 227
+Processing frame 228
+Processing frame 229
+Processing frame 230
+Processing frame 231
+Processing frame 232
+Processing frame 233
+Processing frame 234
+Processing frame 235
+Processing frame 236
+Processing frame 237
+Processing frame 238
+Processing frame 239
+Processing frame 240
+Processing frame 241
+Processing frame 242
+Processing frame 243
+Processing frame 244
+Processing frame 245
+Processing frame 246
+Processing frame 247
+Processing frame 248
+Processing frame 249
+Processing frame 250
+Processing frame 251
+Processing frame 252
+Processing frame 253
+Processing frame 254
+Processing frame 255
+Processing frame 256
+Processing frame 257
+Processing frame 258
+Processing frame 259
+Processing frame 260
+[HOOKS]-20615 : Leaving ROI
+[HOOKS]-20615 : Total time spent in ROI: 711.394s
+[HOOKS]-20615 : Terminating
+[ECO-HOOKS]-20615 : bodytrack finished
+PARSEC Benchmark Suite Version 3.0-beta-20150206
+[HOOKS]-20717 : PARSEC Hooks Version 1.2
+[HOOKS]-20717 : Entering ROI
+Threadcount: 1
+15000 swaps per temperature step
+start temperature: 2000
+netlist filename: /home/amaity/Desktop/parsec-3.0/pkgs/kernels/canneal/inputs/2500000.nets
+number of temperature steps: 6000
+locs created
+locs assigned
+Just saw element: 100000
+Just saw element: 200000
+Just saw element: 300000
+Just saw element: 400000
+Just saw element: 500000
+Just saw element: 600000
+Just saw element: 700000
+Just saw element: 800000
+Just saw element: 900000
+Just saw element: 1000000
+Just saw element: 1100000
+Just saw element: 1200000
+Just saw element: 1300000
+Just saw element: 1400000
+Just saw element: 1500000
+Just saw element: 1600000
+Just saw element: 1700000
+Just saw element: 1800000
+Just saw element: 1900000
+Just saw element: 2000000
+Just saw element: 2100000
+Just saw element: 2200000
+Just saw element: 2300000
+Just saw element: 2400000
+Just saw element: 2500000
+netlist created. 2500000 elements.
+[HOOKS]-20717 : Leaving ROI
+Final routing is: 9.03315e+09
+[HOOKS]-20717 : Total time spent in ROI: 612.012s
+[HOOKS]-20717 : Terminating
+[ECO-HOOKS]-20717 : canneal finished
+PARSEC Benchmark Suite Version 3.0-beta-20150206
+[HOOKS]-20795 : PARSEC Hooks Version 1.2
+[HOOKS]-20795 : Entering ROI
+[HOOKS]-20795 : Leaving ROI
+Total input size:                      671.58 MB
+Total output size:                     637.28 MB
+Effective compression factor:            1.05x
+
+Mean data chunk size:                    1.88 KB (stddev: 2023.50 KB)
+Amount of duplicate chunks:             54.49%
+Data size after deduplication:         658.95 MB (compression factor: 1.02x)
+Data size after compression:           630.26 MB (compression factor: 1.05x)
+Output overhead:                         1.10%
+[HOOKS]-20795 : Total time spent in ROI: 79.960s
+[HOOKS]-20795 : Terminating
+[ECO-HOOKS]-20795 : dedup finished
+PARSEC Benchmark Suite Version 3.0-beta-20150206
+[HOOKS]-20802 : PARSEC Hooks Version 1.2
+[HOOKS]-20802 : Entering ROI

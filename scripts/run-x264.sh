@@ -3,8 +3,8 @@
 # Runs the blackscholes benchmarks on KNL 
 parsec_dir=${PARSECROOT}
 benchmark="parsec.blackscholes"
-nthreads=4
-input=native
+nthreads=1
+input="native"
 
 
 # Run the benchmark natively

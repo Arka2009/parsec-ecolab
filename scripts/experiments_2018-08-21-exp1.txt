@@ -1,0 +1,2176 @@
+[DATE2019-scheduler]-17835 : Welcome
+[x86-TOPO]-17835 : Extracting CPU Topology
+[x86-TOPO]-17835 : Found Processor : Knight's Landing
+[x86-TOPO]-17835 : Initializing Topology
+[x86-TOPO]-17835 : Topology.txt created
+[x86-TOPO]-17835 : Display Matrix Topology
+Core-id
+               0|0	64	128	192	
+               1|1	65	129	193	
+               2|2	66	130	194	
+               3|3	67	131	195	
+               4|4	68	132	196	
+               5|5	69	133	197	
+               6|6	70	134	198	
+               7|7	71	135	199	
+               8|8	72	136	200	
+               9|9	73	137	201	
+               10|10	74	138	202	
+               11|11	75	139	203	
+               12|12	76	140	204	
+               13|13	77	141	205	
+               14|14	78	142	206	
+               15|15	79	143	207	
+               16|16	80	144	208	
+               17|17	81	145	209	
+               18|18	82	146	210	
+               19|19	83	147	211	
+               20|20	84	148	212	
+               21|21	85	149	213	
+               22|22	86	150	214	
+               23|23	87	151	215	
+               24|24	88	152	216	
+               25|25	89	153	217	
+               26|26	90	154	218	
+               27|27	91	155	219	
+               28|28	92	156	220	
+               29|29	93	157	221	
+               30|30	94	158	222	
+               31|31	95	159	223	
+               32|32	96	160	224	
+               33|33	97	161	225	
+               34|34	98	162	226	
+               35|35	99	163	227	
+               36|36	100	164	228	
+               37|37	101	165	229	
+               38|38	102	166	230	
+               39|39	103	167	231	
+               40|40	104	168	232	
+               41|41	105	169	233	
+               42|42	106	170	234	
+               43|43	107	171	235	
+               44|44	108	172	236	
+               45|45	109	173	237	
+               46|46	110	174	238	
+               47|47	111	175	239	
+               48|48	112	176	240	
+               49|49	113	177	241	
+               50|50	114	178	242	
+               51|51	115	179	243	
+               52|52	116	180	244	
+               53|53	117	181	245	
+               54|54	118	182	246	
+               55|55	119	183	247	
+               56|56	120	184	248	
+               57|57	121	185	249	
+               58|58	122	186	250	
+               59|59	123	187	251	
+               60|60	124	188	252	
+               61|61	125	189	253	
+               62|62	126	190	254	
+               63|63	127	191	255	
+[x86-TOPO]-17835 : Display Matrix Topology
+L2-id
+               0|0	1	64	65	128	129	192	193	
+               1|2	3	66	67	130	131	194	195	
+               2|4	5	68	69	132	133	196	197	
+               3|6	7	70	71	134	135	198	199	
+               4|8	9	72	73	136	137	200	201	
+               5|10	11	74	75	138	139	202	203	
+               6|12	13	76	77	140	141	204	205	
+               7|14	15	78	79	142	143	206	207	
+               8|16	17	80	81	144	145	208	209	
+               9|18	19	82	83	146	147	210	211	
+               10|20	21	84	85	148	149	212	213	
+               11|22	23	86	87	150	151	214	215	
+               12|24	25	88	89	152	153	216	217	
+               13|26	27	90	91	154	155	218	219	
+               14|28	29	92	93	156	157	220	221	
+               15|30	31	94	95	158	159	222	223	
+               16|32	33	96	97	160	161	224	225	
+               17|34	35	98	99	162	163	226	227	
+               18|36	37	100	101	164	165	228	229	
+               19|38	39	102	103	166	167	230	231	
+               20|40	41	104	105	168	169	232	233	
+               21|42	43	106	107	170	171	234	235	
+               22|44	45	108	109	172	173	236	237	
+               23|46	47	110	111	174	175	238	239	
+               24|48	49	112	113	176	177	240	241	
+               25|50	51	114	115	178	179	242	243	
+               26|52	53	116	117	180	181	244	245	
+               27|54	55	118	119	182	183	246	247	
+               28|56	57	120	121	184	185	248	249	
+               29|58	59	122	123	186	187	250	251	
+               30|60	61	124	125	188	189	252	253	
+               31|62	63	126	127	190	191	254	255	
+[x86-TOPO]-17835 : No L3 cache for Xeon Phi series
+[x86-TOPO]-17835 : Display Matrix Topology
+socket-id
+               0|0	1	2	3	4	5	6	7	8	9	10	11	12PARSEC Benchmark Suite Version 3.0-beta-20150206
+[HOOKS]-17841 : PARSEC Hooks Version 1.2
+[HOOKS]-17841 : Entering ROI
+Num of Options: 10000000
+Num of Runs: 100
+Size of data: 400000000
+[HOOKS]-17841 : Leaving ROI
+[HOOKS]-17841 : Total time spent in ROI: 1006.123s
+[HOOKS]-17841 : Terminating
+[ECO-HOOKS]-17841 : blackscholes finished
+PARSEC Benchmark Suite Version 3.0-beta-20150206
+[HOOKS]-18081 : PARSEC Hooks Version 1.2
+[HOOKS]-18081 : Entering ROI
+Threading with Posix Threads
+Number of threads : 1
+Using dataset : /home/amaity/Desktop/parsec-3.0/pkgs/apps/bodytrack/inputs/sequenceB_261/
+4000 particles with 5 annealing layers
+
+Processing frame 0
+Processing frame 1
+Processing frame 2
+Processing frame 3
+Processing frame 4
+Processing frame 5
+Processing frame 6
+Processing frame 7
+Processing frame 8
+Processing frame 9
+Processing frame 10
+Processing frame 11
+Processing frame 12
+Processing frame 13
+Processing frame 14
+Processing frame 15
+Processing frame 16
+Processing frame 17
+Processing frame 18
+Processing frame 19
+Processing frame 20
+Processing frame 21
+Processing frame 22
+Processing frame 23
+Processing frame 24
+Processing frame 25
+Processing frame 26
+Processing frame 27
+Processing frame 28
+Processing frame 29
+Processing frame 30
+Processing frame 31
+Processing frame 32
+Processing frame 33
+Processing frame 34
+Processing frame 35
+Processing frame 36
+Processing frame 37
+Processing frame 38
+Processing frame 39
+Processing frame 40
+Processing frame 41
+Processing frame 42
+Processing frame 43
+Processing frame 44
+Processing frame 45
+Processing frame 46
+Processing frame 47
+Processing frame 48
+Processing frame 49
+Processing frame 50
+Processing frame 51
+Processing frame 52
+Processing frame 53
+Processing frame 54
+Processing frame 55
+Processing frame 56
+Processing frame 57
+Processing frame 58
+Processing frame 59
+Processing frame 60
+Processing frame 61
+Processing frame 62
+Processing frame 63
+Processing frame 64
+Processing frame 65
+Processing frame 66
+Processing frame 67
+Processing frame 68
+Processing frame 69
+Processing frame 70
+Processing frame 71
+Processing frame 72
+Processing frame 73
+Processing frame 74
+Processing frame 75
+Processing frame 76
+Processing frame 77
+Processing frame 78
+Processing frame 79
+Processing frame 80
+Processing frame 81
+Processing frame 82
+Processing frame 83
+Processing frame 84
+Processing frame 85
+Processing frame 86
+Processing frame 87
+Processing frame 88
+Processing frame 89
+Processing frame 90
+Processing frame 91
+Processing frame 92
+Processing frame 93
+Processing frame 94
+Processing frame 95
+Processing frame 96
+Processing frame 97
+Processing frame 98
+Processing frame 99
+Processing frame 100
+Processing frame 101
+Processing frame 102
+Processing frame 103
+Processing frame 104
+Processing frame 105
+Processing frame 106
+Processing frame 107
+Processing frame 108
+Processing frame 109
+Processing frame 110
+Processing frame 111
+Processing frame 112
+Processing frame 113
+Processing frame 114
+Processing frame 115
+Processing frame 116
+Processing frame 117
+Processing frame 118
+Processing frame 119
+Processing frame 120
+Processing frame 121
+Processing frame 122
+Processing frame 123
+Processing frame 124
+Processing frame 125
+Processing frame 126
+Processing frame 127
+Processing frame 128
+Processing frame 129
+Processing frame 130
+Processing frame 131
+Processing frame 132
+Processing frame 133
+Processing frame 134
+Processing frame 135
+Processing frame 136
+Processing frame 137
+Processing frame 138
+Processing frame 139
+Processing frame 140
+Processing frame 141
+Processing frame 142
+Processing frame 143
+Processing frame 144
+Processing frame 145
+Processing frame 146
+Processing frame 147
+Processing frame 148
+Processing frame 149
+Processing frame 150
+Processing frame 151
+Processing frame 152
+Processing frame 153
+Processing frame 154
+Processing frame 155
+Processing frame 156
+Processing frame 157
+Processing frame 158
+Processing frame 159
+Processing frame 160
+Processing frame 161
+Processing frame 162
+Processing frame 163
+Processing frame 164
+Processing frame 165
+Processing frame 166
+Processing frame 167
+Processing frame 168
+Processing frame 169
+Processing frame 170
+Processing frame 171
+Processing frame 172
+Processing frame 173
+Processing frame 174
+Processing frame 175
+Processing frame 176
+Processing frame 177
+Processing frame 178
+Processing frame 179
+Processing frame 180
+Processing frame 181
+Processing frame 182
+Processing frame 183
+Processing frame 184
+Processing frame 185
+Processing frame 186
+Processing frame 187
+Processing frame 188
+Processing frame 189
+Processing frame 190
+Processing frame 191
+Processing frame 192
+Processing frame 193
+Processing frame 194
+Processing frame 195
+Processing frame 196
+Processing frame 197
+Processing frame 198
+Processing frame 199
+Processing frame 200
+Processing frame 201
+Processing frame 202
+Processing frame 203
+Processing frame 204
+Processing frame 205
+Processing frame 206
+Processing frame 207
+Processing frame 208
+Processing frame 209
+Processing frame 210
+Processing frame 211
+Processing frame 212
+Processing frame 213
+Processing frame 214
+Processing frame 215
+Processing frame 216
+Processing frame 217
+Processing frame 218
+Processing frame 219
+Processing frame 220
+Processing frame 221
+Processing frame 222
+Processing frame 223
+Processing frame 224
+Processing frame 225
+Processing frame 226
+Processing frame 227
+Processing frame 228
+Processing frame 229
+Processing frame 230
+Processing frame 231
+Processing frame 232
+Processing frame 233
+Processing frame 234
+Processing frame 235
+Processing frame 236
+Processing frame 237
+Processing frame 238
+Processing frame 239
+Processing frame 240
+Processing frame 241
+Processing frame 242
+Processing frame 243
+Processing frame 244
+Processing frame 245
+Processing frame 246
+Processing frame 247
+Processing frame 248
+Processing frame 249
+Processing frame 250
+Processing frame 251
+Processing frame 252
+Processing frame 253
+Processing frame 254
+Processing frame 255
+Processing frame 256
+Processing frame 257
+Processing frame 258
+Processing frame 259
+Processing frame 260
+[HOOKS]-18081 : Leaving ROI
+[HOOKS]-18081 : Total time spent in ROI: 732.845s
+[HOOKS]-18081 : Terminating
+[ECO-HOOKS]-18081 : bodytrack finished
+PARSEC Benchmark Suite Version 3.0-beta-20150206
+[HOOKS]-18087 : PARSEC Hooks Version 1.2
+[HOOKS]-18087 : Entering ROI
+Threadcount: 1
+15000 swaps per temperature step
+start temperature: 2000
+netlist filename: /home/amaity/Desktop/parsec-3.0/pkgs/kernels/canneal/inputs/2500000.nets
+number of temperature steps: 6000
+locs created
+locs assigned
+Just saw element: 100000
+Just saw element: 200000
+Just saw element: 300000
+Just saw element: 400000
+Just saw element: 500000
+Just saw element: 600000
+Just saw element: 700000
+Just saw element: 800000
+Just saw element: 900000
+Just saw element: 1000000
+Just saw element: 1100000
+Just saw element: 1200000
+Just saw element: 1300000
+Just saw element: 1400000
+Just saw element: 1500000
+Just saw element: 1600000
+Just saw element: 1700000
+Just saw element: 1800000
+Just saw element: 1900000
+Just saw element: 2000000
+Just saw element: 2100000
+Just saw element: 2200000
+Just saw element: 2300000
+Just saw element: 2400000
+Just saw element: 2500000
+netlist created. 2500000 elements.
+[HOOKS]-18087 : Leaving ROI
+Final routing is: 9.03315e+09
+[HOOKS]-18087 : Total time spent in ROI: 817.451s
+[HOOKS]-18087 : Terminating
+[ECO-HOOKS]-18087 : canneal finished
+PARSEC Benchmark Suite Version 3.0-beta-20150206
+[HOOKS]-18187 : PARSEC Hooks Version 1.2
+[HOOKS]-18187 : Entering ROI
+[HOOKS]-18187 : Leaving ROI
+Total input size:                      671.58 MB
+Total output size:                     637.28 MB
+Effective compression factor:            1.05x
+
+Mean data chunk size:                    1.88 KB (stddev: 2023.50 KB)
+Amount of duplicate chunks:             54.49%
+Data size after deduplication:         658.95 MB (compression factor: 1.02x)
+Data size after compression:           630.26 MB (compression factor: 1.05x)
+Output overhead:                         1.10%
+[HOOKS]-18187 : Total time spent in ROI: 104.473s
+[HOOKS]-18187 : Terminating
+[ECO-HOOKS]-18187 : dedup finished
+PARSEC Benchmark Suite Version 3.0-beta-20150206
+[HOOKS]-18195 : PARSEC Hooks Version 1.2
+[HOOKS]-18195 : Entering ROI
+[HOOKS]-18195 : Leaving ROI
+QUERY TIME: 1881.038 seconds
+[HOOKS]-18195 : Total time spent in ROI: 1881.038s
+[HOOKS]-18195 : Terminating
+[ECO-HOOKS]-18195 : ferret finished
+PARSEC Benchmark Suite Version 3.0-beta-20150206
+[HOOKS]-18213 : PARSEC Hooks Version 1.2
+Loading file "/home/amaity/Desktop/parsec-3.0/pkgs/apps/fluidanimate/inputs/in_500K.fluid"...
+Number of cells: 229900
+Grids steps over x, y, z: 0.00236364 0.00236842 0.00236364
+Number of particles: 501642
+[HOOKS]-18213 : Entering ROI
+[HOOKS]-18213 : Leaving ROI
+Saving file "dump/out.fluid"...
+[HOOKS]-18213 : Total time spent in ROI: 2104.270s
+[HOOKS]-18213 : Terminating
+[ECO-HOOKS]-18213 : fluidanimate finished
+this =0xb50240
+PARSEC Benchmark Suite Version 3.0-beta-20150206
+[HOOKS]-18224 : PARSEC Hooks Version 1.2
+initializing LRT ray tracer ...
+default BVH builder : binnedalldimssavespace
+
+
+Options:   automove = ;
+     files = /home/amaity/Desktop/parsec-3.0/pkgs/apps/raytrace/inputs/thai_statue.obj;
+    frames = 200;
+ nthreads  = 1;
+       res = [1920, 1080];
+
+Using memory framebuffer...
+Adding obj file: /home/amaity/Desktop/parsec-3.0/pkgs/apps/raytrace/inputs/thai_statue.obj
+Using auto camera...
+num nodes in scene graph 1
+adding 4999996 vertices
+adding 10000000 triangles
+finalizing geometry
+vertices            4999996 (58593.7 KB)
+triangles           10000000 (117188 KB)
+texture coordinates 0 (0 KB)
+No materials -> create dummy material
+building index
+using BVH builder default
+build time 174.51
+done
+sceneAABB =[[[-117.959,-195.497,-99.8228,0] ],[[117.252,205.549,103.342,0] ]]
+Rendering 200 frames... 
+[HOOKS]-18224 : Entering ROI
+[HOOKS]-18224 : Leaving ROI
+[ECO-HOOKS]-18224 : raytrace finished
+Done
+[HOOKS]-18224 : Total time spent in ROI: 1976.982s
+[HOOKS]-18224 : Terminating
+
+
+[HOOKS]-18434 : PARSEC Hooks Version 1.2
+[HOOKS]-18434 : Entering ROI
+[HOOKS]-18434 : Leaving ROI
+[HOOKS]-18434 : Total time spent in ROI: 1750.991s
+[HOOKS]-18434 : Terminating
+[ECO-HOOKS]-18434 : streamcluster finished
+PARSEC Benchmark Suite Version 3.0-beta-20150206
+[HOOKS]-18460 : PARSEC Hooks Version 1.2
+[HOOKS]-18460 : Entering ROI
+Number of Simulations: 1000000,  Number of threads: 1 Number of swaptions: 128
+[HOOKS]-18460 : Leaving ROI
+[HOOKS]-18460 : Total time spent in ROI: 1837.946s
+[HOOKS]-18460 : Terminating
+[ECO-HOOKS]-18460 : swaptions finished
+	13	14	15	16	17	18	19	20	21	22	23	24	25	26	27	28	29	30	31	32	33	34	35	36	37	38	39	40	41	42	43	44	45	46	47	48	49	50	51	52	53	54	55	56	57	58	59	60	61	62	63	64	65	66	67	68	69	70	71	72	73	74	75	76	77	78	79	80	81	82	83	84	85	86	87	88	89	90	91	92	93	94	95	96	97	98	99	100	101	102	103	104	105	106	107	108	109	110	111	112	113	114	115	116	117	118	119	120	121	122	123	124	125	126	127	128	129	130	131	132	133	134	135	136	137	138	139	140	141	142	143	144	145	146	147	148	149	150	151	152	153	154	155	156	157	158	159	160	161	162	163	164	165	166	167	168	169	170	171	172	173	174	175	176	177	178	179	180	181	182	183	184	185	186	187	188	189	190	191	192	193	194	195	196	197	198	199	200	201	202	203	204	205	206	207	208	209	210	211	212	213	214	215	216	217	218	219	220	221	222	223	224	225	226	227	228	229	230	231	232	233	234	235	236	237	238	239	240	241	242	243	244	245	246	247	248	249	250	251	252	253	254	255	
+[x86-TOPO]-17835 : Topology.txt deleted
+[DATE2019-scheduler]-17835 : Obtaining a static thread<---->CPU map
+[DATE2019-scheduler]-17835 : App-17841 finished
+[DATE2019-scheduler]-17835 : blackscholes finished
+[DATE2019-scheduler]-17835 : Obtaining a static thread<---->CPU map
+[DATE2019-scheduler]-17835 : App-18081 finished
+[DATE2019-scheduler]-17835 : bodytrack finished
+[DATE2019-scheduler]-17835 : Obtaining a static thread<---->CPU map
+[DATE2019-scheduler]-17835 : App-18087 finished
+[DATE2019-scheduler]-17835 : canneal finished
+[DATE2019-scheduler]-17835 : Obtaining a static thread<---->CPU map
+[DATE2019-scheduler]-17835 : App-18187 finished
+[DATE2019-scheduler]-17835 : dedup finished
+[DATE2019-scheduler]-17835 : Obtaining a static thread<---->CPU map
+[DATE2019-scheduler]-17835 : App-18195 finished
+[DATE2019-scheduler]-17835 : ferret finished
+[DATE2019-scheduler]-17835 : Obtaining a static thread<---->CPU map
+[DATE2019-scheduler]-17835 : App-18213 finished
+[DATE2019-scheduler]-17835 : fluidanimate finished
+[DATE2019-scheduler]-17835 : Obtaining a static thread<---->CPU map
+[DATE2019-scheduler]-17835 : App-18224 finished
+[DATE2019-scheduler]-17835 : raytrace finished
+[DATE2019-scheduler]-17835 : Obtaining a static thread<---->CPU map
+[DATE2019-scheduler]-17835 : App-18434 finished
+[DATE2019-scheduler]-17835 : streamcluster finished
+[DATE2019-scheduler]-17835 : Obtaining a static thread<---->CPU map
+[DATE2019-scheduler]-17835 : App-18460 finished
+[DATE2019-scheduler]-17835 : swaptions finished
+[DATE2019-scheduler]-17835 : Welcome
+[x86-TOPO]-17835 : Extracting CPU Topology
+[x86-TOPO]-17835 : Found Processor : Knight's Landing
+[x86-TOPO]-17835 : Initializing Topology
+[x86-TOPO]-17835 : Topology.txt created
+[x86-TOPO]-17835 : Display Matrix Topology
+Core-id
+               0|0	64	128	192	
+               1|1	65	129	193	
+               2|2	66	130	194	
+               3|3	67	131	195	
+               4|4	68	132	196	
+               5|5	69	133	197	
+               6|6	70	134	198	
+               7|7	71	135	199	
+               8|8	72	136	200	
+               9|9	73	137	201	
+               10|10	74	138	202	
+               11|11	75	139	203	
+               12|12	76	140	204	
+               13|13	77	141	205	
+               14|14	78	142	206	
+               15|15	79	143	207	
+               16|16	80	144	208	
+               17|17	81	145	209	
+               18|18	82	146	210	
+               19|19	83	147	211	
+               20|20	84	148	212	
+               21|21	85	149	213	
+               22|22	86	150	214	
+               23|23	87	151	215	
+               24|24	88	152	216	
+               25|25	89	153	217	
+               26|26	90	154	218	
+               27|27	91	155	219	
+               28|28	92	156	220	
+               29|29	93	157	221	
+               30|30	94	158	222	
+               31|31	95	159	223	
+               32|32	96	160	224	
+               33|33	97	161	225	
+               34|34	98	162	226	
+               35|35	99	163	227	
+               36|36	100	164	228	
+               37|37	101	165	229	
+               38|38	102	166	230	
+               39|39	103	167	231	
+               40|40	104	168	232	
+               41|41	105	169	233	
+               42|42	106	170	234	
+               43|43	PARSEC Benchmark Suite Version 3.0-beta-20150206
+[HOOKS]-18475 : PARSEC Hooks Version 1.2
+[HOOKS]-18475 : Entering ROI
+Num of Options: 10000000
+Num of Runs: 100
+Size of data: 400000000
+[HOOKS]-18475 : Leaving ROI
+[HOOKS]-18475 : Total time spent in ROI: 1074.109s
+[HOOKS]-18475 : Terminating
+[ECO-HOOKS]-18475 : blackscholes finished
+PARSEC Benchmark Suite Version 3.0-beta-20150206
+[HOOKS]-18484 : PARSEC Hooks Version 1.2
+[HOOKS]-18484 : Entering ROI
+Threading with Posix Threads
+Number of threads : 1
+Using dataset : /home/amaity/Desktop/parsec-3.0/pkgs/apps/bodytrack/inputs/sequenceB_261/
+4000 particles with 5 annealing layers
+
+Processing frame 0
+Processing frame 1
+Processing frame 2
+Processing frame 3
+Processing frame 4
+Processing frame 5
+Processing frame 6
+Processing frame 7
+Processing frame 8
+Processing frame 9
+Processing frame 10
+Processing frame 11
+Processing frame 12
+Processing frame 13
+Processing frame 14
+Processing frame 15
+Processing frame 16
+Processing frame 17
+Processing frame 18
+Processing frame 19
+Processing frame 20
+Processing frame 21
+Processing frame 22
+Processing frame 23
+Processing frame 24
+Processing frame 25
+Processing frame 26
+Processing frame 27
+Processing frame 28
+Processing frame 29
+Processing frame 30
+Processing frame 31
+Processing frame 32
+Processing frame 33
+Processing frame 34
+Processing frame 35
+Processing frame 36
+Processing frame 37
+Processing frame 38
+Processing frame 39
+Processing frame 40
+Processing frame 41
+Processing frame 42
+Processing frame 43
+Processing frame 44
+Processing frame 45
+Processing frame 46
+Processing frame 47
+Processing frame 48
+Processing frame 49
+Processing frame 50
+Processing frame 51
+Processing frame 52
+Processing frame 53
+Processing frame 54
+Processing frame 55
+Processing frame 56
+Processing frame 57
+Processing frame 58
+Processing frame 59
+Processing frame 60
+Processing frame 61
+Processing frame 62
+Processing frame 63
+Processing frame 64
+Processing frame 65
+Processing frame 66
+Processing frame 67
+Processing frame 68
+Processing frame 69
+Processing frame 70
+Processing frame 71
+Processing frame 72
+Processing frame 73
+Processing frame 74
+Processing frame 75
+Processing frame 76
+Processing frame 77
+Processing frame 78
+Processing frame 79
+Processing frame 80
+Processing frame 81
+Processing frame 82
+Processing frame 83
+Processing frame 84
+Processing frame 85
+Processing frame 86
+Processing frame 87
+Processing frame 88
+Processing frame 89
+Processing frame 90
+Processing frame 91
+Processing frame 92
+Processing frame 93
+Processing frame 94
+Processing frame 95
+Processing frame 96
+Processing frame 97
+Processing frame 98
+Processing frame 99
+Processing frame 100
+Processing frame 101
+Processing frame 102
+Processing frame 103
+Processing frame 104
+Processing frame 105
+Processing frame 106
+Processing frame 107
+Processing frame 108
+Processing frame 109
+Processing frame 110
+Processing frame 111
+Processing frame 112
+Processing frame 113
+Processing frame 114
+Processing frame 115
+Processing frame 116
+Processing frame 117
+Processing frame 118
+Processing frame 119
+Processing frame 120
+Processing frame 121
+Processing frame 122
+Processing frame 123
+Processing frame 124
+Processing frame 125
+Processing frame 126
+Processing frame 127
+Processing frame 128
+Processing frame 129
+Processing frame 130
+Processing frame 131
+Processing frame 132
+Processing frame 133
+Processing frame 134
+Processing frame 135
+Processing frame 136
+Processing frame 137
+Processing frame 138
+Processing frame 139
+Processing frame 140
+Processing frame 141
+Processing frame 142
+Processing frame 143
+Processing frame 144
+Processing frame 145
+Processing frame 146
+Processing frame 147
+Processing frame 148
+Processing frame 149
+Processing frame 150
+Processing frame 151
+Processing frame 152
+Processing frame 153
+Processing frame 154
+Processing frame 155
+Processing frame 156
+Processing frame 157
+Processing frame 158
+Processing frame 159
+Processing frame 160
+Processing frame 161
+Processing frame 162
+Processing frame 163
+Processing frame 164
+Processing frame 165
+Processing frame 166
+Processing frame 167
+Processing frame 168
+Processing frame 169
+Processing frame 170
+Processing frame 171
+Processing frame 172
+Processing frame 173
+Processing frame 174
+Processing frame 175
+Processing frame 176
+Processing frame 177
+Processing frame 178
+Processing frame 179
+Processing frame 180
+Processing frame 181
+Processing frame 182
+Processing frame 183
+Processing frame 184
+Processing frame 185
+Processing frame 186
+Processing frame 187
+Processing frame 188
+Processing frame 189
+Processing frame 190
+Processing frame 191
+Processing frame 192
+Processing frame 193
+Processing frame 194
+Processing frame 195
+Processing frame 196
+Processing frame 197
+Processing frame 198
+Processing frame 199
+Processing frame 200
+Processing frame 201
+Processing frame 202
+Processing frame 203
+Processing frame 204
+Processing frame 205
+Processing frame 206
+Processing frame 207
+Processing frame 208
+Processing frame 209
+Processing frame 210
+Processing frame 211
+Processing frame 212
+Processing frame 213
+Processing frame 214
+Processing frame 215
+Processing frame 216
+Processing frame 217
+Processing frame 218
+Processing frame 219
+Processing frame 220
+Processing frame 221
+Processing frame 222
+Processing frame 223
+Processing frame 224
+Processing frame 225
+Processing frame 226
+Processing frame 227
+Processing frame 228
+Processing frame 229
+Processing frame 230
+Processing frame 231
+Processing frame 232
+Processing frame 233
+Processing frame 234
+Processing frame 235
+Processing frame 236
+Processing frame 237
+Processing frame 238
+Processing frame 239
+Processing frame 240
+Processing frame 241
+Processing frame 242
+Processing frame 243
+Processing frame 244
+Processing frame 245
+Processing frame 246
+Processing frame 247
+Processing frame 248
+Processing frame 249
+Processing frame 250
+Processing frame 251
+Processing frame 252
+Processing frame 253
+Processing frame 254
+Processing frame 255
+Processing frame 256
+Processing frame 257
+Processing frame 258
+Processing frame 259
+Processing frame 260
+[HOOKS]-18484 : Leaving ROI
+[HOOKS]-18484 : Total time spent in ROI: 732.540s
+[HOOKS]-18484 : Terminating
+[ECO-HOOKS]-18484 : bodytrack finished
+PARSEC Benchmark Suite Version 3.0-beta-20150206
+[HOOKS]-18489 : PARSEC Hooks Version 1.2
+[HOOKS]-18489 : Entering ROI
+Threadcount: 1
+15000 swaps per temperature step
+start temperature: 2000
+netlist filename: /home/amaity/Desktop/parsec-3.0/pkgs/kernels/canneal/inputs/2500000.nets
+number of temperature steps: 6000
+locs created
+locs assigned
+Just saw element: 100000
+Just saw element: 200000
+Just saw element: 300000
+Just saw element: 400000
+Just saw element: 500000
+Just saw element: 600000
+Just saw element: 700000
+Just saw element: 800000
+Just saw element: 900000
+Just saw element: 1000000
+Just saw element: 1100000
+Just saw element: 1200000
+Just saw element: 1300000
+Just saw element: 1400000
+Just saw element: 1500000
+Just saw element: 1600000
+Just saw element: 1700000
+Just saw element: 1800000
+Just saw element: 1900000
+Just saw element: 2000000
+Just saw element: 2100000
+Just saw element: 2200000
+Just saw element: 2300000
+Just saw element: 2400000
+Just saw element: 2500000
+netlist created. 2500000 elements.
+[HOOKS]-18489 : Leaving ROI
+Final routing is: 9.03315e+09
+[HOOKS]-18489 : Total time spent in ROI: 712.432s
+[HOOKS]-18489 : Terminating
+[ECO-HOOKS]-18489 : canneal finished
+PARSEC Benchmark Suite Version 3.0-beta-20150206
+[HOOKS]-18498 : PARSEC Hooks Version 1.2
+[HOOKS]-18498 : Entering ROI
+[HOOKS]-18498 : Leaving ROI
+Total input size:                      671.58 MB
+Total output size:                     637.28 MB
+Effective compression factor:            1.05x
+
+Mean data chunk size:                    1.88 KB (stddev: 2023.50 KB)
+Amount of duplicate chunks:             54.49%
+Data size after deduplication:         658.95 MB (compression factor: 1.02x)
+Data size after compression:           630.26 MB (compression factor: 1.05x)
+Output overhead:                         1.10%
+[HOOKS]-18498 : Total time spent in ROI: 75.171s
+[HOOKS]-18498 : Terminating
+[ECO-HOOKS]-18498 : dedup finished
+PARSEC Benchmark Suite Version 3.0-beta-20150206
+[HOOKS]-18504 : PARSEC Hooks Version 1.2
+[HOOKS]-18504 : Entering ROI
+[HOOKS]-18504 : Leaving ROI
+QUERY TIME: 1440.858 seconds
+[HOOKS]-18504 : Total time spent in ROI: 1440.858s
+[HOOKS]-18504 : Terminating
+[ECO-HOOKS]-18504 : ferret finished
+107	171	235	
+               44|44	108	172	236	
+               45|45	109	173	237	
+               46|46	110	174	238	
+               47|47	111	175	239	
+               48|48	112	176	240	
+               49|49	113	177	241	
+               50|50	114	178	242	
+               51|51	115	179	243	
+               52|52	116	180	244	
+               53|53	117	181	245	
+               54|54	118	182	246	
+               55|55	119	183	247	
+               56|56	120	184	248	
+               57|57	121	185	249	
+               58|58	122	186	250	
+               59|59	123	187	251	
+               60|60	124	188	252	
+               61|61	125	189	253	
+               62|62	126	190	254	
+               63|63	127	191	255	
+[x86-TOPO]-17835 : Display Matrix Topology
+L2-id
+               0|0	1	64	65	128	129	192	193	
+               1|2	3	66	67	130	131	194	195	
+               2|4	5	68	69	132	133	196	197	
+               3|6	7	70	71	134	135	198	199	
+               4|8	9	72	73	136	137	200	201	
+               5|10	11	74	75	138	139	202	203	
+               6|12	13	76	77	140	141	204	205	
+               7|14	15	78	79	142	143	206	207	
+               8|16	17	80	81	144	145	208	209	
+               9|18	19	82	83	146	147	210	211	
+               10|20	21	84	85	148	149	212	213	
+               11|22	23	86	87	150	151	214	215	
+               12|24	25	88	89	152	153	216	217	
+               13|26	27	90	91	154	155	218	219	
+               14|28	29	92	93	156	157	220	221	
+               15|30	31	94	95	158	159	222	223	
+               16|32	33	96	97	160	161	224	225	
+               17|34	35	98	99	162	163	226	227	
+               18|36	37	100	101	164	165	228	229	
+               19|38	39	102	103	166	167	230	231	
+               20|40	41	104	105	168	169	232	233	
+               21|42	43	106	107	170	171	234	235	
+               22|44	45	108	109	172	173	236	237	
+               23|46	47	110	111	174	175	238	239	
+               24|48	49	112	113	176	177	240	241	
+               25|50	51	114	115	178	179	242	243	
+               26|52	53	116	117	180	181	244	245	
+               27|54	55	118	119	182	183	246	247	
+               28|56	57	120	121	184	185	248	249	
+               29|58	59	122	123	186	187	250	251	
+               30|60	61	124	125	188	189	252	253	
+               31|62	63	126	127	190	191	254	255	
+[x86-TOPO]-17835 : No L3 cache for Xeon Phi series
+[x86-TOPO]-17835 : Display Matrix Topology
+socket-id
+               0|0	1	2	3	4	5	6	7	8	9	10	11	12	13	14	15	16	17	18	19	20	21	22	23	24	25	26	27	28	29	30	31	32	33	34	35	36	37	38	39	40	41	42	43	44	45	46	47	48	49	50	51	52	53	54	55	56	57	58	59	60	61	62	63	64	65	66	67	68	69	70	71	72	73	74	75	76	77	78	79	80	81	82	83	84	85	86	87	88	89	90	91	92	93	94	95	96	97	98	99	100	101	102	103	104	105	106	107	108	109	110	111	112	113	114	115	116	117	118	119	120	121	122	123	124	125	126	127	128	129	130	131	132	133	134	135	136	137	138	139	140	141	142	143	144	145	146	147	148	149	150	151	152	153	154	155	156	157	158	159	160	161	162	163	164	165	166	167	168	169	170	171	172	173	174	175	176	177	178	179	180	181	182	183	184	185	186	187	188	189	190	191	192	193	194	195	196	197	198	199	200	201	202	203	204	205	206	207	208	209	210	211	212	213	214	215	216	217	218	219	220	221	222	223	224	225	226	227	228	229	230	231	232	233	234	235	236	237	238	239	240	241	242	243	244	245	246	247	248	249	250	251	252	253	254	255	
+[x86-TOPO]-17835 : Topology.txt deleted
+[DATE2019-scheduler]-17835 : Obtaining a static thread<---->CPU map
+[DATE2019-scheduler]-17835 : App-18475 finished
+[DATE2019-scheduler]-17835 : blackscholes finished
+[DATE2019-scheduler]-17835 : Obtaining a static thread<---->CPU map
+[DATE2019-scheduler]-17835 : App-18484 finished
+[DATE2019-scheduler]-17835 : bodytrack finished
+[DATE2019-scheduler]-17835 : Obtaining a static thread<---->CPU map
+[DATE2019-scheduler]-17835 : App-18489 finished
+[DATE2019-scheduler]-17835 : canneal finished
+[DATE2019-scheduler]-17835 : Obtaining a static thread<---->CPU map
+[DATE2019-scheduler]-17835 : App-18498 finished
+[DATE2019-scheduler]-17835 : dedup finished
+[DATE2019-scheduler]-17835 : Obtaining a static thread<---->CPU map
+[DATE2019-scheduler]-17835 : App-18504 finishPARSEC Benchmark Suite Version 3.0-beta-20150206
+[HOOKS]-18519 : PARSEC Hooks Version 1.2
+Loading file "/home/amaity/Desktop/parsec-3.0/pkgs/apps/fluidanimate/inputs/in_500K.fluid"...
+Number of cells: 229900
+Grids steps over x, y, z: 0.00236364 0.00236842 0.00236364
+Number of particles: 501642
+[HOOKS]-18519 : Entering ROI
+[HOOKS]-18519 : Leaving ROI
+Saving file "dump/out.fluid"...
+[HOOKS]-18519 : Total time spent in ROI: 1531.930s
+[HOOKS]-18519 : Terminating
+[ECO-HOOKS]-18519 : fluidanimate finished
+this =0xb50240
+PARSEC Benchmark Suite Version 3.0-beta-20150206
+[HOOKS]-18527 : PARSEC Hooks Version 1.2
+initializing LRT ray tracer ...
+default BVH builder : binnedalldimssavespace
+
+
+Options:   automove = ;
+     files = /home/amaity/Desktop/parsec-3.0/pkgs/apps/raytrace/inputs/thai_statue.obj;
+    frames = 200;
+ nthreads  = 1;
+       res = [1920, 1080];
+
+Using memory framebuffer...
+Adding obj file: /home/amaity/Desktop/parsec-3.0/pkgs/apps/raytrace/inputs/thai_statue.obj
+Using auto camera...
+num nodes in scene graph 1
+adding 4999996 vertices
+adding 10000000 triangles
+finalizing geometry
+vertices            4999996 (58593.7 KB)
+triangles           10000000 (117188 KB)
+texture coordinates 0 (0 KB)
+No materials -> create dummy material
+building index
+using BVH builder default
+build time 174.564
+done
+sceneAABB =[[[-117.959,-195.497,-99.8228,0] ],[[117.252,205.549,103.342,0] ]]
+Rendering 200 frames... 
+[HOOKS]-18527 : Entering ROI
+[HOOKS]-18527 : Leaving ROI
+[ECO-HOOKS]-18527 : raytrace finished
+Done
+[HOOKS]-18527 : Total time spent in ROI: 1977.195s
+[HOOKS]-18527 : Terminating
+
+
+[HOOKS]-18539 : PARSEC Hooks Version 1.2
+[HOOKS]-18539 : Entering ROI
+[HOOKS]-18539 : Leaving ROI
+[HOOKS]-18539 : Total time spent in ROI: 1407.571s
+[HOOKS]-18539 : Terminating
+[ECO-HOOKS]-18539 : streamcluster finished
+PARSEC Benchmark Suite Version 3.0-beta-20150206
+[HOOKS]-18555 : PARSEC Hooks Version 1.2
+[HOOKS]-18555 : Entering ROI
+Number of Simulations: 1000000,  Number of threads: 1 Number of swaptions: 128
+[HOOKS]-18555 : Leaving ROI
+[HOOKS]-18555 : Total time spent in ROI: 1346.661s
+[HOOKS]-18555 : Terminating
+[ECO-HOOKS]-18555 : swaptions finished
+ed
+[DATE2019-scheduler]-17835 : ferret finished
+[DATE2019-scheduler]-17835 : Obtaining a static thread<---->CPU map
+[DATE2019-scheduler]-17835 : App-18519 finished
+[DATE2019-scheduler]-17835 : fluidanimate finished
+[DATE2019-scheduler]-17835 : Obtaining a static thread<---->CPU map
+[DATE2019-scheduler]-17835 : App-18527 finished
+[DATE2019-scheduler]-17835 : raytrace finished
+[DATE2019-scheduler]-17835 : Obtaining a static thread<---->CPU map
+[DATE2019-scheduler]-17835 : App-18539 finished
+[DATE2019-scheduler]-17835 : streamcluster finished
+[DATE2019-scheduler]-17835 : Obtaining a static thread<---->CPU map
+[DATE2019-scheduler]-17835 : App-18555 finished
+[DATE2019-scheduler]-17835 : swaptions finished
+[DATE2019-scheduler]-17835 : Welcome
+[x86-TOPO]-17835 : Extracting CPU Topology
+[x86-TOPO]-17835 : Found Processor : Knight's Landing
+[x86-TOPO]-17835 : Initializing Topology
+[x86-TOPO]-17835 : Topology.txt created
+[x86-TOPO]-17835 : Display Matrix Topology
+Core-id
+               0|0	64	128	192	
+               1|1	65	129	193	
+               2|2	66	130	194	
+               3|3	67	131	195	
+               4|4	68	132	196	
+               5|5	69	133	197	
+               6|6	70	134	198	
+               7|7	71	135	199	
+               8|8	72	136	200	
+               9|9	73	137	201	
+               10|10	74	138	202	
+               11|11	75	139	203	
+               12|12	76	140	204	
+               13|13	77	141	205	
+               14|14	78	142	206	
+               15|15	79	143	207	
+               16|16	80	144	208	
+               17|17	81	145	209	
+               18|18	82	146	210	
+               19|19	83	147	211	
+               20|20	84	148	212	
+               21|21	85	149	213	
+               22|22	86	150	214	
+               23|23	87	151	215	
+               24|24	88	152	216	
+               25|25	89	153	217	
+               26|26	90	154	218	
+               27|27	91	155	219	
+               28|28	92	156	220	
+               29|29	93	157	221	
+               30|30	94	158	222	
+               31|31	95	159	223	
+               32|32	96	160	224	
+               33|33	97	161	225	
+               34|34	98	162	226	
+               35|35	99	163	227	
+               36|36	100	164	228	
+               37|37	101	165	229	
+               38|38	102	166	230	
+               39|39	103	167	231	
+               40|40	104	168	232	
+               41|41	105	169	233	
+               42|42	106	170	234	
+               43|43	107	171	235	
+               44|44	108	172	236	
+               45|45	109	173	237	
+               46|46	110	174	238	
+               47|47	111	175	239	
+               48|48	112	176	240	
+               49|49	113	177	241	
+               50|50	114	178	242	
+               51|51	115	179	243	
+               52|52	116	180	244	
+               53|53	117	181	245	
+               54|54	118	182	246	
+               55|55	119	183	247	
+               56|56	120	184	248	
+               57|57	121	185	249	
+               58|58	122	186	250	
+               59|59	123	187	251	
+               60|60	124	188	252	
+               61|61	125	189	253	
+               62|62	126	190	254	
+               63|63	127	191	255	
+[x86-TOPO]-17835 : Display Matrix Topology
+L2-id
+               0|0	1	64	65	128	129	192	193	
+               1|2	3	66	67	130	131	194	195	
+               2|4	5	68	69	132	133	196	197	
+               3|6	7	70	71	134	135	198	199	
+               4|8	9	72	73	136	137	200	201	
+               5|10	11	74	75	138	139	202	203	
+               6|12	13	76	77	140	141	204	205	
+               7|14	15	78	79	142	143	206	207	
+               8|16	17	80	81	144	145	208	209	
+               9|18	19	82	83	146	147	210	211	
+               10|20	21	84	85	148	149	212	213	
+               11|22	23	86	87	150	151	214	215	
+               12|24	25	88	89	152	153	216	217	
+               13|26	27	90	91	154	155	218	219	
+               14|28	29	92	93	156	157	220	221	
+               15|30	31	94	95	158	159	222	223	
+               16|32	33	96	97	160	161	224	225	
+               17|34	35	98	99	162	163	226	227	
+               18|36	37	100	101	164	165	228	229	
+               19|38	39	102	103	166	167	230	231	
+               20|40	41	104PARSEC Benchmark Suite Version 3.0-beta-20150206
+[HOOKS]-18564 : PARSEC Hooks Version 1.2
+[HOOKS]-18564 : Entering ROI
+Num of Options: 10000000
+Num of Runs: 100
+Size of data: 400000000
+[HOOKS]-18564 : Leaving ROI
+[HOOKS]-18564 : Total time spent in ROI: 634.542s
+[HOOKS]-18564 : Terminating
+[ECO-HOOKS]-18564 : blackscholes finished
+PARSEC Benchmark Suite Version 3.0-beta-20150206
+[HOOKS]-18572 : PARSEC Hooks Version 1.2
+[HOOKS]-18572 : Entering ROI
+Threading with Posix Threads
+Number of threads : 3
+Using dataset : /home/amaity/Desktop/parsec-3.0/pkgs/apps/bodytrack/inputs/sequenceB_261/
+4000 particles with 5 annealing layers
+
+Processing frame 0
+Processing frame 1
+Processing frame 2
+Processing frame 3
+Processing frame 4
+Processing frame 5
+Processing frame 6
+Processing frame 7
+Processing frame 8
+Processing frame 9
+Processing frame 10
+Processing frame 11
+Processing frame 12
+Processing frame 13
+Processing frame 14
+Processing frame 15
+Processing frame 16
+Processing frame 17
+Processing frame 18
+Processing frame 19
+Processing frame 20
+Processing frame 21
+Processing frame 22
+Processing frame 23
+Processing frame 24
+Processing frame 25
+Processing frame 26
+Processing frame 27
+Processing frame 28
+Processing frame 29
+Processing frame 30
+Processing frame 31
+Processing frame 32
+Processing frame 33
+Processing frame 34
+Processing frame 35
+Processing frame 36
+Processing frame 37
+Processing frame 38
+Processing frame 39
+Processing frame 40
+Processing frame 41
+Processing frame 42
+Processing frame 43
+Processing frame 44
+Processing frame 45
+Processing frame 46
+Processing frame 47
+Processing frame 48
+Processing frame 49
+Processing frame 50
+Processing frame 51
+Processing frame 52
+Processing frame 53
+Processing frame 54
+Processing frame 55
+Processing frame 56
+Processing frame 57
+Processing frame 58
+Processing frame 59
+Processing frame 60
+Processing frame 61
+Processing frame 62
+Processing frame 63
+Processing frame 64
+Processing frame 65
+Processing frame 66
+Processing frame 67
+Processing frame 68
+Processing frame 69
+Processing frame 70
+Processing frame 71
+Processing frame 72
+Processing frame 73
+Processing frame 74
+Processing frame 75
+Processing frame 76
+Processing frame 77
+Processing frame 78
+Processing frame 79
+Processing frame 80
+Processing frame 81
+Processing frame 82
+Processing frame 83
+Processing frame 84
+Processing frame 85
+Processing frame 86
+Processing frame 87
+Processing frame 88
+Processing frame 89
+Processing frame 90
+Processing frame 91
+Processing frame 92
+Processing frame 93
+Processing frame 94
+Processing frame 95
+Processing frame 96
+Processing frame 97
+Processing frame 98
+Processing frame 99
+Processing frame 100
+Processing frame 101
+Processing frame 102
+Processing frame 103
+Processing frame 104
+Processing frame 105
+Processing frame 106
+Processing frame 107
+Processing frame 108
+Processing frame 109
+Processing frame 110
+Processing frame 111
+Processing frame 112
+Processing frame 113
+Processing frame 114
+Processing frame 115
+Processing frame 116
+Processing frame 117
+Processing frame 118
+Processing frame 119
+Processing frame 120
+Processing frame 121
+Processing frame 122
+Processing frame 123
+Processing frame 124
+Processing frame 125
+Processing frame 126
+Processing frame 127
+Processing frame 128
+Processing frame 129
+Processing frame 130
+Processing frame 131
+Processing frame 132
+Processing frame 133
+Processing frame 134
+Processing frame 135
+Processing frame 136
+Processing frame 137
+Processing frame 138
+Processing frame 139
+Processing frame 140
+Processing frame 141
+Processing frame 142
+Processing frame 143
+Processing frame 144
+Processing frame 145
+Processing frame 146
+Processing frame 147
+Processing frame 148
+Processing frame 149
+Processing frame 150
+Processing frame 151
+Processing frame 152
+Processing frame 153
+Processing frame 154
+Processing frame 155
+Processing frame 156
+Processing frame 157
+Processing frame 158
+Processing frame 159
+Processing frame 160
+Processing frame 161
+Processing frame 162
+Processing frame 163
+Processing frame 164
+Processing frame 165
+Processing frame 166
+Processing frame 167
+Processing frame 168
+Processing frame 169
+Processing frame 170
+Processing frame 171
+Processing frame 172
+Processing frame 173
+Processing frame 174
+Processing frame 175
+Processing frame 176
+Processing frame 177
+Processing frame 178
+Processing frame 179
+Processing frame 180
+Processing frame 181
+Processing frame 182
+Processing frame 183
+Processing frame 184
+Processing frame 185
+Processing frame 186
+Processing frame 187
+Processing frame 188
+Processing frame 189
+Processing frame 190
+Processing frame 191
+Processing frame 192
+Processing frame 193
+Processing frame 194
+Processing frame 195
+Processing frame 196
+Processing frame 197
+Processing frame 198
+Processing frame 199
+Processing frame 200
+Processing frame 201
+Processing frame 202
+Processing frame 203
+Processing frame 204
+Processing frame 205
+Processing frame 206
+Processing frame 207
+Processing frame 208
+Processing frame 209
+Processing frame 210
+Processing frame 211
+Processing frame 212
+Processing frame 213
+Processing frame 214
+Processing frame 215
+Processing frame 216
+Processing frame 217
+Processing frame 218
+Processing frame 219
+Processing frame 220
+Processing frame 221
+Processing frame 222
+Processing frame 223
+Processing frame 224
+Processing frame 225
+Processing frame 226
+Processing frame 227
+Processing frame 228
+Processing frame 229
+Processing frame 230
+Processing frame 231
+Processing frame 232
+Processing frame 233
+Processing frame 234
+Processing frame 235
+Processing frame 236
+Processing frame 237
+Processing frame 238
+Processing frame 239
+Processing frame 240
+Processing frame 241
+Processing frame 242
+Processing frame 243
+Processing frame 244
+Processing frame 245
+Processing frame 246
+Processing frame 247
+Processing frame 248
+Processing frame 249
+Processing frame 250
+Processing frame 251
+Processing frame 252
+Processing frame 253
+Processing frame 254
+Processing frame 255
+Processing frame 256
+Processing frame 257
+Processing frame 258
+Processing frame 259
+Processing frame 260
+[HOOKS]-18572 : Leaving ROI
+[HOOKS]-18572 : Total time spent in ROI: 674.524s
+[HOOKS]-18572 : Terminating
+[ECO-HOOKS]-18572 : bodytrack finished
+PARSEC Benchmark Suite Version 3.0-beta-20150206
+[HOOKS]-18923 : PARSEC Hooks Version 1.2
+[HOOKS]-18923 : Entering ROI
+Threadcount: 3
+15000 swaps per temperature step
+start temperature: 2000
+netlist filename: /home/amaity/Desktop/parsec-3.0/pkgs/kernels/canneal/inputs/2500000.nets
+number of temperature steps: 6000
+locs created
+locs assigned
+Just saw element: 100000
+Just saw element: 200000
+Just saw element: 300000
+Just saw element: 400000
+Just saw element: 500000
+Just saw element: 600000
+Just saw element: 700000
+Just saw element: 800000
+Just saw element: 900000
+Just saw element: 1000000
+Just saw element: 1100000
+Just saw element: 1200000
+Just saw element: 1300000
+Just saw element: 1400000
+Just saw element: 1500000
+Just saw element: 1600000
+Just saw element: 1700000
+Just saw element: 1800000
+Just saw element: 1900000
+Just saw element: 2000000
+Just saw element: 2100000
+Just saw element: 2200000
+Just saw element: 2300000
+Just saw element: 2400000
+Just saw element: 2500000
+netlist created. 2500000 elements.
+[HOOKS]-18923 : Leaving ROI
+Final routing is: 9.03205e+09
+[HOOKS]-18923 : Total time spent in ROI: 611.542s
+[HOOKS]-18923 : Terminating
+[ECO-HOOKS]-18923 : canneal finished
+PARSEC Benchmark Suite Version 3.0-beta-20150206
+[HOOKS]-18931 : PARSEC Hooks Version 1.2
+[HOOKS]-18931 : Entering ROI
+[HOOKS]-18931 : Leaving ROI
+Total input size:                      671.58 MB
+Total output size:                     637.28 MB
+Effective compression factor:            1.05x
+
+Mean data chunk size:                    1.88 KB (stddev: 2023.50 KB)
+Amount of duplicate chunks:             54.49%
+Data size after deduplication:         658.95 MB (compression factor: 1.02x)
+Data size after compression:           630.26 MB (compression factor: 1.05x)
+Output overhead:                         1.10%
+[HOOKS]-18931 : Total time spent in ROI: 91.321s
+[HOOKS]-18931 : Terminating
+[ECO-HOOKS]-18931 : dedup finished
+PARSEC Benchmark Suite Version 3.0-beta-20150206
+[HOOKS]-18947 : PARSEC Hooks Version 1.2
+[HOOKS]-18947 : Entering ROI
+[HOOKS]-18947 : Leaving ROI
+QUERY TIME: 1160.348 seconds
+[HOOKS]-18947 : Total time spent in ROI: 1160.348s
+[HOOKS]-18947 : Terminating
+[ECO-HOOKS]-18947 : ferret finished
+PARSEC Benchmark Suite Version 3.0-beta-20150206
+[HOOKS]-18976 : PARSEC Hooks Version 1.2
+this =0xb50240
+PARSEC Benchmark Suite Version 3.0-beta-20150206
+[HOOKS]-18977 : PARSEC Hooks Version 1.2
+initializing LRT ray tracer ...
+default BVH builder : binnedalldimssavespace
+
+
+Options:   automove = ;
+     files = /home/amaity/Desktop/parsec-3.0/pkgs/apps/raytrace/inputs/thai_statue.obj;
+    frames = 200;
+ nthreads  = 3;
+       res = [1920, 1080];
+
+Using memory framebuffer...
+Adding obj file: /home/amaity/Desktop/parsec-3.0/pkgs/apps/raytrace/inputs/thai_statue.obj
+Using auto camera...
+num nodes in scene graph 1
+adding 4999996 vertices
+adding 10000000 triangles
+finalizing geometry
+vertices            4999996 (58593.7 KB)
+triangles           10000000 (117188 KB)
+texture coordinates 0 (0 KB)
+No materials -> create dummy material
+building index
+using BVH builder default
+build time 105.805
+done
+sceneAABB =[[[-117.959,-195.497,-99.8228,0] ],[[117.252,205.549,103.342,0] ]]
+Rendering 200 frames... 
+[HOOKS]-18977 : Entering ROI
+[HOOKS]-18977 : Leaving ROI
+[ECO-HOOKS]-18977 : raytrace finished
+Done
+[HOOKS]-18977 : Total time spent in ROI: 1262.051s
+[HOOKS]-18977 : Terminating
+
+
+[HOOKS]-18988 : PARSEC Hooks Version 1.2
+[HOOKS]-18988 : Entering ROI
+[HOOKS]-18988 : Leaving ROI
+[HOOKS]-18988 : Total time spent in ROI: 1213.280s
+[HOOKS]-18988 : Terminating
+[ECO-HOOKS]-18988 : streamcluster finished
+PARSEC Benchmark Suite Version 3.0-beta-20150206
+[HOOKS]-19078 : PARSEC Hooks Version 1.2
+[HOOKS]-19078 : Entering ROI
+Number of Simulations: 1000000,  Number of threads: 3 Number of swaptions: 128
+[HOOKS]-19078 : Leaving ROI
+[HOOKS]-19078 : Total time spent in ROI: 1334.752s
+[HOOKS]-19078 : Terminating
+[ECO-HOOKS]-19078 : swaptions finished
+	105	168	169	232	233	
+               21|42	43	106	107	170	171	234	235	
+               22|44	45	108	109	172	173	236	237	
+               23|46	47	110	111	174	175	238	239	
+               24|48	49	112	113	176	177	240	241	
+               25|50	51	114	115	178	179	242	243	
+               26|52	53	116	117	180	181	244	245	
+               27|54	55	118	119	182	183	246	247	
+               28|56	57	120	121	184	185	248	249	
+               29|58	59	122	123	186	187	250	251	
+               30|60	61	124	125	188	189	252	253	
+               31|62	63	126	127	190	191	254	255	
+[x86-TOPO]-17835 : No L3 cache for Xeon Phi series
+[x86-TOPO]-17835 : Display Matrix Topology
+socket-id
+               0|0	1	2	3	4	5	6	7	8	9	10	11	12	13	14	15	16	17	18	19	20	21	22	23	24	25	26	27	28	29	30	31	32	33	34	35	36	37	38	39	40	41	42	43	44	45	46	47	48	49	50	51	52	53	54	55	56	57	58	59	60	61	62	63	64	65	66	67	68	69	70	71	72	73	74	75	76	77	78	79	80	81	82	83	84	85	86	87	88	89	90	91	92	93	94	95	96	97	98	99	100	101	102	103	104	105	106	107	108	109	110	111	112	113	114	115	116	117	118	119	120	121	122	123	124	125	126	127	128	129	130	131	132	133	134	135	136	137	138	139	140	141	142	143	144	145	146	147	148	149	150	151	152	153	154	155	156	157	158	159	160	161	162	163	164	165	166	167	168	169	170	171	172	173	174	175	176	177	178	179	180	181	182	183	184	185	186	187	188	189	190	191	192	193	194	195	196	197	198	199	200	201	202	203	204	205	206	207	208	209	210	211	212	213	214	215	216	217	218	219	220	221	222	223	224	225	226	227	228	229	230	231	232	233	234	235	236	237	238	239	240	241	242	243	244	245	246	247	248	249	250	251	252	253	254	255	
+[x86-TOPO]-17835 : Topology.txt deleted
+[DATE2019-scheduler]-17835 : Obtaining a static thread<---->CPU map
+[DATE2019-scheduler]-17835 : App-18564 finished
+[DATE2019-scheduler]-17835 : blackscholes finished
+[DATE2019-scheduler]-17835 : Obtaining a static thread<---->CPU map
+[DATE2019-scheduler]-17835 : App-18572 finished
+[DATE2019-scheduler]-17835 : bodytrack finished
+[DATE2019-scheduler]-17835 : Obtaining a static thread<---->CPU map
+[DATE2019-scheduler]-17835 : App-18923 finished
+[DATE2019-scheduler]-17835 : canneal finished
+[DATE2019-scheduler]-17835 : Obtaining a static thread<---->CPU map
+[DATE2019-scheduler]-17835 : App-18931 finished
+[DATE2019-scheduler]-17835 : dedup finished
+[DATE2019-scheduler]-17835 : Obtaining a static thread<---->CPU map
+[DATE2019-scheduler]-17835 : App-18947 finished
+[DATE2019-scheduler]-17835 : ferret finished
+[DATE2019-scheduler]-17835 : Obtaining a static thread<---->CPU map
+[DATE2019-scheduler]-17835 : App-18976 finished
+[DATE2019-scheduler]-17835 : fluidanimate finished
+[DATE2019-scheduler]-17835 : Obtaining a static thread<---->CPU map
+[DATE2019-scheduler]-17835 : App-18977 finished
+[DATE2019-scheduler]-17835 : raytrace finished
+[DATE2019-scheduler]-17835 : Obtaining a static thread<---->CPU map
+[DATE2019-scheduler]-17835 : App-18988 finished
+[DATE2019-scheduler]-17835 : streamcluster finished
+[DATE2019-scheduler]-17835 : Obtaining a static thread<---->CPU map
+[DATE2019-scheduler]-17835 : App-19078 finished
+[DATE2019-scheduler]-17835 : swaptions finished
+[DATE2019-scheduler]-17835 : Welcome
+[x86-TOPO]-17835 : Extracting CPU Topology
+[x86-TOPO]-17835 : Found Processor : Knight's Landing
+[x86-TOPO]-17835 : Initializing Topology
+[x86-TOPO]-17835 : Topology.txt created
+[x86-TOPO]-17835 : Display Matrix Topology
+Core-id
+               0|0	64	128	192	
+               1|1	65	129	193	
+               2|2	66	130	194	
+               3|3	67	131	195	
+               4|4	68	132	196	
+               5|5	69	133	197	
+               6|6	70	134	198	
+               7|7	71	135	199	
+               8|8	72	136	200	
+               9|9	73	137	201	
+               10|10	74	138	202	
+               11|11	75	139	203	
+               12|12	76	140	204	
+               13|13	77	141	205	
+               14|14	78	142	206	
+               15|15	79	143	207	
+               16|16	80	144	208	
+               17|17	81	145	209	
+               18|18	82	146	210	
+               19|19	83	147	211	
+               20|20	84	148	212	
+               21|21	85	149	213	
+               22|22	86	150	214	
+               23|23	87	151	215	
+               24|24	88	152	216	
+               25|25	89	153	217	
+               26|26	90	154	218	
+               27|27	91	155	219	
+               28|28	92	156	220	
+               29|29	93	157	221	
+               30|30	94	158	222	
+               31|31	95	159	223	
+               32|32	96	160	224	
+               33|33	97	161	225	
+               34|34	98	162	226	
+               35|35	99	163	227	
+               36|36	100	164	228	
+               37|37	101	165	229	
+               38|38	102	166	230	
+               39|39	103	167	231	
+               40|40	104	168	232	
+               41|41	105	169	233	
+               42|42	106	170	234	
+               43|43	107	171	235	
+               44|44	108	172	236	
+               45|45	109	173	237	
+               46|46	110	174	238	
+               47|47	111	175	239	
+               48|48	112	176	240	
+               49|49	113	177	241	
+               50|50	114	178	242	
+               51|51	115	179	243	
+               52|52	116	180	244	
+               53|53	117	181	245	
+               54|54	118	182	246	
+               55|55	119	183	247	
+               56|56	120	184	248	
+               57|57	121	185	249	
+               58|58	122	186	250	
+               59|59	123	187	251	
+               60|60	124	188	252	
+               61|61	125	189	253	
+               62|62	126	190	254	
+               63|63	127	191	255	
+[x86-TOPO]-17835 : Display Matrix Topology
+L2-id
+               0|0	1	64	65	128	129	192	193	
+               1|2	3	66	67	130	131	194	195	
+               2|4	5	68	69	132	133	196	197	
+               3|6	7	70	71	134	135	198	199	
+               4|8	9	72	73	136	137	200	201	
+               5|10	11	74	75	138	139	202	203	
+               6|12	13	76	77	140	141	204	205	
+               7|14	15	78	79	142	143	206	207	
+               8|16	17	80	81	144	145	208	209	
+               9|18	19	82	83	146	147	210	211	
+               10|20	21	84	85	148	149	212	213	
+               11|22	23	86	87	150	151	214	215	
+               12|24	25	88	89	152	153	216	217	
+               13|26	27	90	91	154	155	218	219	
+               14|28	29	92	93	156	157	220	221	
+               15|30	31	94	95	158	159	222	223	
+               16|32	33	96	97	160	161	224	225	
+               17|34	35	98	99	162	163	226	227	
+               18|36	37	100	101	164	165	228	229	
+               19|38	39	102	103	166	167	230	231	
+               20|40	41	104	105	168	169	232	233	
+               21|42	43	106	107	170	171	234	235	
+               22|44	45	108	109	172	173	236	237	
+               23|46	47	110	111	174	175	238	239	
+               24|48	49	112	113	176	177	240	241	
+               25|50	51	114	115	178	179	242	243	
+               26|52	53	116	117	180	181	244	245	
+               27|54	55	118	119	182	183	246	247	
+               28|56	57	120	121	184	185	248	249	
+               29|58	59	122	123	186	187	250	251	
+               30|60	61	124	125	188	189	252	253	
+               31|62	63	126	127	190	191	254	255	
+[x86-TOPO]-17835 : No L3 cache for Xeon Phi series
+[x86-TOPO]-17835 : Display Matrix Topology
+socket-id
+               0|0	1	2	3	4	5	6	7	8	9	10	11	12	13	14	15	16	17	18	19	20	21	22	23	24	25	26	27	28	29	30	31	32	33	34	35	36	37	38	39	40	41	42	43	44	45	46	47	48	49	50	51	52	53	54	55	56	57	58	59	60	61	62	63	64	65	66	67	68	69	70	71	72	73	74	75	76	77	78	79	80	81	82	83	84	85	86	87	88	89	90	91	92	93	94	95	96	97	98	99	100	101	102	103	104	105	106	107	108	109	110	111	112	113	114	115	116	117	118	119	120	121	122	123	124	125	126	127	128	129	130	131	132	133	134	135	136	137	138	139	140	141	142	143	144	145	146	147	148	149	150	151	152	153	154	155	156	157	158	159	160	161	162	163	164	165	166	167	168	169	170	171	172	173	174	175	176	177	178	179	180	181	182	183	184	185	186	187	188	189	190	191	192	193	194	195	196	197	198	199	200	201	202	203	204	205	206	207	208	209	210	211	212	213	214	215	216	217	218	219	220	221	222	223	224	225	226	227	228	229	230	231	232	233	234	235	236	237	238	239	240	241	242	243	244	245	246	247	248	249	250	251	252	253	254	255	
+[x86-TOPO]-17835 : Topology.txt deleted
+[DATE2019-scheduler]-17835 : Obtaining a static thread<-PARSEC Benchmark Suite Version 3.0-beta-20150206
+[HOOKS]-19092 : PARSEC Hooks Version 1.2
+[HOOKS]-19092 : Entering ROI
+Num of Options: 10000000
+Num of Runs: 100
+Size of data: 400000000
+[HOOKS]-19092 : Leaving ROI
+[HOOKS]-19092 : Total time spent in ROI: 605.316s
+[HOOKS]-19092 : Terminating
+[ECO-HOOKS]-19092 : blackscholes finished
+PARSEC Benchmark Suite Version 3.0-beta-20150206
+[HOOKS]-19098 : PARSEC Hooks Version 1.2
+[HOOKS]-19098 : Entering ROI
+Threading with Posix Threads
+Number of threads : 3
+Using dataset : /home/amaity/Desktop/parsec-3.0/pkgs/apps/bodytrack/inputs/sequenceB_261/
+4000 particles with 5 annealing layers
+
+Processing frame 0
+Processing frame 1
+Processing frame 2
+Processing frame 3
+Processing frame 4
+Processing frame 5
+Processing frame 6
+Processing frame 7
+Processing frame 8
+Processing frame 9
+Processing frame 10
+Processing frame 11
+Processing frame 12
+Processing frame 13
+Processing frame 14
+Processing frame 15
+Processing frame 16
+Processing frame 17
+Processing frame 18
+Processing frame 19
+Processing frame 20
+Processing frame 21
+Processing frame 22
+Processing frame 23
+Processing frame 24
+Processing frame 25
+Processing frame 26
+Processing frame 27
+Processing frame 28
+Processing frame 29
+Processing frame 30
+Processing frame 31
+Processing frame 32
+Processing frame 33
+Processing frame 34
+Processing frame 35
+Processing frame 36
+Processing frame 37
+Processing frame 38
+Processing frame 39
+Processing frame 40
+Processing frame 41
+Processing frame 42
+Processing frame 43
+Processing frame 44
+Processing frame 45
+Processing frame 46
+Processing frame 47
+Processing frame 48
+Processing frame 49
+Processing frame 50
+Processing frame 51
+Processing frame 52
+Processing frame 53
+Processing frame 54
+Processing frame 55
+Processing frame 56
+Processing frame 57
+Processing frame 58
+Processing frame 59
+Processing frame 60
+Processing frame 61
+Processing frame 62
+Processing frame 63
+Processing frame 64
+Processing frame 65
+Processing frame 66
+Processing frame 67
+Processing frame 68
+Processing frame 69
+Processing frame 70
+Processing frame 71
+Processing frame 72
+Processing frame 73
+Processing frame 74
+Processing frame 75
+Processing frame 76
+Processing frame 77
+Processing frame 78
+Processing frame 79
+Processing frame 80
+Processing frame 81
+Processing frame 82
+Processing frame 83
+Processing frame 84
+Processing frame 85
+Processing frame 86
+Processing frame 87
+Processing frame 88
+Processing frame 89
+Processing frame 90
+Processing frame 91
+Processing frame 92
+Processing frame 93
+Processing frame 94
+Processing frame 95
+Processing frame 96
+Processing frame 97
+Processing frame 98
+Processing frame 99
+Processing frame 100
+Processing frame 101
+Processing frame 102
+Processing frame 103
+Processing frame 104
+Processing frame 105
+Processing frame 106
+Processing frame 107
+Processing frame 108
+Processing frame 109
+Processing frame 110
+Processing frame 111
+Processing frame 112
+Processing frame 113
+Processing frame 114
+Processing frame 115
+Processing frame 116
+Processing frame 117
+Processing frame 118
+Processing frame 119
+Processing frame 120
+Processing frame 121
+Processing frame 122
+Processing frame 123
+Processing frame 124
+Processing frame 125
+Processing frame 126
+Processing frame 127
+Processing frame 128
+Processing frame 129
+Processing frame 130
+Processing frame 131
+Processing frame 132
+Processing frame 133
+Processing frame 134
+Processing frame 135
+Processing frame 136
+Processing frame 137
+Processing frame 138
+Processing frame 139
+Processing frame 140
+Processing frame 141
+Processing frame 142
+Processing frame 143
+Processing frame 144
+Processing frame 145
+Processing frame 146
+Processing frame 147
+Processing frame 148
+Processing frame 149
+Processing frame 150
+Processing frame 151
+Processing frame 152
+Processing frame 153
+Processing frame 154
+Processing frame 155
+Processing frame 156
+Processing frame 157
+Processing frame 158
+Processing frame 159
+Processing frame 160
+Processing frame 161
+Processing frame 162
+Processing frame 163
+Processing frame 164
+Processing frame 165
+Processing frame 166
+Processing frame 167
+Processing frame 168
+Processing frame 169
+Processing frame 170
+Processing frame 171
+Processing frame 172
+Processing frame 173
+Processing frame 174
+Processing frame 175
+Processing frame 176
+Processing frame 177
+Processing frame 178
+Processing frame 179
+Processing frame 180
+Processing frame 181
+Processing frame 182
+Processing frame 183
+Processing frame 184
+Processing frame 185
+Processing frame 186
+Processing frame 187
+Processing frame 188
+Processing frame 189
+Processing frame 190
+Processing frame 191
+Processing frame 192
+Processing frame 193
+Processing frame 194
+Processing frame 195
+Processing frame 196
+Processing frame 197
+Processing frame 198
+Processing frame 199
+Processing frame 200
+Processing frame 201
+Processing frame 202
+Processing frame 203
+Processing frame 204
+Processing frame 205
+Processing frame 206
+Processing frame 207
+Processing frame 208
+Processing frame 209
+Processing frame 210
+Processing frame 211
+Processing frame 212
+Processing frame 213
+Processing frame 214
+Processing frame 215
+Processing frame 216
+Processing frame 217
+Processing frame 218
+Processing frame 219
+Processing frame 220
+Processing frame 221
+Processing frame 222
+Processing frame 223
+Processing frame 224
+Processing frame 225
+Processing frame 226
+Processing frame 227
+Processing frame 228
+Processing frame 229
+Processing frame 230
+Processing frame 231
+Processing frame 232
+Processing frame 233
+Processing frame 234
+Processing frame 235
+Processing frame 236
+Processing frame 237
+Processing frame 238
+Processing frame 239
+Processing frame 240
+Processing frame 241
+Processing frame 242
+Processing frame 243
+Processing frame 244
+Processing frame 245
+Processing frame 246
+Processing frame 247
+Processing frame 248
+Processing frame 249
+Processing frame 250
+Processing frame 251
+Processing frame 252
+Processing frame 253
+Processing frame 254
+Processing frame 255
+Processing frame 256
+Processing frame 257
+Processing frame 258
+Processing frame 259
+Processing frame 260
+[HOOKS]-19098 : Leaving ROI
+[HOOKS]-19098 : Total time spent in ROI: 453.285s
+[HOOKS]-19098 : Terminating
+[ECO-HOOKS]-19098 : bodytrack finished
+PARSEC Benchmark Suite Version 3.0-beta-20150206
+[HOOKS]-19105 : PARSEC Hooks Version 1.2
+[HOOKS]-19105 : Entering ROI
+Threadcount: 3
+15000 swaps per temperature step
+start temperature: 2000
+netlist filename: /home/amaity/Desktop/parsec-3.0/pkgs/kernels/canneal/inputs/2500000.nets
+number of temperature steps: 6000
+locs created
+locs assigned
+Just saw element: 100000
+Just saw element: 200000
+Just saw element: 300000
+Just saw element: 400000
+Just saw element: 500000
+Just saw element: 600000
+Just saw element: 700000
+Just saw element: 800000
+Just saw element: 900000
+Just saw element: 1000000
+Just saw element: 1100000
+Just saw element: 1200000
+Just saw element: 1300000
+Just saw element: 1400000
+Just saw element: 1500000
+Just saw element: 1600000
+Just saw element: 1700000
+Just saw element: 1800000
+Just saw element: 1900000
+Just saw element: 2000000
+Just saw element: 2100000
+Just saw element: 2200000
+Just saw element: 2300000
+Just saw element: 2400000
+Just saw element: 2500000
+netlist created. 2500000 elements.
+[HOOKS]-19105 : Leaving ROI
+Final routing is: 9.03264e+09
+[HOOKS]-19105 : Total time spent in ROI: 503.057s
+[HOOKS]-19105 : Terminating
+[ECO-HOOKS]-19105 : canneal finished
+PARSEC Benchmark Suite Version 3.0-beta-20150206
+[HOOKS]-19111 : PARSEC Hooks Version 1.2
+[HOOKS]-19111 : Entering ROI
+[HOOKS]-19111 : Leaving ROI
+Total input size:                      671.58 MB
+Total output size:                     637.28 MB
+Effective compression factor:            1.05x
+
+Mean data chunk size:                    1.88 KB (stddev: 2023.50 KB)
+Amount of duplicate chunks:             54.49%
+Data size after deduplication:         658.95 MB (compression factor: 1.02x)
+Data size after compression:           630.26 MB (compression factor: 1.05x)
+Output overhead:                         1.10%
+[HOOKS]-19111 : Total time spent in ROI: 50.680s
+[HOOKS]-19111 : Terminating
+[ECO-HOOKS]-19111 : dedup finished
+PARSEC Benchmark Suite Version 3.0-beta-20150206
+[HOOKS]-19125 : PARSEC Hooks Version 1.2
+[HOOKS]-19125 : Entering ROI
+[HOOKS]-19125 : Leaving ROI
+QUERY TIME: 744.484 seconds
+[HOOKS]-19125 : Total time spent in ROI: 744.484s
+[HOOKS]-19125 : Terminating
+[ECO-HOOKS]-19125 : ferret finished
+PARSEC Benchmark Suite Version 3.0-beta-20150206
+[HOOKS]-19145 : PARSEC Hooks Version 1.2
+this =0xb50240
+PARSEC Benchmark Suite Version 3.0-beta-20150206
+[HOOKS]-19146 : PARSEC Hooks Version 1.2
+initializing LRT ray tracer ...
+default BVH builder : binnedalldimssavespace
+
+
+Options:   automove = ;
+     files = /home/amaity/Desktop/parsec-3.0/pkgs/apps/raytrace/inputs/thai_statue.obj;
+    frames = 200;
+ nthreads  = 3;
+       res = [1920, 1080];
+
+Using memory framebuffer...
+Adding obj file: /home/amaity/Desktop/parsec-3.0/pkgs/apps/raytrace/inputs/thai_statue.obj
+Using auto camera...
+num nodes in scene graph 1
+adding 4999996 vertices
+adding 10000000 triangles
+finalizing geometry
+vertices            4999996 (58593.7 KB)
+triangles           10000000 (117188 KB)
+texture coordinates 0 (0 KB)
+No materials -> create dummy material
+building index
+using BVH builder default
+build time 105.733
+done
+sceneAABB =[[[-117.959,-195.497,-99.8228,0] ],[[117.252,205.549,103.342,0] ]]
+Rendering 200 frames... 
+[HOOKS]-19146 : Entering ROI
+[HOOKS]-19146 : Leaving ROI
+[ECO-HOOKS]-19146 : raytrace finished
+Done
+[HOOKS]-19146 : Total time spent in ROI: 1261.420s
+[HOOKS]-19146 : Terminating
+
+
+[HOOKS]-19351 : PARSEC Hooks Version 1.2
+[HOOKS]-19351 : Entering ROI
+[HOOKS]-19351 : Leaving ROI
+[HOOKS]-19351 : Total time spent in ROI: 991.305s
+[HOOKS]-19351 : Terminating
+[ECO-HOOKS]-19351 : streamcluster finished
+PARSEC Benchmark Suite Version 3.0-beta-20150206
+[HOOKS]-19373 : PARSEC Hooks Version 1.2
+[HOOKS]-19373 : Entering ROI
+Number of Simulations: 1000000,  Number of threads: 3 Number of swaptions: 128
+[HOOKS]-19373 : Leaving ROI
+[HOOKS]-19373 : Total time spent in ROI: 940.174s
+[HOOKS]-19373 : Terminating
+[ECO-HOOKS]-19373 : swaptions finished
+--->CPU map
+[DATE2019-scheduler]-17835 : App-19092 finished
+[DATE2019-scheduler]-17835 : blackscholes finished
+[DATE2019-scheduler]-17835 : Obtaining a static thread<---->CPU map
+[DATE2019-scheduler]-17835 : App-19098 finished
+[DATE2019-scheduler]-17835 : bodytrack finished
+[DATE2019-scheduler]-17835 : Obtaining a static thread<---->CPU map
+[DATE2019-scheduler]-17835 : App-19105 finished
+[DATE2019-scheduler]-17835 : canneal finished
+[DATE2019-scheduler]-17835 : Obtaining a static thread<---->CPU map
+[DATE2019-scheduler]-17835 : App-19111 finished
+[DATE2019-scheduler]-17835 : dedup finished
+[DATE2019-scheduler]-17835 : Obtaining a static thread<---->CPU map
+[DATE2019-scheduler]-17835 : App-19125 finished
+[DATE2019-scheduler]-17835 : ferret finished
+[DATE2019-scheduler]-17835 : Obtaining a static thread<---->CPU map
+[DATE2019-scheduler]-17835 : App-19145 finished
+[DATE2019-scheduler]-17835 : fluidanimate finished
+[DATE2019-scheduler]-17835 : Obtaining a static thread<---->CPU map
+[DATE2019-scheduler]-17835 : App-19146 finished
+[DATE2019-scheduler]-17835 : raytrace finished
+[DATE2019-scheduler]-17835 : Obtaining a static thread<---->CPU map
+[DATE2019-scheduler]-17835 : App-19351 finished
+[DATE2019-scheduler]-17835 : streamcluster finished
+[DATE2019-scheduler]-17835 : Obtaining a static thread<---->CPU map
+[DATE2019-scheduler]-17835 : App-19373 finished
+[DATE2019-scheduler]-17835 : swaptions finished

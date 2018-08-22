@@ -158,72 +158,18 @@ void __parsec_roi_end();
 
 /**
  * Ecolab specific Hooks
- * In order to affine the
- * slave threads/Computational threads
- * pthread affinity,
- * and hashed affinity
+ * In order to obtain/verify
+ * thread/task affinity of a CPU
  */
-#define ECOLABKNL_HOOKS
-
 #ifdef ECOLABKNL_HOOKS
-#include <stdbool.h>
-
-#define MAX_CPUS	            256
-
-/* CPU Model codes */
-#define CPU_SANDYBRIDGE		    42
-#define CPU_SANDYBRIDGE_EP	    45
-#define CPU_IVYBRIDGE		    58
-#define CPU_IVYBRIDGE_EP	    62
-#define CPU_HASWELL		        60
-#define CPU_HASWELL_ULT		    69
-#define CPU_HASWELL_GT3E	    70
-#define CPU_HASWELL_EP		    63
-#define CPU_BROADWELL		    61
-#define CPU_BROADWELL_GT3E	    71
-#define CPU_BROADWELL_EP	    79
-#define CPU_BROADWELL_DE	    86
-#define CPU_SKYLAKE		        78
-#define CPU_SKYLAKE_HS		    94
-#define CPU_SKYLAKE_X		    85
-#define CPU_KNIGHTS_LANDING	    87
-#define CPU_KNIGHTS_MILL	    133
-#define CPU_KABYLAKE_MOBILE	    142
-#define CPU_KABYLAKE		    158
-#define CPU_ATOM_SILVERMONT	    55
-#define CPU_ATOM_AIRMONT	    76
-#define CPU_ATOM_MERRIFIELD	    74
-#define CPU_ATOM_MOOREFIELD	    90
-#define CPU_ATOM_GOLDMONT	    92
-#define CPU_ATOM_GEMINI_LAKE	122
-#define CPU_ATOM_DENVERTON	    95
-
-#define PRINTTOPO(string) \
-printf("[x86-TOPO-%d]: %s\n",getpid(),string)
-
-#define PRINTERROR(string) \
-fprintf(stderr,"[ERROR]: %s\n",string); \
-exit(EXIT_FAILURE)
-
-#define PRINTECP(string) \
-printf("[eco-parsec3.0-%d]: %s\n",getpid(),string)
-
-typedef struct __cpu_topo {
-	unsigned int numcpus;
-	unsigned int numcores;
-	unsigned int numsockets;
-	int model;
-} cpu_topology_t;
-
-/* The first two functions are "initialization" routines must be called before any of the affinity functions are called */
-int  detect_cpu(void);
-int  detect_topology(cpu_topology_t*);
-
-/* Affinity Functions */
-int affinity_set_cpu(int _id, bool ht_enable);
-
+#include <sys/types.h>
+#include <unistd.h>
+#define PRINTECO(arg) fprintf(stdout,"[ECO-HOOKS]-%d : %s\n",getpid(),arg)
 void ecolab_set_cpu_affinity(int);
 void ecolab_set_cpu_affinity2(int, const char*);
+
+#define MAX_THREADS   256
+#define MAX_CPUS      MAX_THREADS
 #endif /* ECOLABKNL_HOOKS */
 
 #ifdef __cplusplus

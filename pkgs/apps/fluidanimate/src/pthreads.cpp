@@ -1156,7 +1156,7 @@ void *AdvanceFramesMT(void *args)
   thread_args *targs = (thread_args *)args;
 
 #ifdef ECOLABKNL_HOOKS
-  ecolab_set_cpu_affinity(targs->tid+1);
+  //ecolab_set_cpu_affinity(targs->tid+1);
 #endif
   for(int i = 0; i < targs->frames; ++i) {
     AdvanceFrameMT(targs->tid);
@@ -1171,7 +1171,7 @@ void *AdvanceFramesMT(void *args)
   thread_args *targs = (thread_args *)args;
 
 #ifdef ECOLABKNL_HOOKS
-  ecolab_set_cpu_affinity(targs->tid+1);
+  //ecolab_set_cpu_affinity(targs->tid+1);
 #endif
 #if 1
   while(1)
@@ -1205,11 +1205,7 @@ void AdvanceFrameVisualization()
 int main(int argc, char *argv[])
 {
 #ifdef ECOLABKNL_HOOKS
-	/* detect CPU */
-	cpu_topology_t topo;
-	detect_cpu();
-	detect_topology(&topo);
-	ecolab_set_cpu_affinity(ECOLABKNL_MASTERTHREAD_AFFINITY);
+	//ecolab_set_cpu_affinity(0);
 #endif
 #ifdef PARSEC_VERSION
 #define __PARSEC_STRING(x) #x
@@ -1282,6 +1278,7 @@ int main(int argc, char *argv[])
 
 #ifdef ENABLE_PARSEC_HOOKS
   __parsec_bench_end();
+ PRINTECO("fluidanimate finished");
 #endif
 
   return 0;

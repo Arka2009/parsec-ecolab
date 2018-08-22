@@ -4,7 +4,7 @@
 parsec_dir=${PARSECROOT}
 benchmark="parsec.freqmine"
 nthreads=4
-input=native
+input=test
 
 
 # Run the benchmark natively

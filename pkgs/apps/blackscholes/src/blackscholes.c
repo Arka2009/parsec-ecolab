@@ -280,9 +280,7 @@ int bs_thread(void *tid_ptr) {
     fptype priceDelta;
     int tid = *(int *)tid_ptr;
 #ifdef ECOLABKNL_HOOKS
-#ifndef WIN32
-    ecolab_set_cpu_affinity(tid+1);
-#endif //WIN32
+    //ecolab_set_cpu_affinity(tid+1);
 #endif //ECOLABKNL_HOOKS
     int start = tid * (numOptions / nThreads);
     int end = start + (numOptions / nThreads);
@@ -317,14 +315,10 @@ int bs_thread(void *tid_ptr) {
 }
 #endif //ENABLE_TBB
 
-int main (int argc, char **argv)
-{
+int main (int argc, char **argv) {
 #ifdef ECOLABKNL_HOOKS
 	/* detect CPU */
-	cpu_topology_t topo;
-	detect_cpu();
-	detect_topology(&topo);
-    ecolab_set_cpu_affinity(ECOLABKNL_MASTERTHREAD_AFFINITY);
+    //ecolab_set_cpu_affinity(0);
 #endif /* ECOLABKNL_HOOKS */
     FILE *file;
     int i;
@@ -345,7 +339,10 @@ int main (int argc, char **argv)
 #ifdef ENABLE_PARSEC_HOOKS
    __parsec_bench_begin(__parsec_blackscholes);
 #endif
-
+/************************************* New ROI start Location (To account for memory allocation) ********************************/
+#ifdef ENABLE_PARSEC_HOOKS
+    __parsec_roi_begin();
+#endif
    if (argc != 4)
         {
                 printf("Usage:\n\t%s <nthreads> <inputFile> <outputFile>\n", argv[0]);
@@ -378,8 +375,6 @@ int main (int argc, char **argv)
         exit(1);
     }
 #endif
-
-/************************************* New ROI start Location (To account for memory allocation) ********************************/
 
     // alloc spaces for the option data
     data = (OptionData*)malloc(numOptions*sizeof(OptionData));
@@ -431,9 +426,6 @@ int main (int argc, char **argv)
 
 
 /************************************* Original ROI start Location ********************************/
-#ifdef ENABLE_PARSEC_HOOKS
-    __parsec_roi_begin();
-#endif
 #ifdef ENABLE_THREADS
 #ifdef WIN32
     HANDLE *threads;
@@ -518,6 +510,7 @@ int main (int argc, char **argv)
 
 #ifdef ENABLE_PARSEC_HOOKS
     __parsec_bench_end();
+    PRINTECO("blackscholes finished");
 #endif
 
     return 0;

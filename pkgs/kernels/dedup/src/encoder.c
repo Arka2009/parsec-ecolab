@@ -397,7 +397,7 @@ void sub_Compress(chunk_t *chunk) {
 void *Compress(void * targs) {
   struct thread_args *args = (struct thread_args *)targs;
 #ifdef ECOLABKNL_HOOKS
-    ecolab_set_cpu_affinity2(args->tid+1,"ECOLAB.parsec.dedup : Compress Stage");
+    //ecolab_set_cpu_affinity2(args->tid+1,"ECOLAB.parsec.dedup : Compress Stage");
 #endif //ECOLABKNL_HOOKS
   const int qid = args->tid / MAX_THREADS_PER_QUEUE;
   chunk_t * chunk;
@@ -525,7 +525,7 @@ int sub_Deduplicate(chunk_t *chunk) {
 void *Deduplicate(void * targs) {
   struct thread_args *args = (struct thread_args *)targs;
 #ifdef ECOLABKNL_HOOKS
-    ecolab_set_cpu_affinity2(args->tid+1,"ECOLAB.parsec.dedup : Deduplicate Stage");
+    //ecolab_set_cpu_affinity2(args->tid+1,"ECOLAB.parsec.dedup : Deduplicate Stage");
 #endif //ECOLABKNL_HOOKS
   const int qid = args->tid / MAX_THREADS_PER_QUEUE;
   chunk_t *chunk;
@@ -627,7 +627,7 @@ void *Deduplicate(void * targs) {
 void *FragmentRefine(void * targs) {
   struct thread_args *args = (struct thread_args *)targs;
 #ifdef ECOLABKNL_HOOKS
-    ecolab_set_cpu_affinity2(args->tid+1,"ECOLAB.parsec.dedup : FragmentRefine Stage");
+    //ecolab_set_cpu_affinity2(args->tid+1,"ECOLAB.parsec.dedup : FragmentRefine Stage");
 #endif //ECOLABKNL_HOOKS
   const int qid = args->tid / MAX_THREADS_PER_QUEUE;
   ringbuffer_t recv_buf, send_buf;
@@ -988,7 +988,7 @@ void *SerialIntegratedPipeline(void * targs) {
 void *Fragment(void * targs){
   struct thread_args *args = (struct thread_args *)targs;
 #ifdef ECOLABKNL_HOOKS
-    ecolab_set_cpu_affinity2(args->tid+1,"ECOLAB.parsec.dedup : Fragment Stage");
+    //ecolab_set_cpu_affinity2(args->tid+1,"ECOLAB.parsec.dedup : Fragment Stage");
 #endif //ECOLABKNL_HOOKS
   size_t preloading_buffer_seek = 0;
   int qid = 0;
@@ -1205,7 +1205,7 @@ void *Fragment(void * targs){
 void *Reorder(void * targs) {
   struct thread_args *args = (struct thread_args *)targs;
 #ifdef ECOLABKNL_HOOKS
-    ecolab_set_cpu_affinity2(args->tid+1,"ECOLAB.parsec.dedup : Reorder Stage");
+    //ecolab_set_cpu_affinity2(args->tid+1,"ECOLAB.parsec.dedup : Reorder Stage");
 #endif //ECOLABKNL_HOOKS
   int qid = 0;
   int fd = 0;

@@ -212,6 +212,10 @@ int mainOMP(string path, int cameras, int frames, int particles, int layers, int
 //Body tracking threaded with explicit Posix threads
 int mainPthreads(string path, int cameras, int frames, int particles, int layers, int threads, bool OutputBMP)
 {
+	/* New ROI */
+#if defined(ENABLE_PARSEC_HOOKS)
+        __parsec_roi_begin();
+#endif
 	cout << "Threading with Posix Threads" << endl;
 	if(threads < 1) {
 		cout << "Warning: Illegal or unspecified number of threads, using 1 thread" << endl;
@@ -247,9 +251,7 @@ int mainPthreads(string path, int cameras, int frames, int particles, int layers
 
 	vector<float> estimate;																//expected pose from particle distribution
 
-#if defined(ENABLE_PARSEC_HOOKS)
-        __parsec_roi_begin();
-#endif
+	/* Original ROI */
 	for(int i = 0; i < frames; i++)														//process each set of frames
 	{	cout << "Processing frame " << i << endl;
 		if(!pf.Update((float)i))														//Run particle filter step
@@ -368,11 +370,7 @@ int mainSingleThread(string path, int cameras, int frames, int particles, int la
 int main(int argc, char **argv)
 {
 #ifdef ECOLABKNL_HOOKS
-	/* detect CPU */
-	cpu_topology_t topo;
-	detect_cpu();
-	detect_topology(&topo);
-    ecolab_set_cpu_affinity(ECOLABKNL_MASTERTHREAD_AFFINITY);
+    //ecolab_set_cpu_affinity(0);
 #endif /* ECOLABKNL_HOOKS */
 	string path;
 	bool OutputBMP;
@@ -458,6 +456,7 @@ int main(int argc, char **argv)
 
 #if defined(ENABLE_PARSEC_HOOKS)
         __parsec_bench_end();
+		PRINTECO("bodytrack finished");
 #endif
 
 	return 0;

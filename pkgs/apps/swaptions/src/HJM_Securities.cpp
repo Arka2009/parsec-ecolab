@@ -85,7 +85,7 @@ void * worker(void *arg){
   FTYPE pdSwaptionPrice[2];
 
 #ifdef ECOLABKNL_HOOKS
-  ecolab_set_cpu_affinity(tid+1);
+  //ecolab_set_cpu_affinity(tid+1);
 #endif
 
   int beg, end, chunksize;
@@ -137,11 +137,7 @@ void print_usage(char *name) {
 int main(int argc, char *argv[])
 {
 #ifdef ECOLABKNL_HOOKS
-	/* detect CPU */
-	cpu_topology_t topo;
-	detect_cpu();
-	detect_topology(&topo);
-    ecolab_set_cpu_affinity(ECOLABKNL_MASTERTHREAD_AFFINITY);
+    //ecolab_set_cpu_affinity(0);
 #endif /* ECOLABKNL_HOOKS */
 	int iSuccess = 0;
 	int i,j;
@@ -160,7 +156,11 @@ int main(int argc, char *argv[])
 #ifdef ENABLE_PARSEC_HOOKS
 	__parsec_bench_begin(__parsec_swaptions);
 #endif
-	
+	/************************ New ROI start Location *****************************/
+#ifdef ENABLE_PARSEC_HOOKS
+	__parsec_roi_begin();
+#endif
+
         if(argc == 1)
         {
           print_usage(argv[0]);
@@ -220,10 +220,6 @@ int main(int argc, char *argv[])
 	}
 #endif //ENABLE_THREADS
 
-	/************************ New ROI start Location *****************************/
-#ifdef ENABLE_PARSEC_HOOKS
-	__parsec_roi_begin();
-#endif
         // initialize input dataset
 	factors = dmatrix(0, iFactors-1, 0, iN-2);
 	//the three rows store vol data for the three factors
@@ -347,6 +343,7 @@ int main(int argc, char *argv[])
 
 #ifdef ENABLE_PARSEC_HOOKS
 	__parsec_bench_end();
+	PRINTECO("swaptions finished");
 #endif
 
 	return iSuccess;

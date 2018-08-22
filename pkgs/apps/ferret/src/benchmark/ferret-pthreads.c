@@ -208,7 +208,7 @@ int scan_dir (const char *dir, char *head)
 void *t_load (void *dummy)
 {
 #ifdef ECOLABKNL_HOOKS
-    ecolab_set_cpu_affinity2(0,"ECOLAB.parsec.ferret : Load Stage"); /* Where to Affine this ? */
+    //ecolab_set_cpu_affinity2(0,"ECOLAB.parsec.ferret : Load Stage"); /* Where to Affine this ? */
 #endif //ECOLABKNL_HOOKS
 	const char *dir = (const char *)dummy;
 
@@ -233,7 +233,7 @@ void *t_seg (void *dummy)
 	struct load_data *load;
 #ifdef ECOLABKNL_HOOKS
 	unsigned int *tid = (unsigned int*)dummy;
-    ecolab_set_cpu_affinity2(*tid,"ECOLAB.parsec.ferret : Seg Stage");
+    //ecolab_set_cpu_affinity2(*tid,"ECOLAB.parsec.ferret : Seg Stage");
 #endif //ECOLABKNL_HOOKS
 
 	while(1)
@@ -268,7 +268,7 @@ void *t_extract (void *dummy)
 	struct extract_data *extract;
 #ifdef ECOLABKNL_HOOKS
 	unsigned int *tid = (unsigned int*)dummy;
-    ecolab_set_cpu_affinity2(*tid,"ECOLAB.parsec.ferret : Extract Stage");
+    //ecolab_set_cpu_affinity2(*tid,"ECOLAB.parsec.ferret : Extract Stage");
 #endif //ECOLABKNL_HOOKS
 
 	while (1)
@@ -298,7 +298,7 @@ void *t_vec (void *dummy)
 {
 #ifdef ECOLABKNL_HOOKS
 	unsigned int *tid = (unsigned int*)dummy;
-    ecolab_set_cpu_affinity2(*tid,"ECOLAB.parsec.ferret : Vec Stage");
+    //ecolab_set_cpu_affinity2(*tid,"ECOLAB.parsec.ferret : Vec Stage");
 #endif //ECOLABKNL_HOOKS
 	struct extract_data *extract;
 	struct vec_query_data *vec;
@@ -343,7 +343,7 @@ void *t_rank (void *dummy)
 {
 #ifdef ECOLABKNL_HOOKS
 	unsigned int *tid = (unsigned int*)dummy;
-    ecolab_set_cpu_affinity2(*tid,"ECOLAB.parsec.ferret : Rank Stage");
+    //ecolab_set_cpu_affinity2(*tid,"ECOLAB.parsec.ferret : Rank Stage");
 #endif //ECOLABKNL_HOOKS
 	struct vec_query_data *vec;
 	struct rank_data *rank;
@@ -395,7 +395,7 @@ void *t_out (void *dummy)
 {
 #ifdef ECOLABKNL_HOOKS
 	unsigned int *tid = (unsigned int*)dummy;
-    ecolab_set_cpu_affinity2(*tid,"ECOLAB.parsec.ferret : Out Stage");
+    //ecolab_set_cpu_affinity2(*tid,"ECOLAB.parsec.ferret : Out Stage");
 #endif //ECOLABKNL_HOOKS
 	struct rank_data *rank;
 	while (1)
@@ -433,11 +433,7 @@ void *t_out (void *dummy)
 
 int main (int argc, char *argv[]) {
 #ifdef ECOLABKNL_HOOKS
-	/* detect CPU */
-	cpu_topology_t topo;
-	detect_cpu();
-	detect_topology(&topo);
-    ecolab_set_cpu_affinity(ECOLABKNL_MASTERTHREAD_AFFINITY);
+    //ecolab_set_cpu_affinity(0);
 #endif /* ECOLABKNL_HOOKS */
 
 	stimer_t tmr;
@@ -646,6 +642,7 @@ int main (int argc, char *argv[]) {
 
 #ifdef ENABLE_PARSEC_HOOKS
 	__parsec_bench_end();
+	PRINTECO("ferret finished");
 #endif
 	return 0;
 }
