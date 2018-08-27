@@ -68,6 +68,7 @@
  * Time measurement can be enabled in file config.h.
  */
 static double time_begin;
+static struct timeval time_begin2;
 /** \brief Time at end of execution of Region-of-Interest.
  *
  * This variable will store the time when the Region-of-Interest is left.
@@ -77,6 +78,11 @@ static double time_begin;
  * Time measurement can be enabled in file config.h.
  */
 static double time_end;
+static struct timeval time_end2;
+inline long long calculate_time_diff(struct timeval t2, struct timeval t1) {
+    long long elapsedTime = (t2.tv_sec - t1.tv_sec) * 1000000LL + t2.tv_usec - t1.tv_usec;
+    return elapsedTime;
+}
 #endif //ENABLE_TIMING
 
 #if ENABLE_SETAFFINITY
@@ -178,6 +184,7 @@ void __parsec_bench_end() {
   fflush(NULL);
   #if ENABLE_TIMING
   printf(HOOKS_PREFIX"-%d : Total time spent in ROI: %.3fs\n",getpid(), time_end-time_begin);
+  printf(HOOKS_PREFIX"-%d : Total time spent in ROI (in ms): %lldms\n",getpid(), calculate_time_diff(time_end2,time_begin2));
   #endif //ENABLE_TIMING
   printf(HOOKS_PREFIX"-%d : Terminating\n",getpid());
 }
@@ -197,6 +204,7 @@ void __parsec_roi_begin() {
   #if ENABLE_TIMING
   struct timeval t;
   gettimeofday(&t,NULL);
+  gettimeofday(&time_begin2,NULL);
   time_begin = (double)t.tv_sec+(double)t.tv_usec*1e-6;
   #endif //ENABLE_TIMING
 
@@ -230,6 +238,7 @@ void __parsec_roi_end() {
   #if ENABLE_TIMING
   struct timeval t;
   gettimeofday(&t,NULL);
+  gettimeofday(&time_end2,NULL);
   time_end = (double)t.tv_sec+(double)t.tv_usec*1e-6;
   #endif //ENABLE_TIMING
 

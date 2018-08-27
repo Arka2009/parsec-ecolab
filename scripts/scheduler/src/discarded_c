@@ -1,3 +1,36 @@
+void unbalanced_alloc() {
+    PRINTSCHED("Welcome");
+    char log[BUFSIZ];
+    cpu_topology_t cpu_top;
+    detect_topology(&cpu_top);
+
+    unsigned int i;
+    int status; /* Child status */
+    int rc;
+    app_info_t app[MAX_APPS];
+
+    /* Launch applications (This can be done concurrently by a separate thread that generates the application) */
+    char *map_file2 = "/home/amaity/Desktop/parsec-3.0/scripts/static_maps/alloc_u/app_0_map.csv";
+    init_app_info(&app[0]);
+    launch_blackscholes(7,&app[0],map_file2);
+    schedule_affine_map(app,1);
+    PRINTSCHED("blackscholes finished - uAlloc1");
+
+    /* Launch applications (This can be done concurrently by a separate thread that generates the application) */
+    char *map_file3 = "/home/amaity/Desktop/parsec-3.0/scripts/static_maps/alloc_u/app_1_map.csv";
+    init_app_info(&app[0]);
+    launch_blackscholes(7,&app[0],map_file3);
+    schedule_affine_map(app,1);
+    PRINTSCHED("blackscholes finished - uAlloc2");
+
+    /* Launch applications (This can be done concurrently by a separate thread that generates the application) */
+    char *map_file4 = "/home/amaity/Desktop/parsec-3.0/scripts/static_maps/alloc_u/app_2_map.csv";
+    init_app_info(&app[0]);
+    launch_blackscholes(7,&app[0],map_file4);
+    schedule_affine_map(app,1);
+    PRINTSCHED("blackscholes finished - uAlloc4");
+}
+
 void alloc1() {
     PRINTSCHED("Welcome");
     char log[BUFSIZ];

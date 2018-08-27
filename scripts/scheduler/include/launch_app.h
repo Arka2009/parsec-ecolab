@@ -21,14 +21,23 @@ void display_app_info(const app_info_t *app);
 
 /* Launch the application */
 pid_t launch_blackscholes(unsigned int nt, app_info_t *app, const char *map_file);
+pid_t launch_blackscholes_simsmall(unsigned int nt, app_info_t *app, const char *map_file);
 pid_t launch_bodytrack(unsigned int nt, app_info_t *app, const char *map_file);
+pid_t launch_bodytrack_simsmall(unsigned int nt, app_info_t *app, const char *map_file);
 pid_t launch_canneal(unsigned int nt, app_info_t *app, const char *map_file);
+pid_t launch_canneal_simsmall(unsigned int nt, app_info_t *app, const char *map_file);
 pid_t launch_dedup(unsigned int nt, app_info_t *app, const char *map_file);
+pid_t launch_dedup_simsmall(unsigned int nt, app_info_t *app, const char *map_file);
 pid_t launch_ferret(unsigned int nt, app_info_t *app, const char *map_file);
+pid_t launch_ferret_simsmall(unsigned int nt, app_info_t *app, const char *map_file);
 pid_t launch_fluidanimate(unsigned int nt, app_info_t *app, const char *map_file);
+pid_t launch_fluidanimate_simsmall(unsigned int nt, app_info_t *app, const char *map_file);
 pid_t launch_raytrace(unsigned int nt, app_info_t *app, const char *map_file);
+pid_t launch_raytrace_simsmall(unsigned int nt, app_info_t *app, const char *map_file);
 pid_t launch_swaptions(unsigned int nt, app_info_t *app, const char *map_file);
+pid_t launch_swaptions_simsmall(unsigned int nt, app_info_t *app, const char *map_file);
 pid_t launch_streamcluster(unsigned int nt, app_info_t *app, const char *map_file);
+pid_t launch_streamcluster_simsmall(unsigned int nt, app_info_t *app, const char *map_file);
 
 /* (Non-blocking) wait for the applications */
 bool waitapp(const app_info_t *, int num_apps);

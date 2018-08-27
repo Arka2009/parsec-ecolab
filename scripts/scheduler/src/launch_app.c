@@ -61,7 +61,45 @@ int launch_blackscholes(unsigned int nt, app_info_t *app, const char *map_file) 
     if(!fc) {
 		PRINTERROR("Map File not found");
     }
-    PRINTSCHED("Obtaining a static thread<---->CPU map");
+    //PRINTSCHED("Obtaining a static thread<---->CPU map");
+    unsigned int i, cpu;
+    char line[BUFSIZ];
+	for(i=0; i<MAX_CPUS;i++) {
+		if (fgets(line,BUFSIZ,fc) > 0) {
+			//PRINTTOPO(line);
+			sscanf(line,"%d,%d\n",&cpu,&app->thr2cpuMap[i]);
+		}
+    }
+
+    /* Fork the process */
+    pid_t pid = launch_app(binary,arg);
+    app->pid  = pid;
+    sprintf(log,"Started blackscholes with pid@%d\n",pid);
+    return pid;
+}
+
+/* Launch Blackscholes wrapper */
+int launch_blackscholes_simsmall(unsigned int nt, app_info_t *app, const char *map_file) {
+    char log[BUFSIZ];
+    char nthreads[BUFSIZ];
+    sprintf(nthreads,"%d",nt);
+    app->numthreads = nt;
+
+    /* Set the binary arguments */
+    const char *binary = "/home/amaity/Desktop/parsec-3.0/pkgs/apps/blackscholes/inst/amd64-linux.gcc-hooks/bin/blackscholes";
+    char *const arg[]  = {
+        "/home/amaity/Desktop/parsec-3.0/pkgs/apps/blackscholes/inst/amd64-linux.gcc-hooks/bin/blackscholes",\
+        nthreads,\
+        "/home/amaity/Desktop/parsec-3.0/pkgs/apps/blackscholes/inputs/in_4K.txt",\
+        "/home/amaity/Desktop/parsec-3.0/pkgs/apps/blackscholes/run/prices.txt",\
+        (char*)0};
+    
+    /* Extract the thread to cpu mapping information */
+    FILE *fc = fopen(map_file,"r");
+    if(!fc) {
+		PRINTERROR("Map File not found");
+    }
+    //PRINTSCHED("Obtaining a static thread<---->CPU map");
     unsigned int i, cpu;
     char line[BUFSIZ];
 	for(i=0; i<MAX_CPUS;i++) {
@@ -103,7 +141,48 @@ pid_t launch_bodytrack(unsigned int nt, app_info_t *app, const char *map_file) {
     if(!fc) {
 		PRINTERROR("Map File not found");
     }
-    PRINTSCHED("Obtaining a static thread<---->CPU map");
+    //PRINTSCHED("Obtaining a static thread<---->CPU map");
+    unsigned int i, cpu;
+    char line[BUFSIZ];
+	for(i=0; i<MAX_CPUS;i++) {
+		if (fgets(line,BUFSIZ,fc) > 0) {
+			//PRINTTOPO(line);
+			sscanf(line,"%d,%d\n",&cpu,&app->thr2cpuMap[i]);
+		}
+    }
+
+    pid_t pid = launch_app(binary,arg);
+    app->pid  = pid;
+    sprintf(log,"Started bodytrack with pid@%d\n",pid);
+    return pid;
+}
+
+/* Launch Bodytrack wrapper */
+pid_t launch_bodytrack_simsmall(unsigned int nt, app_info_t *app, const char *map_file) {
+    char log[BUFSIZ];
+    char nthreads[BUFSIZ];
+    sprintf(nthreads,"%d",nt);
+    app->numthreads = nt;
+
+    /* Set the binary arguments */
+    const char *binary = "/home/amaity/Desktop/parsec-3.0/pkgs/apps/bodytrack/inst/amd64-linux.gcc-hooks/bin/bodytrack";
+    char *const arg[]  = {
+        "/home/amaity/Desktop/parsec-3.0/pkgs/apps/bodytrack/inst/amd64-linux.gcc-hooks/bin/bodytrack",\
+        "/home/amaity/Desktop/parsec-3.0/pkgs/apps/bodytrack/inputs/sequenceB_1",\
+        "4",\
+        "1",\
+        "1000",\
+        "5",\
+        "0",\
+        nthreads,\
+        (char*)0};
+    
+    /* Extract the thread to cpu mapping information */
+    FILE *fc = fopen(map_file,"r");
+    if(!fc) {
+		PRINTERROR("Map File not found");
+    }
+    //PRINTSCHED("Obtaining a static thread<---->CPU map");
     unsigned int i, cpu;
     char line[BUFSIZ];
 	for(i=0; i<MAX_CPUS;i++) {
@@ -141,7 +220,7 @@ pid_t launch_canneal(unsigned int nt, app_info_t *app, const char *map_file) {
     if(!fc) {
 		PRINTERROR("Map File not found");
     }
-    PRINTSCHED("Obtaining a static thread<---->CPU map");
+    //PRINTSCHED("Obtaining a static thread<---->CPU map");
     unsigned int i, cpu;
     char line[BUFSIZ];
 	for(i=0; i<MAX_CPUS;i++) {
@@ -156,6 +235,45 @@ pid_t launch_canneal(unsigned int nt, app_info_t *app, const char *map_file) {
     sprintf(log,"Started canneal with pid@%d\n",pid);
     return pid;
 }
+
+/* Launch canneal wrapper */
+pid_t launch_canneal_simsmall(unsigned int nt, app_info_t *app, const char *map_file) {
+    char log[BUFSIZ];
+    char nthreads[BUFSIZ];
+    sprintf(nthreads,"%d",nt);
+    app->numthreads = nt;
+
+    const char *binary = "/home/amaity/Desktop/parsec-3.0/pkgs/kernels/canneal/inst/amd64-linux.gcc-hooks/bin/canneal";
+    char *const arg[]  = {
+        "/home/amaity/Desktop/parsec-3.0/pkgs/kernels/canneal/inst/amd64-linux.gcc-hooks/bin/canneal",\
+        nthreads,\
+        "10000",\
+        "2000",\
+        "/home/amaity/Desktop/parsec-3.0/pkgs/kernels/canneal/inputs/100000.nets",\
+        "32",\
+        (char*)0};
+
+    /* Extract the thread to cpu mapping information */
+    FILE *fc = fopen(map_file,"r");
+    if(!fc) {
+		PRINTERROR("Map File not found");
+    }
+    //PRINTSCHED("Obtaining a static thread<---->CPU map");
+    unsigned int i, cpu;
+    char line[BUFSIZ];
+	for(i=0; i<MAX_CPUS;i++) {
+		if (fgets(line,BUFSIZ,fc) > 0) {
+			//PRINTTOPO(line);
+			sscanf(line,"%d,%d\n",&cpu,&app->thr2cpuMap[i]);
+		}
+    }
+
+    pid_t pid = launch_app(binary,arg);
+    app->pid  = pid;
+    sprintf(log,"Started canneal with pid@%d\n",pid);
+    return pid;
+}
+
 
 /* Launch dedup wrapper */
 pid_t launch_dedup(unsigned int nt, app_info_t *app, const char *map_file) {
@@ -183,7 +301,7 @@ pid_t launch_dedup(unsigned int nt, app_info_t *app, const char *map_file) {
     if(!fc) {
 		PRINTERROR("Map File not found");
     }
-    PRINTSCHED("Obtaining a static thread<---->CPU map");
+    //PRINTSCHED("Obtaining a static thread<---->CPU map");
     unsigned int i, cpu;
     char line[BUFSIZ];
 	for(i=0; i<MAX_CPUS;i++) {
@@ -198,6 +316,49 @@ pid_t launch_dedup(unsigned int nt, app_info_t *app, const char *map_file) {
     sprintf(log,"Started dedup with pid@%d\n",pid);
     return pid;
 }
+
+/* Launch dedup wrapper */
+pid_t launch_dedup_simsmall(unsigned int nt, app_info_t *app, const char *map_file) {
+    char log[BUFSIZ];
+    char nthreads[BUFSIZ];
+    sprintf(nthreads,"%d",nt);
+    app->numthreads = nt;
+
+    const char *binary = "/home/amaity/Desktop/parsec-3.0/pkgs/kernels/dedup/inst/amd64-linux.gcc-hooks/bin/dedup";
+    char *const arg[]  = {
+        "/home/amaity/Desktop/parsec-3.0/pkgs/kernels/dedup/inst/amd64-linux.gcc-hooks/bin/dedup",\
+        "-c",\
+        "-p",\
+        "-v",\
+        "-t",\
+        nthreads,\
+        "-i",\
+        "/home/amaity/Desktop/parsec-3.0/pkgs/kernels/dedup/inputs/media.dat",\
+        "-o",\
+        "dump/output.dat.ddp",\
+        (char*)0};
+
+    /* Extract the thread to cpu mapping information */
+    FILE *fc = fopen(map_file,"r");
+    if(!fc) {
+		PRINTERROR("Map File not found");
+    }
+    //PRINTSCHED("Obtaining a static thread<---->CPU map");
+    unsigned int i, cpu;
+    char line[BUFSIZ];
+	for(i=0; i<MAX_CPUS;i++) {
+		if (fgets(line,BUFSIZ,fc) > 0) {
+			//PRINTTOPO(line);
+			sscanf(line,"%d,%d\n",&cpu,&app->thr2cpuMap[i]);
+		}
+    }
+
+    pid_t pid = launch_app(binary,arg);
+    app->pid  = pid;
+    sprintf(log,"Started dedup with pid@%d\n",pid);
+    return pid;
+}
+
 
 /* Launch ferret wrapper */
 pid_t launch_ferret(unsigned int nt, app_info_t *app, const char *map_file) {
@@ -223,7 +384,47 @@ pid_t launch_ferret(unsigned int nt, app_info_t *app, const char *map_file) {
     if(!fc) {
 		PRINTERROR("Map File not found");
     }
-    PRINTSCHED("Obtaining a static thread<---->CPU map");
+    //PRINTSCHED("Obtaining a static thread<---->CPU map");
+    unsigned int i, cpu;
+    char line[BUFSIZ];
+	for(i=0; i<MAX_CPUS;i++) {
+		if (fgets(line,BUFSIZ,fc) > 0) {
+			//PRINTTOPO(line);
+			sscanf(line,"%d,%d\n",&cpu,&app->thr2cpuMap[i]);
+		}
+    }
+
+    pid_t pid = launch_app(binary,arg);
+    app->pid  = pid;
+    sprintf(log,"Started ferret with pid@%d\n",pid);
+    return pid;
+}
+
+/* Launch ferret wrapper */
+pid_t launch_ferret_simsmall(unsigned int nt, app_info_t *app, const char *map_file) {
+    char log[BUFSIZ];
+    char nthreads[BUFSIZ];
+    sprintf(nthreads,"%d",nt);
+    app->numthreads = nt;
+
+    const char *binary = "/home/amaity/Desktop/parsec-3.0/pkgs/apps/ferret/inst/amd64-linux.gcc-hooks/bin/ferret";
+    char *const arg[]  = {
+        "/home/amaity/Desktop/parsec-3.0/pkgs/apps/ferret/inst/amd64-linux.gcc-hooks/bin/ferret",\
+        "/home/amaity/Desktop/parsec-3.0/pkgs/apps/ferret/inputs/corel",\
+        "lsh",\
+        "/home/amaity/Desktop/parsec-3.0/pkgs/apps/ferret/inputs/queries_simsmall",\
+        "10",\
+        "20",\
+        nthreads,\
+        "dump/output.txt",\
+        (char*)0};
+
+    /* Extract the thread to cpu mapping information */
+    FILE *fc = fopen(map_file,"r");
+    if(!fc) {
+		PRINTERROR("Map File not found");
+    }
+    //PRINTSCHED("Obtaining a static thread<---->CPU map");
     unsigned int i, cpu;
     char line[BUFSIZ];
 	for(i=0; i<MAX_CPUS;i++) {
@@ -260,7 +461,44 @@ pid_t launch_fluidanimate(unsigned int nt, app_info_t *app, const char *map_file
     if(!fc) {
 		PRINTERROR("Map File not found");
     }
-    PRINTSCHED("Obtaining a static thread<---->CPU map");
+    //PRINTSCHED("Obtaining a static thread<---->CPU map");
+    unsigned int i, cpu;
+    char line[BUFSIZ];
+	for(i=0; i<MAX_CPUS;i++) {
+		if (fgets(line,BUFSIZ,fc) > 0) {
+			//PRINTTOPO(line);
+			sscanf(line,"%d,%d\n",&cpu,&app->thr2cpuMap[i]);
+		}
+    }
+
+    pid_t pid = launch_app(binary,arg);
+    app->pid  = pid;
+    sprintf(log,"Started fluidanimate with pid@%d\n",pid);
+    return pid;
+}
+
+/* Launch fluidanimate wrapper */
+pid_t launch_fluidanimate_simsmall(unsigned int nt, app_info_t *app, const char *map_file) {
+    char log[BUFSIZ];
+    char nthreads[BUFSIZ];
+    sprintf(nthreads,"%d",nt);
+    app->numthreads = nt;
+
+    const char *binary = "/home/amaity/Desktop/parsec-3.0/pkgs/apps/fluidanimate/inst/amd64-linux.gcc-hooks/bin/fluidanimate";
+    char *const arg[]  = {
+        "/home/amaity/Desktop/parsec-3.0/pkgs/apps/fluidanimate/inst/amd64-linux.gcc-hooks/bin/fluidanimate",\
+        nthreads,\
+        "5",\
+        "/home/amaity/Desktop/parsec-3.0/pkgs/apps/fluidanimate/inputs/in_35K.fluid",\
+        "dump/out.fluid",\
+        (char*)0};
+
+    /* Extract the thread to cpu mapping information */
+    FILE *fc = fopen(map_file,"r");
+    if(!fc) {
+		PRINTERROR("Map File not found");
+    }
+    //PRINTSCHED("Obtaining a static thread<---->CPU map");
     unsigned int i, cpu;
     char line[BUFSIZ];
 	for(i=0; i<MAX_CPUS;i++) {
@@ -302,7 +540,49 @@ pid_t launch_raytrace(unsigned int nt, app_info_t *app, const char *map_file) {
     if(!fc) {
 		PRINTERROR("Map File not found");
     }
-    PRINTSCHED("Obtaining a static thread<---->CPU map");
+    //PRINTSCHED("Obtaining a static thread<---->CPU map");
+    unsigned int i, cpu;
+    char line[BUFSIZ];
+	for(i=0; i<MAX_CPUS;i++) {
+		if (fgets(line,BUFSIZ,fc) > 0) {
+			//PRINTTOPO(line);
+			sscanf(line,"%d,%d\n",&cpu,&app->thr2cpuMap[i]);
+		}
+    }
+
+    pid_t pid = launch_app(binary,arg);
+    app->pid  = pid;
+    sprintf(log,"Started raytrace with pid@%d\n",pid);
+    return pid;
+}
+
+/* Launch raytrace wrapper */
+pid_t launch_raytrace_simsmall(unsigned int nt, app_info_t *app, const char *map_file) {
+    char log[BUFSIZ];
+    char nthreads[BUFSIZ];
+    sprintf(nthreads,"%d",nt);
+    app->numthreads = nt;
+
+    const char *binary = "/home/amaity/Desktop/parsec-3.0/pkgs/apps/raytrace/inst/amd64-linux.gcc-hooks/bin/rtview";
+    char *const arg[]  = {
+        "/home/amaity/Desktop/parsec-3.0/pkgs/apps/raytrace/inst/amd64-linux.gcc-hooks/bin/rtview",\
+        "/home/amaity/Desktop/parsec-3.0/pkgs/apps/raytrace/inputs/happy_buddha.obj",\
+        "-automove",\
+        "-nthreads ",\
+        nthreads,\
+        "-frames",\
+        "3",\
+        "-res",\
+        "400",\
+        "270",\
+        (char*)0};
+
+    /* Extract the thread to cpu mapping information */
+    FILE *fc = fopen(map_file,"r");
+    if(!fc) {
+		PRINTERROR("Map File not found");
+    }
+    //PRINTSCHED("Obtaining a static thread<---->CPU map");
     unsigned int i, cpu;
     char line[BUFSIZ];
 	for(i=0; i<MAX_CPUS;i++) {
@@ -341,7 +621,46 @@ pid_t launch_swaptions(unsigned int nt, app_info_t *app, const char *map_file) {
     if(!fc) {
 		PRINTERROR("Map File not found");
     }
-    PRINTSCHED("Obtaining a static thread<---->CPU map");
+    //PRINTSCHED("Obtaining a static thread<---->CPU map");
+    unsigned int i, cpu;
+    char line[BUFSIZ];
+	for(i=0; i<MAX_CPUS;i++) {
+		if (fgets(line,BUFSIZ,fc) > 0) {
+			//PRINTTOPO(line);
+			sscanf(line,"%d,%d\n",&cpu,&app->thr2cpuMap[i]);
+		}
+    }
+
+    pid_t pid = launch_app(binary,arg);
+    app->pid  = pid;
+    sprintf(log,"Started swaptions with pid@%d\n",pid);
+    return pid;
+}
+
+/* Launch swaptions wrapper */
+pid_t launch_swaptions_simsmall(unsigned int nt, app_info_t *app, const char *map_file) {
+    char log[BUFSIZ];
+    char nthreads[BUFSIZ];
+    sprintf(nthreads,"%d",nt);
+    app->numthreads = nt;
+
+    const char *binary = "/home/amaity/Desktop/parsec-3.0/pkgs/apps/swaptions/inst/amd64-linux.gcc-hooks/bin/swaptions";
+    char *const arg[]  = {
+        "/home/amaity/Desktop/parsec-3.0/pkgs/apps/swaptions/inst/amd64-linux.gcc-hooks/bin/swaptions",\
+        "-ns",\
+        "16",\
+        "-sm",\
+        "1000",\
+        "-nt",\
+        nthreads,\
+        (char*)0};
+
+    /* Extract the thread to cpu mapping information */
+    FILE *fc = fopen(map_file,"r");
+    if(!fc) {
+		PRINTERROR("Map File not found");
+    }
+    //PRINTSCHED("Obtaining a static thread<---->CPU map");
     unsigned int i, cpu;
     char line[BUFSIZ];
 	for(i=0; i<MAX_CPUS;i++) {
@@ -383,7 +702,7 @@ pid_t launch_streamcluster(unsigned int nt, app_info_t *app, const char *map_fil
     if(!fc) {
 		PRINTERROR("Map File not found");
     }
-    PRINTSCHED("Obtaining a static thread<---->CPU map");
+    //PRINTSCHED("Obtaining a static thread<---->CPU map");
     unsigned int i, cpu;
     char line[BUFSIZ];
 	for(i=0; i<MAX_CPUS;i++) {
@@ -399,6 +718,47 @@ pid_t launch_streamcluster(unsigned int nt, app_info_t *app, const char *map_fil
     return pid;
 }
 
+/* Launch streamcluster wrapper */
+pid_t launch_streamcluster_simsmall(unsigned int nt, app_info_t *app, const char *map_file) {
+    char log[BUFSIZ];
+    char nthreads[BUFSIZ];
+    sprintf(nthreads,"%d",nt);
+    app->numthreads = nt;
+
+    const char *binary = "/home/amaity/Desktop/parsec-3.0/pkgs/kernels/streamcluster/inst/amd64-linux.gcc-hooks/bin/streamcluster";
+    char *const arg[]  = {
+        "/home/amaity/Desktop/parsec-3.0/pkgs/kernels/streamcluster/inst/amd64-linux.gcc-hooks/bin/streamcluster",\
+        "10",\
+        "20",\
+        "32",\
+        "4096",\
+        "4096",\
+        "1000",\
+        "none",\
+        "dump/output.txt",\
+        nthreads,\
+        (char*)0};
+
+    /* Extract the thread to cpu mapping information */
+    FILE *fc = fopen(map_file,"r");
+    if(!fc) {
+		PRINTERROR("Map File not found");
+    }
+    //PRINTSCHED("Obtaining a static thread<---->CPU map");
+    unsigned int i, cpu;
+    char line[BUFSIZ];
+	for(i=0; i<MAX_CPUS;i++) {
+		if (fgets(line,BUFSIZ,fc) > 0) {
+			//PRINTTOPO(line);
+			sscanf(line,"%d,%d\n",&cpu,&app->thr2cpuMap[i]);
+		}
+    }
+
+    pid_t pid = launch_app(binary,arg);
+    app->pid  = pid;
+    sprintf(log,"Started streamcluster with pid@%d\n",pid);
+    return pid;
+}
 
 bool waitapp(const app_info_t *apps, int num_apps) {
     int i, status, rc;

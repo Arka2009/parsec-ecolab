@@ -13,8 +13,8 @@ parsec.swaptions \
 "
 
 #benchmarks="parsec.blackscholes"
-input="native"
-nthreads=3
+input="test"
+nthreads=4
 affinity="0-255"
 mkdir -p dump
 
@@ -23,5 +23,5 @@ ${parsec_dir}/bin/parsecmgmt -a build -p ${benchmarks} -c gcc-serial
 
 for bench in ${benchmarks}; do
 	echo "[DATE2019-Exp]: running serial ${bench} "
-	taskset -c ${affinity} ${parsec_dir}/bin/parsecmgmt -a run -p ${bench} -c gcc-serial -i ${input} | tee dump/${bench}-serial.log
+	taskset -c ${affinity} ${parsec_dir}/bin/parsecmgmt -a run -p ${bench} -c gcc-serial -i ${input} >> tee dump/test_inputs.log
 done

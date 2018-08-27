@@ -1,17 +1,26 @@
 #!/bin/bash
 
 mkdir -p dump
-cp thrd_cpu_map.csv dump/
-source run-blackscholes.sh
-source run-bodytrack.sh
-source run-canneal.sh
-source run-dedup.sh
-#source run-facesim.sh
-source run-ferret.sh
-source run-fluidanimate.sh
-#source run-freqmine.sh
-#source run-raytrace.sh
-source run-streamcluster.sh
-source run-swaptions.sh
-#source run-vips.sh
-#source run-x264.sh
+
+parsec_dir=${PARSECROOT}
+nthreads=1
+input="test"
+
+benchmarks="\
+parsec.blackscholes \
+parsec.bodytrack \
+parsec.canneal \
+parsec.dedup \
+parsec.ferret \
+parsec.fluidanimate \
+parsec.streamcluster \
+parsec.raytrace \
+parsec.swaptions \
+"
+dump="dump/run-all-${input}.txt"
+
+for bench in ${benchmarks}; do
+	echo "[DATE2019-Exp]: running ${bench} " >> ${dump}
+	${parsec_dir}/bin/parsecmgmt -a run -p ${bench} -c gcc-hooks -i ${input} -n ${nthreads} >> ${dump}
+	echo "------------------------------------------------------" >> ${dump}
+done

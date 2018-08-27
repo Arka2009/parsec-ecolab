@@ -68,3 +68,7 @@ inputs/
 
 # Ignore dump files
 scripts/dump/
+scripts/*.txt
+
+# Scheduler builds
+scripts/scheduler/build/
