@@ -84,15 +84,15 @@ perf_prefix3="likwid-perfctr -f -c ${affinity},32 -g MEM_UOPS_RETIRED_L2_HIT_LOA
 perf_prefix4="likwid-perfctr -f -c ${affinity},32 -g MEM_UOPS_RETIRED_HITM:PMC0"
 aff_prefix="numactl -m 0 taskset -c ${affinity}"
 
-for i in "${exe_native[@]}" ; do
+for i in "${exe_simsmall[@]}" ; do
 	#echo $i
 	#echo ${perf_prefix1}
 	#echo ${aff_prefix}
 	#echo "${perf_prefix1} ${aff_prefix} $i"
-	${perf_prefix1} ${aff_prefix} $i >> dump/cache_perf_native_aff_0-1.txt 
-	${perf_prefix2} ${aff_prefix} $i >> dump/cache_perf_native_aff_0-1.txt
-	${perf_prefix3} ${aff_prefix} $i >> dump/cache_perf_native_aff_0-1.txt
-	${perf_prefix4} ${aff_prefix} $i >> dump/cache_perf_native_aff_0-1.txt
+	${perf_prefix1} ${aff_prefix} $i >> dump/cache_perf_simsmall_aff_0-1.txt 
+	${perf_prefix2} ${aff_prefix} $i >> dump/cache_perf_simsmall_aff_0-1.txt
+	${perf_prefix3} ${aff_prefix} $i >> dump/cache_perf_simsmall_aff_0-1.txt
+	${perf_prefix4} ${aff_prefix} $i >> dump/cache_perf_simsmall_aff_0-1.txt
 	echo "$i"
 	echo "------------------FINISHED---------------------"
 done
@@ -104,15 +104,15 @@ perf_prefix3="likwid-perfctr -f -c ${affinity},32 -g MEM_UOPS_RETIRED_L2_HIT_LOA
 perf_prefix4="likwid-perfctr -f -c ${affinity},32 -g MEM_UOPS_RETIRED_HITM:PMC0"
 aff_prefix="numactl -m 0 taskset -c ${affinity}"
 
-for i in "${exe_native[@]}" ; do
+for i in "${exe_simsmall[@]}" ; do
 	#echo $i
 	#echo ${perf_prefix1}
 	#echo ${aff_prefix}
 	#echo "${perf_prefix1} ${aff_prefix} $i"
-	${perf_prefix1} ${aff_prefix} $i >> dump/cache_perf_native_aff_0-2.txt 
-	${perf_prefix2} ${aff_prefix} $i >> dump/cache_perf_native_aff_0-2.txt
-	${perf_prefix3} ${aff_prefix} $i >> dump/cache_perf_native_aff_0-2.txt
-	${perf_prefix4} ${aff_prefix} $i >> dump/cache_perf_native_aff_0-2.txt
+	${perf_prefix1} ${aff_prefix} $i >> dump/cache_perf_simsmall_aff_0-2.txt 
+	${perf_prefix2} ${aff_prefix} $i >> dump/cache_perf_simsmall_aff_0-2.txt
+	${perf_prefix3} ${aff_prefix} $i >> dump/cache_perf_simsmall_aff_0-2.txt
+	${perf_prefix4} ${aff_prefix} $i >> dump/cache_perf_simsmall_aff_0-2.txt
 	echo "$i"
 	echo "------------------FINISHED---------------------"
 done

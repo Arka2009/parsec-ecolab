@@ -12,6 +12,7 @@ f2a2 = open("exp2a_alloc2.csv","w")
 f2b1 = open("exp2b_alloc1.csv","w")
 f2b2 = open("exp2b_alloc2.csv","w")
 f12c = open("exp12c.csv","w")
+f2e  = open("exp2e.csv","w")
 
 for i in range(0,255,2):
 	f1a1.write(str(i)+",0\n")
@@ -47,6 +48,12 @@ for i in range(0,255,4):
 	f12c.write(str(i+2)+",2\n")
 	f12c.write(str(i+3)+",3\n")
 
+for i in range(0,255,4):
+	f2e.write(str(i)+",0\n")
+	f2e.write(str(i+1)+",16\n")
+	f2e.write(str(i+2)+",32\n")
+	f2e.write(str(i+3)+",48\n")
+
 
 f1a1.close()
 f1a2.close()
@@ -57,3 +64,4 @@ f1b2.close()
 f2b1.close()
 f2b2.close()
 f12c.close()
+f2e.close()

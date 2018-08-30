@@ -120,7 +120,7 @@ void __parsec_bench_begin(enum __parsec_benchmark __bench) {
   assert(num_bench_ends==0);
   #endif //DEBUG
 
-  printf(HOOKS_PREFIX"-%d : PARSEC Hooks Version "HOOKS_VERSION"\n",getpid());
+  printf(HOOKS_PREFIX"-%d:PARSEC Hooks Version "HOOKS_VERSION"\n",getpid());
   fflush(NULL);
 
   //Store global benchmark ID for other hook functions
@@ -183,10 +183,10 @@ void __parsec_bench_end() {
 
   fflush(NULL);
   #if ENABLE_TIMING
-  printf(HOOKS_PREFIX"-%d : Total time spent in ROI: %.3fs\n",getpid(), time_end-time_begin);
-  printf(HOOKS_PREFIX"-%d : Total time spent in ROI (in ms): %lldms\n",getpid(), calculate_time_diff(time_end2,time_begin2));
+  printf(HOOKS_PREFIX"-%d:Total time spent in ROI:%.3f\n",getpid(), time_end-time_begin);
+  printf(HOOKS_PREFIX"-%d:Total time spent in ROI (in ms):%lldms\n",getpid(), calculate_time_diff(time_end2,time_begin2));
   #endif //ENABLE_TIMING
-  printf(HOOKS_PREFIX"-%d : Terminating\n",getpid());
+  printf(HOOKS_PREFIX"-%d:Terminating\n",getpid());
 }
 
 void __parsec_roi_begin() {
@@ -198,7 +198,7 @@ void __parsec_roi_begin() {
   assert(num_bench_ends==0);
   #endif //DEBUG
 
-  printf(HOOKS_PREFIX"-%d : Entering ROI\n",getpid());
+  printf(HOOKS_PREFIX"-%d:Entering ROI\n",getpid());
   fflush(NULL);
 
   #if ENABLE_TIMING
@@ -242,7 +242,7 @@ void __parsec_roi_end() {
   time_end = (double)t.tv_sec+(double)t.tv_usec*1e-6;
   #endif //ENABLE_TIMING
 
-  printf(HOOKS_PREFIX"-%d : Leaving ROI\n",getpid());
+  printf(HOOKS_PREFIX"-%d:Leaving ROI\n",getpid());
   fflush(NULL);
 }
 

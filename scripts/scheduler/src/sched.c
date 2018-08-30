@@ -244,6 +244,74 @@ void exp1b_alloc1() {
     
 }
 
+void exp1b_alloc1_simsmall() {
+     PRINTSCHED("Welcome");
+    char log[BUFSIZ];
+    cpu_topology_t cpu_top;
+    detect_topology(&cpu_top);
+
+    unsigned int i;
+    int status; /* Child status */
+    app_info_t app[MAX_APPS];
+    char *map_file2 = "/home/amaity/Desktop/parsec-3.0/scripts/static_maps/exp1b_alloc1.csv";
+    unsigned int nthreads = 3;
+
+    /* Launch applications (This can be done concurrently by a separate thread that generates the application) */
+    init_app_info(&app[0]);
+    launch_blackscholes_simsmall(nthreads,&app[0],map_file2);
+    schedule_affine_map(app,1);
+    PRINTSCHED("exp1b_alloc1_simsmall Finished : blackscholes finished");
+    
+
+    init_app_info(&app[0]);
+    launch_bodytrack_simsmall(nthreads,&app[0],map_file2);
+    schedule_affine_map(app,1);
+    PRINTSCHED("exp1b_alloc1_simsmall Finished : bodytrack finished");
+    
+
+    init_app_info(&app[0]);
+    launch_canneal_simsmall(nthreads,&app[0],map_file2);
+    schedule_affine_map(app,1);
+    PRINTSCHED("exp1b_alloc1_simsmall Finished : canneal finished");
+    
+
+    init_app_info(&app[0]);
+    launch_dedup_simsmall(nthreads,&app[0],map_file2);
+    schedule_affine_map(app,1);
+    PRINTSCHED("exp1b_alloc1_simsmall Finished : dedup finished");
+    
+
+    init_app_info(&app[0]);
+    launch_ferret_simsmall(nthreads,&app[0],map_file2);
+    schedule_affine_map(app,1);
+    PRINTSCHED("exp1b_alloc1_simsmall Finished : ferret finished");
+    
+
+    init_app_info(&app[0]);
+    launch_fluidanimate_simsmall(nthreads,&app[0],map_file2);
+    schedule_affine_map(app,1);
+    PRINTSCHED("exp1b_alloc1_simsmall Finished : fluidanimate finished");
+    
+
+    init_app_info(&app[0]);
+    launch_raytrace_simsmall(nthreads,&app[0],map_file2);
+    schedule_affine_map(app,1);
+    PRINTSCHED("exp1b_alloc1_simsmall Finished : raytrace finished");
+    
+
+    init_app_info(&app[0]);
+    launch_streamcluster_simsmall(nthreads,&app[0],map_file2);
+    schedule_affine_map(app,1);
+    PRINTSCHED("exp1b_alloc1_simsmall Finished : streamcluster finished");
+    
+
+    init_app_info(&app[0]);
+    launch_swaptions_simsmall(nthreads,&app[0],map_file2);
+    schedule_affine_map(app,1);
+    PRINTSCHED("exp1b_alloc1_simsmall Finished : swaptions finished");
+    
+}
+
 void exp1b_alloc2() {
      PRINTSCHED("Welcome");
     char log[BUFSIZ];
@@ -309,6 +377,74 @@ void exp1b_alloc2() {
     launch_swaptions(nthreads,&app[0],map_file2);
     schedule_affine_map(app,1);
     PRINTSCHED("exp1b_alloc2 Finished : swaptions finished");
+    
+}
+
+void exp1b_alloc2_simsmall() {
+     PRINTSCHED("Welcome");
+    char log[BUFSIZ];
+    cpu_topology_t cpu_top;
+    detect_topology(&cpu_top);
+
+    unsigned int i;
+    int status; /* Child status */
+    app_info_t app[MAX_APPS];
+    char *map_file2 = "/home/amaity/Desktop/parsec-3.0/scripts/static_maps/exp1b_alloc2.csv";
+    unsigned int nthreads = 3;
+
+    /* Launch applications (This can be done concurrently by a separate thread that generates the application) */
+    init_app_info(&app[0]);
+    launch_blackscholes_simsmall(nthreads,&app[0],map_file2);
+    schedule_affine_map(app,1);
+    PRINTSCHED("exp1b_alloc2_simsmall Finished : blackscholes finished");
+    
+
+    init_app_info(&app[0]);
+    launch_bodytrack_simsmall(nthreads,&app[0],map_file2);
+    schedule_affine_map(app,1);
+    PRINTSCHED("exp1b_alloc2_simsmall Finished : bodytrack finished");
+    
+
+    init_app_info(&app[0]);
+    launch_canneal_simsmall(nthreads,&app[0],map_file2);
+    schedule_affine_map(app,1);
+    PRINTSCHED("exp1b_alloc2_simsmall Finished : canneal finished");
+    
+
+    init_app_info(&app[0]);
+    launch_dedup_simsmall(nthreads,&app[0],map_file2);
+    schedule_affine_map(app,1);
+    PRINTSCHED("exp1b_alloc2_simsmall Finished : dedup finished");
+    
+
+    init_app_info(&app[0]);
+    launch_ferret_simsmall(nthreads,&app[0],map_file2);
+    schedule_affine_map(app,1);
+    PRINTSCHED("exp1b_alloc2_simsmall Finished : ferret finished");
+    
+
+    init_app_info(&app[0]);
+    launch_fluidanimate_simsmall(nthreads,&app[0],map_file2);
+    schedule_affine_map(app,1);
+    PRINTSCHED("exp1b_alloc2_simsmall Finished : fluidanimate finished");
+    
+
+    init_app_info(&app[0]);
+    launch_raytrace_simsmall(nthreads,&app[0],map_file2);
+    schedule_affine_map(app,1);
+    PRINTSCHED("exp1b_alloc2_simsmall Finished : raytrace finished");
+    
+
+    init_app_info(&app[0]);
+    launch_streamcluster_simsmall(nthreads,&app[0],map_file2);
+    schedule_affine_map(app,1);
+    PRINTSCHED("exp1b_alloc2_simsmall Finished : streamcluster finished");
+    
+
+    init_app_info(&app[0]);
+    launch_swaptions_simsmall(nthreads,&app[0],map_file2);
+    schedule_affine_map(app,1);
+    PRINTSCHED("exp1b_alloc2_simsmall Finished : swaptions finished");
     
 }
 
@@ -781,6 +917,74 @@ void exp2b_alloc2() {
     
 }
 
+void exp2e() {
+     PRINTSCHED("Welcome");
+    char log[BUFSIZ];
+    cpu_topology_t cpu_top;
+    detect_topology(&cpu_top);
+
+    unsigned int i;
+    int status; /* Child status */
+    app_info_t app[MAX_APPS];
+    char *map_file2 = "/home/amaity/Desktop/parsec-3.0/scripts/static_maps/exp2e.csv";
+    unsigned int nthreads = 3;
+
+    /* Launch applications (This can be done concurrently by a separate thread that generates the application) */
+    init_app_info(&app[0]);
+    launch_blackscholes(nthreads,&app[0],map_file2);
+    schedule_affine_map(app,1);
+    PRINTSCHED("exp2e Finished : blackscholes finished");
+    
+
+    init_app_info(&app[0]);
+    launch_bodytrack(nthreads,&app[0],map_file2);
+    schedule_affine_map(app,1);
+    PRINTSCHED("exp2e Finished : bodytrack finished");
+    
+
+    init_app_info(&app[0]);
+    launch_canneal(nthreads,&app[0],map_file2);
+    schedule_affine_map(app,1);
+    PRINTSCHED("exp2e Finished : canneal finished");
+    
+
+    init_app_info(&app[0]);
+    launch_dedup(nthreads,&app[0],map_file2);
+    schedule_affine_map(app,1);
+    PRINTSCHED("exp2e Finished : dedup finished");
+    
+
+    init_app_info(&app[0]);
+    launch_ferret(nthreads,&app[0],map_file2);
+    schedule_affine_map(app,1);
+    PRINTSCHED("exp2e Finished : ferret finished");
+    
+
+    init_app_info(&app[0]);
+    launch_fluidanimate(nthreads,&app[0],map_file2);
+    schedule_affine_map(app,1);
+    PRINTSCHED("exp2e Finished : fluidanimate finished");
+    
+
+    init_app_info(&app[0]);
+    launch_raytrace(nthreads,&app[0],map_file2);
+    schedule_affine_map(app,1);
+    PRINTSCHED("exp2e Finished : raytrace finished");
+    
+
+    init_app_info(&app[0]);
+    launch_streamcluster(nthreads,&app[0],map_file2);
+    schedule_affine_map(app,1);
+    PRINTSCHED("exp2e Finished : streamcluster finished");
+    
+
+    init_app_info(&app[0]);
+    launch_swaptions(nthreads,&app[0],map_file2);
+    schedule_affine_map(app,1);
+    PRINTSCHED("exp2e Finished : swaptions finished");
+    
+}
+
 void exp2b_alloc2_simsmall() {
      PRINTSCHED("Welcome");
     char log[BUFSIZ];
@@ -987,34 +1191,18 @@ void exp12c_simsmall() {
 
 
 void main(int argc, char *argv[]) {
-    // alloc1();
-    // alloc2();
-    //alloc3();
-    //alloc4();
-    // unbalanced_alloc();
-
+    /* Small Inputs */
+    // exp1b_alloc1_simsmall();     /* Same as alloc-a */
+    // exp1b_alloc2_simsmall();     /* Same as alloc-b */
+    // exp12c_simsmall();           /* Same as alloc-c */
+    // exp2b_alloc2_simsmall();     /* Same as alloc-d */
     
-    // exp1a_alloc1();
-    // exp1a_alloc2();
-    // exp1b_alloc1();
-    // exp1b_alloc2();
-    // exp2a_alloc1();
-    // exp2a_alloc2();
-    // exp2b_alloc1();
-    // exp2b_alloc2();
-    // exp12c();
 
-    // exp1a_alloc1();
-    // exp1a_alloc2();
-    // exp1b_alloc1();
-    exp1b_alloc2_simsmall();
-    // exp2a_alloc1_simsmall();
-    // exp2a_alloc2_simsmall();
-    // exp2b_alloc1_simsmall();
-    // exp2b_alloc2_simsmall();
-    // exp12c_simsmall();
-
-
-
-    //test_fluidanimate();
+    /* Native Inputs */
+    exp2e();            /* Same as alloc-e */
+    exp1b_alloc1();     /* Same as alloc-a */
+    exp1b_alloc2();     /* Same as alloc-b */
+    exp12c();           /* Same as alloc-c */
+    exp2b_alloc2();     /* Same as alloc-d */
+    
 }
