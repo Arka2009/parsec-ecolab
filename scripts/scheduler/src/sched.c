@@ -1,14 +1,3 @@
-//!/usr/bin/python3
-
-// Launch The applications
-// ---- APP1 (store the pid/tids)
-// ---- APP2 (store the pid/tids)
-// ---- APP3 (store the pid/tids)
-
-// while(1) {
-// Get the APP1-3 usage statistics
-// Affine the pid/tids appropriatly
-// }
 #include <stdio.h>
 #include <stdlib.h>
 #include <sys/types.h>
@@ -54,9 +43,11 @@ void exp1a_alloc1() {
 
     /* Launch applications (This can be done concurrently by a separate thread that generates the application) */
     init_app_info(&app[0]);
-    launch_blackscholes(nthreads,&app[0],map_file2);
+    launch_blackscholes(nthreads,&app[0],map_file2); 
+    /* __eco_roi_begin() */
     schedule_affine_map(app,1);
     PRINTSCHED("exp1a_alloc1 Finished : blackscholes finished");
+    /* __eco_roi_end() */
     
 
     init_app_info(&app[0]);

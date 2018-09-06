@@ -1,0 +1,868 @@
+--------------------------------------------------------------------------------
+CPU name:	Intel(R) Xeon Phi(TM) CPU 7210 @ 1.30GHz
+CPU type:	Intel Xeon Phi (Knights Landing) (Co)Processor
+CPU clock:	1.30 GHz
+--------------------------------------------------------------------------------
+PARSEC Benchmark Suite Version 3.0-beta-20150206
+[HOOKS]-13766:PARSEC Hooks Version 1.2
+[HOOKS]-13766:Entering ROI
+Num of Options: 10000000
+Num of Runs: 100
+Size of data: 400000000
+[HOOKS]-13766:Leaving ROI
+[HOOKS]-13766:Total time spent in ROI:412.097
+[HOOKS]-13766:Total time spent in ROI (in ms):412096764ms
+[HOOKS]-13766:Terminating
+[ECO-HOOKS]-13766 : blackscholes finished
+--------------------------------------------------------------------------------
+Group 1: L2CACHE
++--------------------------------+---------+----------+--------------+--------------+--------------+
+|              Event             | Counter |  Core 0  |    Core 1    |    Core 64   |    Core 65   |
++--------------------------------+---------+----------+--------------+--------------+--------------+
+|        INSTR_RETIRED_ANY       |  FIXC0  |  5312594 | 204927392675 | 329430524254 | 251278922082 |
+|      CPU_CLK_UNHALTED_CORE     |  FIXC1  | 11437748 | 414169840581 | 530350247348 | 473077182490 |
+|      CPU_CLK_UNHALTED_REF      |  FIXC2  | 11437777 | 414169848521 | 530350303275 | 473077205978 |
+|  MEM_UOPS_RETIRED_L2_HIT_LOADS |   PMC0  |     8778 |    125526470 |    218091312 |    135672548 |
+| MEM_UOPS_RETIRED_L2_MISS_LOADS |   PMC1  |      330 |      7880993 |      6813101 |      8398128 |
++--------------------------------+---------+----------+--------------+--------------+--------------+
+
++-------------------------------------+---------+---------------+----------+--------------+--------------+
+|                Event                | Counter |      Sum      |    Min   |      Max     |      Avg     |
++-------------------------------------+---------+---------------+----------+--------------+--------------+
+|        INSTR_RETIRED_ANY STAT       |  FIXC0  |  785642151605 |  5312594 | 329430524254 | 1.964105e+11 |
+|      CPU_CLK_UNHALTED_CORE STAT     |  FIXC1  | 1417608708167 | 11437748 | 530350247348 | 3.544022e+11 |
+|      CPU_CLK_UNHALTED_REF STAT      |  FIXC2  | 1417608795551 | 11437777 | 530350303275 | 3.544022e+11 |
+|  MEM_UOPS_RETIRED_L2_HIT_LOADS STAT |   PMC0  |     479299108 |     8778 |    218091312 |    119824777 |
+| MEM_UOPS_RETIRED_L2_MISS_LOADS STAT |   PMC1  |      23092552 |      330 |      8398128 |      5773138 |
++-------------------------------------+---------+---------------+----------+--------------+--------------+
+
++----------------------+-----------+--------------+--------------+--------------+
+|        Metric        |   Core 0  |    Core 1    |    Core 64   |    Core 65   |
++----------------------+-----------+--------------+--------------+--------------+
+|  Runtime (RDTSC) [s] |  435.5819 |     435.5819 |     435.5819 |     435.5819 |
+| Runtime unhalted [s] |    0.0088 |     318.5912 |     407.9605 |     363.9044 |
+|      Clock [MHz]     | 1300.0006 |    1300.0038 |    1300.0037 |    1300.0038 |
+|          CPI         |    2.1529 |       2.0211 |       1.6099 |       1.8827 |
+|    L2 request rate   |    0.0017 |       0.0007 |       0.0007 |       0.0006 |
+|     L2 miss rate     |    0.0001 | 3.845749e-05 | 2.068145e-05 | 3.342154e-05 |
+|     L2 miss ratio    |    0.0362 |       0.0591 |       0.0303 |       0.0583 |
++----------------------+-----------+--------------+--------------+--------------+
+
++---------------------------+-----------+--------------+-----------+--------------+
+|           Metric          |    Sum    |      Min     |    Max    |      Avg     |
++---------------------------+-----------+--------------+-----------+--------------+
+|  Runtime (RDTSC) [s] STAT | 1742.3276 |     435.5819 |  435.5819 |     435.5819 |
+| Runtime unhalted [s] STAT | 1090.4649 |       0.0088 |  407.9605 |     272.6162 |
+|      Clock [MHz] STAT     | 5200.0119 |    1300.0006 | 1300.0038 |    1300.0030 |
+|          CPI STAT         |    7.6666 |       1.6099 |    2.1529 |       1.9166 |
+|    L2 request rate STAT   |    0.0037 |       0.0006 |    0.0017 |       0.0009 |
+|     L2 miss rate STAT     |    0.0002 | 2.068145e-05 |    0.0001 | 4.814012e-05 |
+|     L2 miss ratio STAT    |    0.1839 |       0.0303 |    0.0591 |       0.0460 |
++---------------------------+-----------+--------------+-----------+--------------+
+
+--------------------------------------------------------------------------------
+CPU name:	Intel(R) Xeon Phi(TM) CPU 7210 @ 1.30GHz
+CPU type:	Intel Xeon Phi (Knights Landing) (Co)Processor
+CPU clock:	1.30 GHz
+--------------------------------------------------------------------------------
+PARSEC Benchmark Suite Version 3.0-beta-20150206
+[HOOKS]-13813:PARSEC Hooks Version 1.2
+[HOOKS]-13813:Entering ROI
+Threading with Posix Threads
+Number of threads : 3
+Using dataset : /home/amaity/Desktop/parsec-3.0/pkgs/apps/bodytrack/inputs/sequenceB_261/
+4000 particles with 5 annealing layers
+
+Processing frame 0
+Processing frame 1
+Processing frame 2
+Processing frame 3
+Processing frame 4
+Processing frame 5
+Processing frame 6
+Processing frame 7
+Processing frame 8
+Processing frame 9
+Processing frame 10
+Processing frame 11
+Processing frame 12
+Processing frame 13
+Processing frame 14
+Processing frame 15
+Processing frame 16
+Processing frame 17
+Processing frame 18
+Processing frame 19
+Processing frame 20
+Processing frame 21
+Processing frame 22
+Processing frame 23
+Processing frame 24
+Processing frame 25
+Processing frame 26
+Processing frame 27
+Processing frame 28
+Processing frame 29
+Processing frame 30
+Processing frame 31
+Processing frame 32
+Processing frame 33
+Processing frame 34
+Processing frame 35
+Processing frame 36
+Processing frame 37
+Processing frame 38
+Processing frame 39
+Processing frame 40
+Processing frame 41
+Processing frame 42
+Processing frame 43
+Processing frame 44
+Processing frame 45
+Processing frame 46
+Processing frame 47
+Processing frame 48
+Processing frame 49
+Processing frame 50
+Processing frame 51
+Processing frame 52
+Processing frame 53
+Processing frame 54
+Processing frame 55
+Processing frame 56
+Processing frame 57
+Processing frame 58
+Processing frame 59
+Processing frame 60
+Processing frame 61
+Processing frame 62
+Processing frame 63
+Processing frame 64
+Processing frame 65
+Processing frame 66
+Processing frame 67
+Processing frame 68
+Processing frame 69
+Processing frame 70
+Processing frame 71
+Processing frame 72
+Processing frame 73
+Processing frame 74
+Processing frame 75
+Processing frame 76
+Processing frame 77
+Processing frame 78
+Processing frame 79
+Processing frame 80
+Processing frame 81
+Processing frame 82
+Processing frame 83
+Processing frame 84
+Processing frame 85
+Processing frame 86
+Processing frame 87
+Processing frame 88
+Processing frame 89
+Processing frame 90
+Processing frame 91
+Processing frame 92
+Processing frame 93
+Processing frame 94
+Processing frame 95
+Processing frame 96
+Processing frame 97
+Processing frame 98
+Processing frame 99
+Processing frame 100
+Processing frame 101
+Processing frame 102
+Processing frame 103
+Processing frame 104
+Processing frame 105
+Processing frame 106
+Processing frame 107
+Processing frame 108
+Processing frame 109
+Processing frame 110
+Processing frame 111
+Processing frame 112
+Processing frame 113
+Processing frame 114
+Processing frame 115
+Processing frame 116
+Processing frame 117
+Processing frame 118
+Processing frame 119
+Processing frame 120
+Processing frame 121
+Processing frame 122
+Processing frame 123
+Processing frame 124
+Processing frame 125
+Processing frame 126
+Processing frame 127
+Processing frame 128
+Processing frame 129
+Processing frame 130
+Processing frame 131
+Processing frame 132
+Processing frame 133
+Processing frame 134
+Processing frame 135
+Processing frame 136
+Processing frame 137
+Processing frame 138
+Processing frame 139
+Processing frame 140
+Processing frame 141
+Processing frame 142
+Processing frame 143
+Processing frame 144
+Processing frame 145
+Processing frame 146
+Processing frame 147
+Processing frame 148
+Processing frame 149
+Processing frame 150
+Processing frame 151
+Processing frame 152
+Processing frame 153
+Processing frame 154
+Processing frame 155
+Processing frame 156
+Processing frame 157
+Processing frame 158
+Processing frame 159
+Processing frame 160
+Processing frame 161
+Processing frame 162
+Processing frame 163
+Processing frame 164
+Processing frame 165
+Processing frame 166
+Processing frame 167
+Processing frame 168
+Processing frame 169
+Processing frame 170
+Processing frame 171
+Processing frame 172
+Processing frame 173
+Processing frame 174
+Processing frame 175
+Processing frame 176
+Processing frame 177
+Processing frame 178
+Processing frame 179
+Processing frame 180
+Processing frame 181
+Processing frame 182
+Processing frame 183
+Processing frame 184
+Processing frame 185
+Processing frame 186
+Processing frame 187
+Processing frame 188
+Processing frame 189
+Processing frame 190
+Processing frame 191
+Processing frame 192
+Processing frame 193
+Processing frame 194
+Processing frame 195
+Processing frame 196
+Processing frame 197
+Processing frame 198
+Processing frame 199
+Processing frame 200
+Processing frame 201
+Processing frame 202
+Processing frame 203
+Processing frame 204
+Processing frame 205
+Processing frame 206
+Processing frame 207
+Processing frame 208
+Processing frame 209
+Processing frame 210
+Processing frame 211
+Processing frame 212
+Processing frame 213
+Processing frame 214
+Processing frame 215
+Processing frame 216
+Processing frame 217
+Processing frame 218
+Processing frame 219
+Processing frame 220
+Processing frame 221
+Processing frame 222
+Processing frame 223
+Processing frame 224
+Processing frame 225
+Processing frame 226
+Processing frame 227
+Processing frame 228
+Processing frame 229
+Processing frame 230
+Processing frame 231
+Processing frame 232
+Processing frame 233
+Processing frame 234
+Processing frame 235
+Processing frame 236
+Processing frame 237
+Processing frame 238
+Processing frame 239
+Processing frame 240
+Processing frame 241
+Processing frame 242
+Processing frame 243
+Processing frame 244
+Processing frame 245
+Processing frame 246
+Processing frame 247
+Processing frame 248
+Processing frame 249
+Processing frame 250
+Processing frame 251
+Processing frame 252
+Processing frame 253
+Processing frame 254
+Processing frame 255
+Processing frame 256
+Processing frame 257
+Processing frame 258
+Processing frame 259
+Processing frame 260
+[HOOKS]-13813:Leaving ROI
+[HOOKS]-13813:Total time spent in ROI:323.890
+[HOOKS]-13813:Total time spent in ROI (in ms):323889698ms
+[HOOKS]-13813:Terminating
+[ECO-HOOKS]-13813 : bodytrack finished
+--------------------------------------------------------------------------------
+Group 1: L2CACHE
++--------------------------------+---------+--------------+--------------+--------------+--------------+
+|              Event             | Counter |    Core 0    |    Core 1    |    Core 64   |    Core 65   |
++--------------------------------+---------+--------------+--------------+--------------+--------------+
+|        INSTR_RETIRED_ANY       |  FIXC0  | 200827037940 | 187941583853 | 190433220767 | 218395607181 |
+|      CPU_CLK_UNHALTED_CORE     |  FIXC1  | 280136380705 | 285251914231 | 274265978629 | 326308898684 |
+|      CPU_CLK_UNHALTED_REF      |  FIXC2  | 280136386426 | 285251918302 | 274265990713 | 326308908081 |
+|  MEM_UOPS_RETIRED_L2_HIT_LOADS |   PMC0  |   1480024913 |   1297036775 |   1371663494 |   1601255943 |
+| MEM_UOPS_RETIRED_L2_MISS_LOADS |   PMC1  |      6841659 |      6607319 |     11307672 |     11449768 |
++--------------------------------+---------+--------------+--------------+--------------+--------------+
+
++-------------------------------------+---------+---------------+--------------+--------------+--------------+
+|                Event                | Counter |      Sum      |      Min     |      Max     |      Avg     |
++-------------------------------------+---------+---------------+--------------+--------------+--------------+
+|        INSTR_RETIRED_ANY STAT       |  FIXC0  |  797597449741 | 187941583853 | 218395607181 | 1.993994e+11 |
+|      CPU_CLK_UNHALTED_CORE STAT     |  FIXC1  | 1165963172249 | 274265978629 | 326308898684 | 2.914908e+11 |
+|      CPU_CLK_UNHALTED_REF STAT      |  FIXC2  | 1165963203522 | 274265990713 | 326308908081 | 2.914908e+11 |
+|  MEM_UOPS_RETIRED_L2_HIT_LOADS STAT |   PMC0  |    5749981125 |   1297036775 |   1601255943 | 1.437495e+09 |
+| MEM_UOPS_RETIRED_L2_MISS_LOADS STAT |   PMC1  |      36206418 |      6607319 |     11449768 | 9.051604e+06 |
++-------------------------------------+---------+---------------+--------------+--------------+--------------+
+
++----------------------+--------------+--------------+-----------+-----------+
+|        Metric        |    Core 0    |    Core 1    |  Core 64  |  Core 65  |
++----------------------+--------------+--------------+-----------+-----------+
+|  Runtime (RDTSC) [s] |     323.8832 |     323.8832 |  323.8832 |  323.8832 |
+| Runtime unhalted [s] |     215.5031 |     219.4384 |  210.9872 |  251.0227 |
+|      Clock [MHz]     |    1299.9179 |    1299.9179 | 1299.9178 | 1299.9178 |
+|          CPI         |       1.3949 |       1.5178 |    1.4402 |    1.4941 |
+|    L2 request rate   |       0.0074 |       0.0069 |    0.0073 |    0.0074 |
+|     L2 miss rate     | 3.406742e-05 | 3.515624e-05 |    0.0001 |    0.0001 |
+|     L2 miss ratio    |       0.0046 |       0.0051 |    0.0082 |    0.0071 |
++----------------------+--------------+--------------+-----------+-----------+
+
++---------------------------+-----------+--------------+-----------+-----------+
+|           Metric          |    Sum    |      Min     |    Max    |    Avg    |
++---------------------------+-----------+--------------+-----------+-----------+
+|  Runtime (RDTSC) [s] STAT | 1295.5328 |     323.8832 |  323.8832 |  323.8832 |
+| Runtime unhalted [s] STAT |  896.9514 |     210.9872 |  251.0227 |  224.2379 |
+|      Clock [MHz] STAT     | 5199.6714 |    1299.9178 | 1299.9179 | 1299.9179 |
+|          CPI STAT         |    5.8470 |       1.3949 |    1.5178 |    1.4617 |
+|    L2 request rate STAT   |    0.0290 |       0.0069 |    0.0074 |    0.0073 |
+|     L2 miss rate STAT     |    0.0003 | 3.406742e-05 |    0.0001 |    0.0001 |
+|     L2 miss ratio STAT    |    0.0250 |       0.0046 |    0.0082 |    0.0063 |
++---------------------------+-----------+--------------+-----------+-----------+
+
+--------------------------------------------------------------------------------
+CPU name:	Intel(R) Xeon Phi(TM) CPU 7210 @ 1.30GHz
+CPU type:	Intel Xeon Phi (Knights Landing) (Co)Processor
+CPU clock:	1.30 GHz
+--------------------------------------------------------------------------------
+PARSEC Benchmark Suite Version 3.0-beta-20150206
+[HOOKS]-13860:PARSEC Hooks Version 1.2
+[HOOKS]-13860:Entering ROI
+Threadcount: 3
+15000 swaps per temperature step
+start temperature: 2000
+netlist filename: /home/amaity/Desktop/parsec-3.0/pkgs/kernels/canneal/inputs/2500000.nets
+number of temperature steps: 6000
+locs created
+locs assigned
+Just saw element: 100000
+Just saw element: 200000
+Just saw element: 300000
+Just saw element: 400000
+Just saw element: 500000
+Just saw element: 600000
+Just saw element: 700000
+Just saw element: 800000
+Just saw element: 900000
+Just saw element: 1000000
+Just saw element: 1100000
+Just saw element: 1200000
+Just saw element: 1300000
+Just saw element: 1400000
+Just saw element: 1500000
+Just saw element: 1600000
+Just saw element: 1700000
+Just saw element: 1800000
+Just saw element: 1900000
+Just saw element: 2000000
+Just saw element: 2100000
+Just saw element: 2200000
+Just saw element: 2300000
+Just saw element: 2400000
+Just saw element: 2500000
+netlist created. 2500000 elements.
+[HOOKS]-13860:Leaving ROI
+Final routing is: 9.03251e+09
+[HOOKS]-13860:Total time spent in ROI:310.851
+[HOOKS]-13860:Total time spent in ROI (in ms):310851344ms
+[HOOKS]-13860:Terminating
+[ECO-HOOKS]-13860 : canneal finished
+--------------------------------------------------------------------------------
+Group 1: L2CACHE
++--------------------------------+---------+-------------+--------------+--------------+--------------+
+|              Event             | Counter |    Core 0   |    Core 1    |    Core 64   |    Core 65   |
++--------------------------------+---------+-------------+--------------+--------------+--------------+
+|        INSTR_RETIRED_ANY       |  FIXC0  |  2042536070 |  30838308287 |  66031812225 |  30814004676 |
+|      CPU_CLK_UNHALTED_CORE     |  FIXC1  | 26305233459 | 270714203094 | 348602565724 | 270569129508 |
+|      CPU_CLK_UNHALTED_REF      |  FIXC2  | 26305235814 | 270714201173 | 348602571473 | 270569116246 |
+|  MEM_UOPS_RETIRED_L2_HIT_LOADS |   PMC0  |     7767905 |     30633708 |    160274207 |     30641820 |
+| MEM_UOPS_RETIRED_L2_MISS_LOADS |   PMC1  |    92372082 |    658556877 |    903702991 |    658197896 |
++--------------------------------+---------+-------------+--------------+--------------+--------------+
+
++-------------------------------------+---------+--------------+-------------+--------------+--------------+
+|                Event                | Counter |      Sum     |     Min     |      Max     |      Avg     |
++-------------------------------------+---------+--------------+-------------+--------------+--------------+
+|        INSTR_RETIRED_ANY STAT       |  FIXC0  | 129726661258 |  2042536070 |  66031812225 | 3.243167e+10 |
+|      CPU_CLK_UNHALTED_CORE STAT     |  FIXC1  | 916191131785 | 26305233459 | 348602565724 | 2.290478e+11 |
+|      CPU_CLK_UNHALTED_REF STAT      |  FIXC2  | 916191124706 | 26305235814 | 348602571473 | 2.290478e+11 |
+|  MEM_UOPS_RETIRED_L2_HIT_LOADS STAT |   PMC0  |    229317640 |     7767905 |    160274207 |     57329410 |
+| MEM_UOPS_RETIRED_L2_MISS_LOADS STAT |   PMC1  |   2312829846 |    92372082 |    903702991 | 5.782075e+08 |
++-------------------------------------+---------+--------------+-------------+--------------+--------------+
+
++----------------------+-----------+-----------+-----------+-----------+
+|        Metric        |   Core 0  |   Core 1  |  Core 64  |  Core 65  |
++----------------------+-----------+-----------+-----------+-----------+
+|  Runtime (RDTSC) [s] |  329.9646 |  329.9646 |  329.9646 |  329.9646 |
+| Runtime unhalted [s] |   20.2348 |  208.2419 |  268.1561 |  208.1303 |
+|      Clock [MHz]     | 1299.9987 | 1299.9988 | 1299.9988 | 1299.9988 |
+|          CPI         |   12.8787 |    8.7785 |    5.2793 |    8.7807 |
+|    L2 request rate   |    0.0490 |    0.0223 |    0.0161 |    0.0224 |
+|     L2 miss rate     |    0.0452 |    0.0214 |    0.0137 |    0.0214 |
+|     L2 miss ratio    |    0.9224 |    0.9556 |    0.8494 |    0.9555 |
++----------------------+-----------+-----------+-----------+-----------+
+
++---------------------------+-----------+-----------+-----------+-----------+
+|           Metric          |    Sum    |    Min    |    Max    |    Avg    |
++---------------------------+-----------+-----------+-----------+-----------+
+|  Runtime (RDTSC) [s] STAT | 1319.8584 |  329.9646 |  329.9646 |  329.9646 |
+| Runtime unhalted [s] STAT |  704.7631 |   20.2348 |  268.1561 |  176.1908 |
+|      Clock [MHz] STAT     | 5199.9951 | 1299.9987 | 1299.9988 | 1299.9988 |
+|          CPI STAT         |   35.7172 |    5.2793 |   12.8787 |    8.9293 |
+|    L2 request rate STAT   |    0.1098 |    0.0161 |    0.0490 |    0.0275 |
+|     L2 miss rate STAT     |    0.1017 |    0.0137 |    0.0452 |    0.0254 |
+|     L2 miss ratio STAT    |    3.6829 |    0.8494 |    0.9556 |    0.9207 |
++---------------------------+-----------+-----------+-----------+-----------+
+
+--------------------------------------------------------------------------------
+CPU name:	Intel(R) Xeon Phi(TM) CPU 7210 @ 1.30GHz
+CPU type:	Intel Xeon Phi (Knights Landing) (Co)Processor
+CPU clock:	1.30 GHz
+--------------------------------------------------------------------------------
+PARSEC Benchmark Suite Version 3.0-beta-20150206
+[HOOKS]-13929:PARSEC Hooks Version 1.2
+[HOOKS]-13929:Entering ROI
+[HOOKS]-13929:Leaving ROI
+Total input size:                      671.58 MB
+Total output size:                     637.28 MB
+Effective compression factor:            1.05x
+
+Mean data chunk size:                    1.88 KB (stddev: 2023.50 KB)
+Amount of duplicate chunks:             54.49%
+Data size after deduplication:         658.95 MB (compression factor: 1.02x)
+Data size after compression:           630.26 MB (compression factor: 1.05x)
+Output overhead:                         1.10%
+[HOOKS]-13929:Total time spent in ROI:38.363
+[HOOKS]-13929:Total time spent in ROI (in ms):38362811ms
+[HOOKS]-13929:Terminating
+[ECO-HOOKS]-13929 : dedup finished
+--------------------------------------------------------------------------------
+Group 1: L2CACHE
++--------------------------------+---------+-------------+-------------+-------------+-------------+
+|              Event             | Counter |    Core 0   |    Core 1   |   Core 64   |   Core 65   |
++--------------------------------+---------+-------------+-------------+-------------+-------------+
+|        INSTR_RETIRED_ANY       |  FIXC0  | 16526226864 | 33662848492 | 33433635566 | 26216113364 |
+|      CPU_CLK_UNHALTED_CORE     |  FIXC1  | 22412825552 | 41166911678 | 41587251472 | 34143443912 |
+|      CPU_CLK_UNHALTED_REF      |  FIXC2  | 22412828568 | 41166914620 | 41587257257 | 34143441852 |
+|  MEM_UOPS_RETIRED_L2_HIT_LOADS |   PMC0  |    87124027 |   219319517 |   209069288 |   163103628 |
+| MEM_UOPS_RETIRED_L2_MISS_LOADS |   PMC1  |     2974009 |     3027010 |     2796869 |     3854307 |
++--------------------------------+---------+-------------+-------------+-------------+-------------+
+
++-------------------------------------+---------+--------------+-------------+-------------+--------------+
+|                Event                | Counter |      Sum     |     Min     |     Max     |      Avg     |
++-------------------------------------+---------+--------------+-------------+-------------+--------------+
+|        INSTR_RETIRED_ANY STAT       |  FIXC0  | 109838824286 | 16526226864 | 33662848492 | 2.745971e+10 |
+|      CPU_CLK_UNHALTED_CORE STAT     |  FIXC1  | 139310432614 | 22412825552 | 41587251472 | 3.482761e+10 |
+|      CPU_CLK_UNHALTED_REF STAT      |  FIXC2  | 139310442297 | 22412828568 | 41587257257 | 3.482761e+10 |
+|  MEM_UOPS_RETIRED_L2_HIT_LOADS STAT |   PMC0  |    678616460 |    87124027 |   219319517 |    169654115 |
+| MEM_UOPS_RETIRED_L2_MISS_LOADS STAT |   PMC1  |     12652195 |     2796869 |     3854307 | 3.163049e+06 |
++-------------------------------------+---------+--------------+-------------+-------------+--------------+
+
++----------------------+-----------+-----------+-----------+-----------+
+|        Metric        |   Core 0  |   Core 1  |  Core 64  |  Core 65  |
++----------------------+-----------+-----------+-----------+-----------+
+|  Runtime (RDTSC) [s] |   39.5834 |   39.5834 |   39.5834 |   39.5834 |
+| Runtime unhalted [s] |   17.2408 |   31.6671 |   31.9905 |   26.2644 |
+|      Clock [MHz]     | 1299.9886 | 1299.9887 | 1299.9886 | 1299.9889 |
+|          CPI         |    1.3562 |    1.2229 |    1.2439 |    1.3024 |
+|    L2 request rate   |    0.0055 |    0.0066 |    0.0063 |    0.0064 |
+|     L2 miss rate     |    0.0002 |    0.0001 |    0.0001 |    0.0001 |
+|     L2 miss ratio    |    0.0330 |    0.0136 |    0.0132 |    0.0231 |
++----------------------+-----------+-----------+-----------+-----------+
+
++---------------------------+-----------+-----------+-----------+-----------+
+|           Metric          |    Sum    |    Min    |    Max    |    Avg    |
++---------------------------+-----------+-----------+-----------+-----------+
+|  Runtime (RDTSC) [s] STAT |  158.3336 |   39.5834 |   39.5834 |   39.5834 |
+| Runtime unhalted [s] STAT |  107.1628 |   17.2408 |   31.9905 |   26.7907 |
+|      Clock [MHz] STAT     | 5199.9548 | 1299.9886 | 1299.9889 | 1299.9887 |
+|          CPI STAT         |    5.1254 |    1.2229 |    1.3562 |    1.2814 |
+|    L2 request rate STAT   |    0.0248 |    0.0055 |    0.0066 |    0.0062 |
+|     L2 miss rate STAT     |    0.0005 |    0.0001 |    0.0002 |    0.0001 |
+|     L2 miss ratio STAT    |    0.0829 |    0.0132 |    0.0330 |    0.0207 |
++---------------------------+-----------+-----------+-----------+-----------+
+
+--------------------------------------------------------------------------------
+CPU name:	Intel(R) Xeon Phi(TM) CPU 7210 @ 1.30GHz
+CPU type:	Intel Xeon Phi (Knights Landing) (Co)Processor
+CPU clock:	1.30 GHz
+--------------------------------------------------------------------------------
+PARSEC Benchmark Suite Version 3.0-beta-20150206
+[HOOKS]-13995:PARSEC Hooks Version 1.2
+[HOOKS]-13995:Entering ROI
+[HOOKS]-13995:Leaving ROI
+QUERY TIME: 328.073 seconds
+[HOOKS]-13995:Total time spent in ROI:328.072
+[HOOKS]-13995:Total time spent in ROI (in ms):328072330ms
+[HOOKS]-13995:Terminating
+[ECO-HOOKS]-13995 : ferret finished
+--------------------------------------------------------------------------------
+Group 1: L2CACHE
++--------------------------------+---------+--------------+--------------+--------------+--------------+
+|              Event             | Counter |    Core 0    |    Core 1    |    Core 64   |    Core 65   |
++--------------------------------+---------+--------------+--------------+--------------+--------------+
+|        INSTR_RETIRED_ANY       |  FIXC0  | 195203702722 | 191944018275 | 234145771241 | 233317256703 |
+|      CPU_CLK_UNHALTED_CORE     |  FIXC1  | 341899355006 | 335580264614 | 384967025551 | 382899996732 |
+|      CPU_CLK_UNHALTED_REF      |  FIXC2  | 341899357410 | 335580269219 | 384967030110 | 382899994672 |
+|  MEM_UOPS_RETIRED_L2_HIT_LOADS |   PMC0  |    632587644 |    608613118 |    671418537 |    661077724 |
+| MEM_UOPS_RETIRED_L2_MISS_LOADS |   PMC1  |     63455078 |     64123070 |     30655541 |     35275539 |
++--------------------------------+---------+--------------+--------------+--------------+--------------+
+
++-------------------------------------+---------+---------------+--------------+--------------+--------------+
+|                Event                | Counter |      Sum      |      Min     |      Max     |      Avg     |
++-------------------------------------+---------+---------------+--------------+--------------+--------------+
+|        INSTR_RETIRED_ANY STAT       |  FIXC0  |  854610748941 | 191944018275 | 234145771241 | 2.136527e+11 |
+|      CPU_CLK_UNHALTED_CORE STAT     |  FIXC1  | 1445346641903 | 335580264614 | 384967025551 | 3.613367e+11 |
+|      CPU_CLK_UNHALTED_REF STAT      |  FIXC2  | 1445346651411 | 335580269219 | 384967030110 | 3.613367e+11 |
+|  MEM_UOPS_RETIRED_L2_HIT_LOADS STAT |   PMC0  |    2573697023 |    608613118 |    671418537 | 6.434243e+08 |
+| MEM_UOPS_RETIRED_L2_MISS_LOADS STAT |   PMC1  |     193509228 |     30655541 |     64123070 |     48377307 |
++-------------------------------------+---------+---------------+--------------+--------------+--------------+
+
++----------------------+-----------+-----------+-----------+-----------+
+|        Metric        |   Core 0  |   Core 1  |  Core 64  |  Core 65  |
++----------------------+-----------+-----------+-----------+-----------+
+|  Runtime (RDTSC) [s] |  328.0635 |  328.0635 |  328.0635 |  328.0635 |
+| Runtime unhalted [s] |  262.9985 |  258.1377 |  296.1273 |  294.5373 |
+|      Clock [MHz]     | 1300.0050 | 1300.0050 | 1300.0050 | 1300.0050 |
+|          CPI         |    1.7515 |    1.7483 |    1.6441 |    1.6411 |
+|    L2 request rate   |    0.0036 |    0.0035 |    0.0030 |    0.0030 |
+|     L2 miss rate     |    0.0003 |    0.0003 |    0.0001 |    0.0002 |
+|     L2 miss ratio    |    0.0912 |    0.0953 |    0.0437 |    0.0507 |
++----------------------+-----------+-----------+-----------+-----------+
+
++---------------------------+-----------+-----------+-----------+-----------+
+|           Metric          |    Sum    |    Min    |    Max    |    Avg    |
++---------------------------+-----------+-----------+-----------+-----------+
+|  Runtime (RDTSC) [s] STAT | 1312.2540 |  328.0635 |  328.0635 |  328.0635 |
+| Runtime unhalted [s] STAT | 1111.8008 |  258.1377 |  296.1273 |  277.9502 |
+|      Clock [MHz] STAT     | 5200.0200 | 1300.0050 | 1300.0050 | 1300.0050 |
+|          CPI STAT         |    6.7850 |    1.6411 |    1.7515 |    1.6963 |
+|    L2 request rate STAT   |    0.0131 |    0.0030 |    0.0036 |    0.0033 |
+|     L2 miss rate STAT     |    0.0009 |    0.0001 |    0.0003 |    0.0002 |
+|     L2 miss ratio STAT    |    0.2809 |    0.0437 |    0.0953 |    0.0702 |
++---------------------------+-----------+-----------+-----------+-----------+
+
+--------------------------------------------------------------------------------
+CPU name:	Intel(R) Xeon Phi(TM) CPU 7210 @ 1.30GHz
+CPU type:	Intel Xeon Phi (Knights Landing) (Co)Processor
+CPU clock:	1.30 GHz
+--------------------------------------------------------------------------------
+PARSEC Benchmark Suite Version 3.0-beta-20150206
+[HOOKS]-14181:PARSEC Hooks Version 1.2
+--------------------------------------------------------------------------------
+Group 1: L2CACHE
++--------------------------------+---------+--------+--------+---------+---------+
+|              Event             | Counter | Core 0 | Core 1 | Core 64 | Core 65 |
++--------------------------------+---------+--------+--------+---------+---------+
+|        INSTR_RETIRED_ANY       |  FIXC0  |   5168 |  12122 | 2321664 |       0 |
+|      CPU_CLK_UNHALTED_CORE     |  FIXC1  | 113718 | 156892 | 3104626 |       0 |
+|      CPU_CLK_UNHALTED_REF      |  FIXC2  | 113685 | 156897 | 3104569 |       0 |
+|  MEM_UOPS_RETIRED_L2_HIT_LOADS |   PMC0  |    167 |    344 |    9794 |       0 |
+| MEM_UOPS_RETIRED_L2_MISS_LOADS |   PMC1  |     55 |    131 |    2604 |       0 |
++--------------------------------+---------+--------+--------+---------+---------+
+
++-------------------------------------+---------+---------+-----+---------+-------------+
+|                Event                | Counter |   Sum   | Min |   Max   |     Avg     |
++-------------------------------------+---------+---------+-----+---------+-------------+
+|        INSTR_RETIRED_ANY STAT       |  FIXC0  | 2338954 |   0 | 2321664 | 584738.5000 |
+|      CPU_CLK_UNHALTED_CORE STAT     |  FIXC1  | 3375236 |   0 | 3104626 |      843809 |
+|      CPU_CLK_UNHALTED_REF STAT      |  FIXC2  | 3375151 |   0 | 3104569 | 843787.7500 |
+|  MEM_UOPS_RETIRED_L2_HIT_LOADS STAT |   PMC0  |   10305 |   0 |    9794 |   2576.2500 |
+| MEM_UOPS_RETIRED_L2_MISS_LOADS STAT |   PMC1  |    2790 |   0 |    2604 |    697.5000 |
++-------------------------------------+---------+---------+-----+---------+-------------+
+
++----------------------+-----------+-----------+-----------+---------+
+|        Metric        |   Core 0  |   Core 1  |  Core 64  | Core 65 |
++----------------------+-----------+-----------+-----------+---------+
+|  Runtime (RDTSC) [s] |    0.0156 |    0.0156 |    0.0156 |  0.0156 |
+| Runtime unhalted [s] |    0.0001 |    0.0001 |    0.0024 |       0 |
+|      Clock [MHz]     | 1300.3833 | 1299.9645 | 1300.0298 |    -    |
+|          CPI         |   22.0043 |   12.9427 |    1.3372 |    -    |
+|    L2 request rate   |    0.0430 |    0.0392 |    0.0053 |    -    |
+|     L2 miss rate     |    0.0106 |    0.0108 |    0.0011 |    -    |
+|     L2 miss ratio    |    0.2477 |    0.2758 |    0.2100 |    -    |
++----------------------+-----------+-----------+-----------+---------+
+
++---------------------------+--------+--------+--------+--------+
+|           Metric          |   Sum  |   Min  |   Max  |   Avg  |
++---------------------------+--------+--------+--------+--------+
+|  Runtime (RDTSC) [s] STAT | 0.0624 | 0.0156 | 0.0156 | 0.0156 |
+| Runtime unhalted [s] STAT | 0.0026 |      0 | 0.0024 | 0.0006 |
+|      Clock [MHz] STAT     |      0 |      0 |      0 |      0 |
+|          CPI STAT         |      0 |      0 |      0 |      0 |
+|    L2 request rate STAT   |      0 |      0 |      0 |      0 |
+|     L2 miss rate STAT     |      0 |      0 |      0 |      0 |
+|     L2 miss ratio STAT    |      0 |      0 |      0 |      0 |
++---------------------------+--------+--------+--------+--------+
+
+--------------------------------------------------------------------------------
+CPU name:	Intel(R) Xeon Phi(TM) CPU 7210 @ 1.30GHz
+CPU type:	Intel Xeon Phi (Knights Landing) (Co)Processor
+CPU clock:	1.30 GHz
+--------------------------------------------------------------------------------
+this =0xb50240
+PARSEC Benchmark Suite Version 3.0-beta-20150206
+[HOOKS]-14223:PARSEC Hooks Version 1.2
+initializing LRT ray tracer ...
+default BVH builder : binnedalldimssavespace
+
+
+Options:  automove = ;
+    files = /home/amaity/Desktop/parsec-3.0/pkgs/apps/raytrace/inputs/thai_statue.obj;
+   frames = 200;
+ nthreads = 3;
+      res = [1920, 1080];
+
+Using memory framebuffer...
+Adding obj file: /home/amaity/Desktop/parsec-3.0/pkgs/apps/raytrace/inputs/thai_statue.obj
+Using auto camera...
+num nodes in scene graph 1
+adding 4999996 vertices
+adding 10000000 triangles
+finalizing geometry
+vertices            4999996 (58593.7 KB)
+triangles           10000000 (117188 KB)
+texture coordinates 0 (0 KB)
+No materials -> create dummy material
+building index
+using BVH builder default
+build time 86.0819
+done
+sceneAABB =[[[-117.959,-195.497,-99.8228,0] ],[[117.252,205.549,103.342,0] ]]
+Rendering 200 frames... 
+[HOOKS]-14223:Entering ROI
+-> starting 3 threads...done
+[HOOKS]-14223:Leaving ROI
+[ECO-HOOKS]-14223 : raytrace finished
+Done
+[HOOKS]-14223:Total time spent in ROI:387.585
+[HOOKS]-14223:Total time spent in ROI (in ms):387585156ms
+[HOOKS]-14223:Terminating
+--------------------------------------------------------------------------------
+Group 1: L2CACHE
++--------------------------------+---------+--------------+--------------+--------------+--------------+
+|              Event             | Counter |    Core 0    |    Core 1    |    Core 64   |    Core 65   |
++--------------------------------+---------+--------------+--------------+--------------+--------------+
+|        INSTR_RETIRED_ANY       |  FIXC0  | 330338219239 | 190495657725 | 290651071520 | 303102027647 |
+|      CPU_CLK_UNHALTED_CORE     |  FIXC1  | 493309899060 | 337339344893 | 458475517358 | 500139794212 |
+|      CPU_CLK_UNHALTED_REF      |  FIXC2  | 493309926655 | 337339343640 | 458475500600 | 500139789695 |
+|  MEM_UOPS_RETIRED_L2_HIT_LOADS |   PMC0  |    114565908 |     77092165 |   2483541945 |    120455827 |
+| MEM_UOPS_RETIRED_L2_MISS_LOADS |   PMC1  |     94565906 |     56161046 |     38430682 |     88733310 |
++--------------------------------+---------+--------------+--------------+--------------+--------------+
+
++-------------------------------------+---------+---------------+--------------+--------------+--------------+
+|                Event                | Counter |      Sum      |      Min     |      Max     |      Avg     |
++-------------------------------------+---------+---------------+--------------+--------------+--------------+
+|        INSTR_RETIRED_ANY STAT       |  FIXC0  | 1114586976131 | 190495657725 | 330338219239 | 2.786467e+11 |
+|      CPU_CLK_UNHALTED_CORE STAT     |  FIXC1  | 1789264555523 | 337339344893 | 500139794212 | 4.473161e+11 |
+|      CPU_CLK_UNHALTED_REF STAT      |  FIXC2  | 1789264560590 | 337339343640 | 500139789695 | 4.473161e+11 |
+|  MEM_UOPS_RETIRED_L2_HIT_LOADS STAT |   PMC0  |    2795655845 |     77092165 |   2483541945 | 6.989140e+08 |
+| MEM_UOPS_RETIRED_L2_MISS_LOADS STAT |   PMC1  |     277890944 |     38430682 |     94565906 |     69472736 |
++-------------------------------------+---------+---------------+--------------+--------------+--------------+
+
++----------------------+-----------+-----------+-----------+-----------+
+|        Metric        |   Core 0  |   Core 1  |  Core 64  |  Core 65  |
++----------------------+-----------+-----------+-----------+-----------+
+|  Runtime (RDTSC) [s] |  614.6371 |  614.6371 |  614.6371 |  614.6371 |
+| Runtime unhalted [s] |  379.4666 |  259.4901 |  352.6711 |  384.7203 |
+|      Clock [MHz]     | 1300.0087 | 1300.0087 | 1300.0088 | 1300.0087 |
+|          CPI         |    1.4933 |    1.7709 |    1.5774 |    1.6501 |
+|    L2 request rate   |    0.0006 |    0.0007 |    0.0087 |    0.0007 |
+|     L2 miss rate     |    0.0003 |    0.0003 |    0.0001 |    0.0003 |
+|     L2 miss ratio    |    0.4522 |    0.4215 |    0.0152 |    0.4242 |
++----------------------+-----------+-----------+-----------+-----------+
+
++---------------------------+-----------+-----------+-----------+-----------+
+|           Metric          |    Sum    |    Min    |    Max    |    Avg    |
++---------------------------+-----------+-----------+-----------+-----------+
+|  Runtime (RDTSC) [s] STAT | 2458.5484 |  614.6371 |  614.6371 |  614.6371 |
+| Runtime unhalted [s] STAT | 1376.3481 |  259.4901 |  384.7203 |  344.0870 |
+|      Clock [MHz] STAT     | 5200.0349 | 1300.0087 | 1300.0088 | 1300.0087 |
+|          CPI STAT         |    6.4917 |    1.4933 |    1.7709 |    1.6229 |
+|    L2 request rate STAT   |    0.0107 |    0.0006 |    0.0087 |    0.0027 |
+|     L2 miss rate STAT     |    0.0010 |    0.0001 |    0.0003 |    0.0003 |
+|     L2 miss ratio STAT    |    1.3131 |    0.0152 |    0.4522 |    0.3283 |
++---------------------------+-----------+-----------+-----------+-----------+
+
+--------------------------------------------------------------------------------
+CPU name:	Intel(R) Xeon Phi(TM) CPU 7210 @ 1.30GHz
+CPU type:	Intel Xeon Phi (Knights Landing) (Co)Processor
+CPU clock:	1.30 GHz
+--------------------------------------------------------------------------------
+[HOOKS]-14287:PARSEC Hooks Version 1.2
+[HOOKS]-14287:Entering ROI
+[HOOKS]-14287:Leaving ROI
+[HOOKS]-14287:Total time spent in ROI:566.598
+[HOOKS]-14287:Total time spent in ROI (in ms):566597848ms
+[HOOKS]-14287:Terminating
+[ECO-HOOKS]-14287 : streamcluster finished
+--------------------------------------------------------------------------------
+Group 1: L2CACHE
++--------------------------------+---------+--------------+--------------+--------------+--------------+
+|              Event             | Counter |    Core 0    |    Core 1    |    Core 64   |    Core 65   |
++--------------------------------+---------+--------------+--------------+--------------+--------------+
+|        INSTR_RETIRED_ANY       |  FIXC0  |  80980573531 | 279358370047 | 349232836075 | 349142707883 |
+|      CPU_CLK_UNHALTED_CORE     |  FIXC1  | 162033507445 | 572643064513 | 641214588595 | 697391802453 |
+|      CPU_CLK_UNHALTED_REF      |  FIXC2  | 162033510457 | 572643060366 | 641214686177 | 697391783231 |
+|  MEM_UOPS_RETIRED_L2_HIT_LOADS |   PMC0  |      8708987 |     39660091 |     58711376 |     39799202 |
+| MEM_UOPS_RETIRED_L2_MISS_LOADS |   PMC1  |    134607489 |    478559892 |    614383516 |    604974464 |
++--------------------------------+---------+--------------+--------------+--------------+--------------+
+
++-------------------------------------+---------+---------------+--------------+--------------+--------------+
+|                Event                | Counter |      Sum      |      Min     |      Max     |      Avg     |
++-------------------------------------+---------+---------------+--------------+--------------+--------------+
+|        INSTR_RETIRED_ANY STAT       |  FIXC0  | 1058714487536 |  80980573531 | 349232836075 | 264678621884 |
+|      CPU_CLK_UNHALTED_CORE STAT     |  FIXC1  | 2073282963006 | 162033507445 | 697391802453 | 5.183207e+11 |
+|      CPU_CLK_UNHALTED_REF STAT      |  FIXC2  | 2073283040231 | 162033510457 | 697391783231 | 5.183208e+11 |
+|  MEM_UOPS_RETIRED_L2_HIT_LOADS STAT |   PMC0  |     146879656 |      8708987 |     58711376 |     36719914 |
+| MEM_UOPS_RETIRED_L2_MISS_LOADS STAT |   PMC1  |    1832525361 |    134607489 |    614383516 | 4.581313e+08 |
++-------------------------------------+---------+---------------+--------------+--------------+--------------+
+
++----------------------+-----------+-----------+-----------+-----------+
+|        Metric        |   Core 0  |   Core 1  |  Core 64  |  Core 65  |
++----------------------+-----------+-----------+-----------+-----------+
+|  Runtime (RDTSC) [s] |  566.4992 |  566.4992 |  566.4992 |  566.4992 |
+| Runtime unhalted [s] |  124.6421 |  440.4979 |  493.2456 |  536.4592 |
+|      Clock [MHz]     | 1299.9903 | 1299.9904 | 1299.9902 | 1299.9904 |
+|          CPI         |    2.0009 |    2.0499 |    1.8361 |    1.9974 |
+|    L2 request rate   |    0.0018 |    0.0019 |    0.0019 |    0.0018 |
+|     L2 miss rate     |    0.0017 |    0.0017 |    0.0018 |    0.0017 |
+|     L2 miss ratio    |    0.9392 |    0.9235 |    0.9128 |    0.9383 |
++----------------------+-----------+-----------+-----------+-----------+
+
++---------------------------+-----------+-----------+-----------+-----------+
+|           Metric          |    Sum    |    Min    |    Max    |    Avg    |
++---------------------------+-----------+-----------+-----------+-----------+
+|  Runtime (RDTSC) [s] STAT | 2265.9968 |  566.4992 |  566.4992 |  566.4992 |
+| Runtime unhalted [s] STAT | 1594.8448 |  124.6421 |  536.4592 |  398.7112 |
+|      Clock [MHz] STAT     | 5199.9613 | 1299.9902 | 1299.9904 | 1299.9903 |
+|          CPI STAT         |    7.8843 |    1.8361 |    2.0499 |    1.9711 |
+|    L2 request rate STAT   |    0.0074 |    0.0018 |    0.0019 |    0.0019 |
+|     L2 miss rate STAT     |    0.0069 |    0.0017 |    0.0018 |    0.0017 |
+|     L2 miss ratio STAT    |    3.7138 |    0.9128 |    0.9392 |    0.9284 |
++---------------------------+-----------+-----------+-----------+-----------+
+
+--------------------------------------------------------------------------------
+CPU name:	Intel(R) Xeon Phi(TM) CPU 7210 @ 1.30GHz
+CPU type:	Intel Xeon Phi (Knights Landing) (Co)Processor
+CPU clock:	1.30 GHz
+--------------------------------------------------------------------------------
+PARSEC Benchmark Suite Version 3.0-beta-20150206
+[HOOKS]-14353:PARSEC Hooks Version 1.2
+[HOOKS]-14353:Entering ROI
+Number of Simulations: 1000000,  Number of threads: 3 Number of swaptions: 128
+[HOOKS]-14353:Leaving ROI
+[HOOKS]-14353:Total time spent in ROI:570.256
+[HOOKS]-14353:Total time spent in ROI (in ms):570256292ms
+[HOOKS]-14353:Terminating
+[ECO-HOOKS]-14353 : swaptions finished
+--------------------------------------------------------------------------------
+Group 1: L2CACHE
++--------------------------------+---------+-------------+--------------+--------------+--------------+
+|              Event             | Counter |    Core 0   |    Core 1    |    Core 64   |    Core 65   |
++--------------------------------+---------+-------------+--------------+--------------+--------------+
+|        INSTR_RETIRED_ANY       |  FIXC0  | 34384198983 | 496761407352 | 564304448758 | 383314397609 |
+|      CPU_CLK_UNHALTED_CORE     |  FIXC1  | 40638550433 | 732986866409 | 696878201364 | 598888989248 |
+|      CPU_CLK_UNHALTED_REF      |  FIXC2  | 40638550966 | 732986822633 | 696878178165 | 598888996680 |
+|  MEM_UOPS_RETIRED_L2_HIT_LOADS |   PMC0  |    69641358 |   1234548946 |   1217799859 |   1015578447 |
+| MEM_UOPS_RETIRED_L2_MISS_LOADS |   PMC1  |       18971 |      5480098 |      8758184 |      4669120 |
++--------------------------------+---------+-------------+--------------+--------------+--------------+
+
++-------------------------------------+---------+---------------+-------------+--------------+--------------+
+|                Event                | Counter |      Sum      |     Min     |      Max     |      Avg     |
++-------------------------------------+---------+---------------+-------------+--------------+--------------+
+|        INSTR_RETIRED_ANY STAT       |  FIXC0  | 1478764452702 | 34384198983 | 564304448758 | 3.696911e+11 |
+|      CPU_CLK_UNHALTED_CORE STAT     |  FIXC1  | 2069392607454 | 40638550433 | 732986866409 | 5.173482e+11 |
+|      CPU_CLK_UNHALTED_REF STAT      |  FIXC2  | 2069392548444 | 40638550966 | 732986822633 | 517348137111 |
+|  MEM_UOPS_RETIRED_L2_HIT_LOADS STAT |   PMC0  |    3537568610 |    69641358 |   1234548946 | 8.843922e+08 |
+| MEM_UOPS_RETIRED_L2_MISS_LOADS STAT |   PMC1  |      18926373 |       18971 |      8758184 | 4.731593e+06 |
++-------------------------------------+---------+---------------+-------------+--------------+--------------+
+
++----------------------+--------------+--------------+--------------+--------------+
+|        Metric        |    Core 0    |    Core 1    |    Core 64   |    Core 65   |
++----------------------+--------------+--------------+--------------+--------------+
+|  Runtime (RDTSC) [s] |     570.2044 |     570.2044 |     570.2044 |     570.2044 |
+| Runtime unhalted [s] |      31.2606 |     563.8393 |     536.0632 |     460.6865 |
+|      Clock [MHz]     |    1299.9925 |    1299.9926 |    1299.9926 |    1299.9925 |
+|          CPI         |       1.1819 |       1.4755 |       1.2349 |       1.5624 |
+|    L2 request rate   |       0.0020 |       0.0025 |       0.0022 |       0.0027 |
+|     L2 miss rate     | 5.517360e-07 | 1.103165e-05 | 1.552032e-05 | 1.218091e-05 |
+|     L2 miss ratio    |       0.0003 |       0.0044 |       0.0071 |       0.0046 |
++----------------------+--------------+--------------+--------------+--------------+
+
++---------------------------+--------------+--------------+--------------+--------------+
+|           Metric          |      Sum     |      Min     |      Max     |      Avg     |
++---------------------------+--------------+--------------+--------------+--------------+
+|  Runtime (RDTSC) [s] STAT |    2280.8176 |     570.2044 |     570.2044 |     570.2044 |
+| Runtime unhalted [s] STAT |    1591.8496 |      31.2606 |     563.8393 |     397.9624 |
+|      Clock [MHz] STAT     |    5199.9702 |    1299.9925 |    1299.9926 |    1299.9925 |
+|          CPI STAT         |       5.4547 |       1.1819 |       1.5624 |       1.3637 |
+|    L2 request rate STAT   |       0.0094 |       0.0020 |       0.0027 |       0.0024 |
+|     L2 miss rate STAT     | 3.928462e-05 | 5.517360e-07 | 1.552032e-05 | 9.821154e-06 |
+|     L2 miss ratio STAT    |       0.0164 |       0.0003 |       0.0071 |       0.0041 |
++---------------------------+--------------+--------------+--------------+--------------+
+

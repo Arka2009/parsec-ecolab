@@ -61,20 +61,17 @@ int launch_blackscholes(unsigned int nt, app_info_t *app, const char *map_file) 
     if(!fc) {
 		PRINTERROR("Map File not found");
     }
-    //PRINTSCHED("Obtaining a static thread<---->CPU map");
     unsigned int i, cpu;
     char line[BUFSIZ];
 	for(i=0; i<MAX_CPUS;i++) {
 		if (fgets(line,BUFSIZ,fc) > 0) {
-			//PRINTTOPO(line);
 			sscanf(line,"%d,%d\n",&cpu,&app->thr2cpuMap[i]);
-		}
+		} /* Do you need an else condition ? */
     }
 
     /* Fork the process */
     pid_t pid = launch_app(binary,arg);
     app->pid  = pid;
-    sprintf(log,"Started blackscholes with pid@%d\n",pid);
     return pid;
 }
 
