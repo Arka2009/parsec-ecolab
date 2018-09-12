@@ -79,9 +79,6 @@ int main (int argc, char * const argv[]) {
 	__parsec_bench_begin(__parsec_canneal);
 #endif
 /*********************New ROI start*****************************************/	
-#ifdef ENABLE_PARSEC_HOOKS
-	__parsec_roi_begin();
-#endif
 
 	srandom(3);
 
@@ -124,6 +121,9 @@ int main (int argc, char * const argv[]) {
 	annealer_thread a_thread(&my_netlist,num_threads,swaps_per_temp,start_temp,number_temp_steps);
 
 /*********************Original ROI start*****************************************/
+#ifdef ENABLE_PARSEC_HOOKS
+	__parsec_roi_begin();
+#endif
 
 #ifdef ENABLE_THREADS
 	std::vector<pthread_t> threads(num_threads);

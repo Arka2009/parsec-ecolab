@@ -157,9 +157,6 @@ int main(int argc, char *argv[])
 	__parsec_bench_begin(__parsec_swaptions);
 #endif
 	/************************ New ROI start Location *****************************/
-#ifdef ENABLE_PARSEC_HOOKS
-	__parsec_roi_begin();
-#endif
 
         if(argc == 1)
         {
@@ -291,7 +288,9 @@ int main(int argc, char *argv[])
 
 	// **********Calling the Swaption Pricing Routine*****************
 	/************ Original ROI Location ******************************/
-
+#ifdef ENABLE_PARSEC_HOOKS
+	__parsec_roi_begin();
+#endif
 #ifdef ENABLE_THREADS
 
 #ifdef TBB_VERSION

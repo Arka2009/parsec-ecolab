@@ -213,9 +213,6 @@ int mainOMP(string path, int cameras, int frames, int particles, int layers, int
 int mainPthreads(string path, int cameras, int frames, int particles, int layers, int threads, bool OutputBMP)
 {
 	/* New ROI */
-#if defined(ENABLE_PARSEC_HOOKS)
-        __parsec_roi_begin();
-#endif
 	cout << "Threading with Posix Threads" << endl;
 	if(threads < 1) {
 		cout << "Warning: Illegal or unspecified number of threads, using 1 thread" << endl;
@@ -252,6 +249,9 @@ int mainPthreads(string path, int cameras, int frames, int particles, int layers
 	vector<float> estimate;																//expected pose from particle distribution
 
 	/* Original ROI */
+#if defined(ENABLE_PARSEC_HOOKS)
+        __parsec_roi_begin();
+#endif
 	for(int i = 0; i < frames; i++)														//process each set of frames
 	{	cout << "Processing frame " << i << endl;
 		if(!pf.Update((float)i))														//Run particle filter step

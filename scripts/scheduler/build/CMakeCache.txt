@@ -171,12 +171,6 @@ date2019_scheduler_BINARY_DIR:STATIC=/home/amaity/Desktop/parsec-3.0/scripts/sch
 //Value Computed by CMake
 date2019_scheduler_SOURCE_DIR:STATIC=/home/amaity/Desktop/parsec-3.0/scripts/scheduler
 
-//Value Computed by CMake
-ecoaffine_BINARY_DIR:STATIC=/home/amaity/Desktop/parsec-3.0/scripts/scheduler/build
-
-//Value Computed by CMake
-ecoaffine_SOURCE_DIR:STATIC=/home/amaity/Desktop/parsec-3.0/scripts/scheduler
-
 
 ########################
 # INTERNAL cache entries

@@ -72,3 +72,9 @@ scripts/*.txt
 
 # Scheduler builds
 scripts/scheduler/build/
+
+# Static Maps
+*.csv
+
+# Python Objects
+*.pyc
