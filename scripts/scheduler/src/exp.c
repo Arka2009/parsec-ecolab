@@ -187,7 +187,24 @@ void exp_1bench_simsmall(unsigned int bench_hash, char alloc_hash, unsigned int 
     }
 }
 
-void exp_main(int argc, char **argv) {}
+void exp_main(int argc, char **argv) {
+    // if (argc < 10) {
+    //     fprintf(stderr,"usage: %s <benchmark-code> <alloc-code> <>\n",argv[0]);
+    //     fprintf(stderr,"  <benchmark-code>:          Benchmark to run\n");
+    //     fprintf(stderr,"  <alloc-code>:              Allocation Code\n");
+    //     fprintf(stderr,"  d:           Dimension of each data point\n");
+    //     fprintf(stderr,"  n:           Number of data points\n");
+    //     fprintf(stderr,"  chunksize:   Number of data points to handle per step\n");
+    //     fprintf(stderr,"  clustersize: Maximum number of intermediate centers\n");
+    //     fprintf(stderr,"  infile:      Input file (if n<=0)\n");
+    //     fprintf(stderr,"  outfile:     Output file\n");
+    //     fprintf(stderr,"  nproc:       Number of threads to use\n");
+    //     fprintf(stderr,"\n");
+    //     fprintf(stderr, "if n > 0, points will be randomly generated instead of reading from infile.\n");
+    //     PRINTERROR("Insufficient Arguments");
+    // }
+
+}
 
 /* Run all benchmarks */
 void exp_allbench(char alloc_hash,unsigned int nth_hash) {

@@ -36,6 +36,10 @@ using namespace tbb;
 #include <hooks.h>
 #endif
 
+#ifdef ECOLABKNL_HOOKS
+#define STREAMCLUSTER_PREFIX "[parsec.streamcluster]"
+#endif
+
 using namespace std;
 
 #define MAXNAMESIZE 1024 // max filename length
@@ -1692,6 +1696,7 @@ void* localSearchSub(void* arg_) {
   pkmedian_arg_t* arg= (pkmedian_arg_t*)arg_;
 #ifdef ECOLABKNL_HOOKS
   //ecolab_set_cpu_affinity(arg->pid+1);
+  printf(STREAMCLUSTER_PREFIX" : creating slave-thread@%d\n",arg->pid+1);
 #endif
   pkmedian(arg->points,arg->kmin,arg->kmax,arg->kfinal,arg->pid,arg->barrier);
 
@@ -1714,6 +1719,11 @@ void localSearch( Points* points, long kmin, long kmax, long* kfinal ) {
     pthread_barrier_t barrier;
     pthread_t* threads = new pthread_t[nproc];
     pkmedian_arg_t* arg = new pkmedian_arg_t[nproc];
+
+#ifdef ECOLABKNL_HOOKS
+	static unsigned int invoke = 1;
+	printf(STREAMCLUSTER_PREFIX" : parallel section invoked %d\n",invoke++);
+#endif
 
 #ifdef ENABLE_THREADS
     pthread_barrier_init(&barrier,NULL,nproc);
