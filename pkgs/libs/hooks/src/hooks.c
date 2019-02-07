@@ -185,12 +185,23 @@ void __parsec_bench_end() {
   #endif //DEBUG
 
   fflush(NULL);
-  #if ENABLE_TIMING
-  printf(HOOKS_PREFIX"-%d:Total time spent in ROI:%.3f\n",getpid(), time_end-time_begin);
-  printf(HOOKS_PREFIX"-%d:Total time spent in ROI (in ms):%lldms\n",getpid(), calculate_time_diff(time_end2,time_begin2));
-  #endif //ENABLE_TIMING
+  //#if ENABLE_TIMING
+  //printf(HOOKS_PREFIX"-%d:Total time spent in ROI:%.3f\n",getpid(), time_end-time_begin);
+  //printf(HOOKS_PREFIX"-%d:Total time spent in ROI (in ms):%lldms\n",getpid(), calculate_time_diff(time_end2,time_begin2));
+  //#endif //ENABLE_TIMING
   printf(HOOKS_PREFIX"-%d:Terminating\n",getpid());
 }
+
+#ifdef ECOLABKNL_HOOKS
+void eco_cacheflush() {
+   /* Just Polute the cache woth huge amounts of DATA*/
+    const int size = 80*1024*1024; // Allocate 20M. Set much larger then L2
+    char *c = (char *)malloc(size);
+    for (int i = 0; i < 0xffff; i++)
+      for (int j = 0; j < size; j++)
+        c[j] = i*j;
+}
+#endif /* ECOLABKNL_HOOKS */
 
 void __parsec_roi_begin() {
   #if DEBUG

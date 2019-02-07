@@ -168,6 +168,9 @@ void __parsec_roi_end();
 void ecolab_set_cpu_affinity(int);
 void ecolab_set_cpu_affinity2(int, const char*);
 
+/* Flush the cache in your application */
+void eco_cacheflush();
+
 #define MAX_THREADS   256
 #define MAX_CPUS      MAX_THREADS
 #endif /* ECOLABKNL_HOOKS */

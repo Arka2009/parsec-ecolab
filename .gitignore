@@ -78,3 +78,6 @@ scripts/scheduler/build/
 
 # Python Objects
 *.pyc
+
+# VSCode directories
+/.vscode/
