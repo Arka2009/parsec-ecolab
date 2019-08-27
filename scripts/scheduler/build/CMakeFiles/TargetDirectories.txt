@@ -1,3 +1,0 @@
-/home/amaity/Desktop/parsec-3.0/scripts/scheduler/build/CMakeFiles/edit_cache.dir
-/home/amaity/Desktop/parsec-3.0/scripts/scheduler/build/CMakeFiles/rebuild_cache.dir
-/home/amaity/Desktop/parsec-3.0/scripts/scheduler/build/CMakeFiles/sched.dir
