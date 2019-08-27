@@ -1,14 +1,3 @@
-//!/usr/bin/python3
-
-// Launch The applications
-// ---- APP1 (store the pid/tids)
-// ---- APP2 (store the pid/tids)
-// ---- APP3 (store the pid/tids)
-
-// while(1) {
-// Get the APP1-3 usage statistics
-// Affine the pid/tids appropriatly
-// }
 #include <stdio.h>
 #include <stdlib.h>
 #include <sys/types.h>

@@ -1,7 +1,7 @@
 {
     "files.associations": {
-        "types.h": "c",
-        "string.h": "c",
-        "dirent.h": "c"
-    }
+        "dirent.h": "c",
+        "cpu_topology.h": "c"
+    },
+    "C_Cpp.errorSquiggles": "Disabled"
 }

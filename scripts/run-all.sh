@@ -3,24 +3,26 @@
 mkdir -p dump
 
 parsec_dir=${PARSECROOT}
-nthreads=1
-input="test"
+nthreads=64
+input="simlarge"
 
-benchmarks="\
-parsec.blackscholes \
-parsec.bodytrack \
-parsec.canneal \
-parsec.dedup \
-parsec.ferret \
-parsec.fluidanimate \
-parsec.streamcluster \
-parsec.raytrace \
-parsec.swaptions \
-"
+#benchmarks="\
+#parsec.blackscholes \
+#parsec.bodytrack \
+#parsec.canneal \
+#parsec.dedup \
+#parsec.ferret \
+#parsec.fluidanimate \
+#parsec.streamcluster \
+#parsec.raytrace \
+#parsec.swaptions \
+#"
+#
+benchmarks="parsec.blackscholes"
 dump="dump/run-all-${input}.txt"
 
 for bench in ${benchmarks}; do
-	echo "[DATE2019-Exp]: running ${bench} " >> ${dump}
-	${parsec_dir}/bin/parsecmgmt -a run -p ${bench} -c gcc-hooks -i ${input} -n ${nthreads} >> ${dump}
-	echo "------------------------------------------------------" >> ${dump}
+	echo "[DATE2019-Exp]: running ${bench} "
+	${parsec_dir}/bin/parsecmgmt -a run -p ${bench} -c gcc-hooks -i ${input} -n ${nthreads}
+	echo "------------------------------------------------------"
 done

@@ -55,6 +55,9 @@
 #include <limits.h>
 #include <sys/types.h>
 #include <unistd.h>
+#ifdef ECOLAB_VTUNE
+#include <ittnotify.h>
+#endif
 #endif
 
 #if ENABLE_TIMING
@@ -215,6 +218,10 @@ void __parsec_roi_begin() {
   #if ENABLE_PTLSIM_TRIGGER
   ptlcall_switch_to_sim();
   #endif //ENABLE_PTLSIM_TRIGGER
+
+  #ifdef ECOLAB_VTUNE
+  __itt_resume(); // Enable VTune profiling
+  #endif
 }
 
 
@@ -244,6 +251,10 @@ void __parsec_roi_end() {
 
   printf(HOOKS_PREFIX"-%d:Leaving ROI\n",getpid());
   fflush(NULL);
+
+  #ifdef ECOLAB_VTUNE
+  __itt_pause();
+  #endif
 }
 
 

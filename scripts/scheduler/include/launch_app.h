@@ -38,6 +38,7 @@ pid_t launch_swaptions(unsigned int nt, app_info_t *app, const char *map_file);
 pid_t launch_swaptions_simsmall(unsigned int nt, app_info_t *app, const char *map_file);
 pid_t launch_streamcluster(unsigned int nt, app_info_t *app, const char *map_file);
 pid_t launch_streamcluster_simsmall(unsigned int nt, app_info_t *app, const char *map_file);
+void schedule_affine_map(app_info_t *app, unsigned int num);
 
 /* (Non-blocking) wait for the applications */
 bool waitapp(const app_info_t *, int num_apps);

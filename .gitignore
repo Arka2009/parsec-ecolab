@@ -74,3 +74,9 @@ scripts/*.txt
 build/
 autom4te.cache/
 config.h.in
+
+# Static Maps
+*.csv
+
+# Python Objects
+*.pyc

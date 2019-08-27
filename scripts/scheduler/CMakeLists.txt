@@ -8,7 +8,7 @@ include_directories(include)
 #However, the file(GLOB...) allows for wildcard additions:
 file(GLOB SOURCES "src/*.c")
  
-#Buid products
+#Build products
 add_executable(sched ${SOURCES})
  
 #Set the location for library installation -- i.e., /usr/lib in this case

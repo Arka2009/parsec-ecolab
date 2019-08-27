@@ -1,0 +1,155 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <sys/types.h>
+#include <sys/wait.h>
+#include <unistd.h>
+#include <string.h>
+#include <errno.h>
+#include <dirent.h>
+#include <time.h>
+#include <assert.h>
+#include "cpu_topology.h"
+#include "pretty_print.h"
+#include "launch_app.h"
+#include "exp_alloc.h"
+
+void exp_alloc_32nth_a() {
+     PRINTSCHED("Welcome");
+    char log[BUFSIZ];
+    cpu_topology_t cpu_top;
+    detect_topology(&cpu_top);
+
+    unsigned int i;
+    int status; /* Child status */
+    app_info_t app[MAX_APPS];
+    char *map_file2 = "/home/amaity/Desktop/parsec-3.0/scripts/static_maps/exp_alloc_32nth_a.csv";
+    unsigned int nthreads = 32;
+
+    /* Launch applications (This can be done concurrently by a separate thread that generates the application) */
+    init_app_info(&app[0]);
+    launch_blackscholes(nthreads,&app[0],map_file2);
+    schedule_affine_map(app,1);
+    PRINTSCHED("exp_alloc_32nth_a Finished : blackscholes finished");
+    
+
+    init_app_info(&app[0]);
+    launch_bodytrack(nthreads,&app[0],map_file2);
+    schedule_affine_map(app,1);
+    PRINTSCHED("exp_alloc_32nth_a Finished : bodytrack finished");
+    
+
+    init_app_info(&app[0]);
+    launch_canneal(nthreads,&app[0],map_file2);
+    schedule_affine_map(app,1);
+    PRINTSCHED("exp_alloc_32nth_a Finished : canneal finished");
+    
+
+    init_app_info(&app[0]);
+    launch_dedup(nthreads,&app[0],map_file2);
+    schedule_affine_map(app,1);
+    PRINTSCHED("exp_alloc_32nth_a Finished : dedup finished");
+    
+
+    init_app_info(&app[0]);
+    launch_ferret(nthreads,&app[0],map_file2);
+    schedule_affine_map(app,1);
+    PRINTSCHED("exp_alloc_32nth_a Finished : ferret finished");
+    
+
+    init_app_info(&app[0]);
+    launch_fluidanimate(nthreads,&app[0],map_file2);
+    schedule_affine_map(app,1);
+    PRINTSCHED("exp_alloc_32nth_a Finished : fluidanimate finished");
+    
+
+    init_app_info(&app[0]);
+    launch_raytrace(nthreads,&app[0],map_file2);
+    schedule_affine_map(app,1);
+    PRINTSCHED("exp_alloc_32nth_a Finished : raytrace finished");
+    
+
+    init_app_info(&app[0]);
+    launch_streamcluster(nthreads,&app[0],map_file2);
+    schedule_affine_map(app,1);
+    PRINTSCHED("exp_alloc_32nth_a Finished : streamcluster finished");
+    
+
+    init_app_info(&app[0]);
+    launch_swaptions(nthreads,&app[0],map_file2);
+    schedule_affine_map(app,1);
+    PRINTSCHED("exp_alloc_32nth_a Finished : swaptions finished");
+    
+}
+
+void exp_alloc_32nth_b() {
+     PRINTSCHED("Welcome");
+    char log[BUFSIZ];
+    cpu_topology_t cpu_top;
+    detect_topology(&cpu_top);
+
+    unsigned int i;
+    int status; /* Child status */
+    app_info_t app[MAX_APPS];
+    char *map_file2 = "/home/amaity/Desktop/parsec-3.0/scripts/static_maps/exp_alloc_32nth_b.csv";
+    unsigned int nthreads = 32;
+
+    /* Launch applications (This can be done concurrently by a separate thread that generates the application) */
+    init_app_info(&app[0]);
+    launch_blackscholes(nthreads,&app[0],map_file2);
+    schedule_affine_map(app,1);
+    PRINTSCHED("exp_alloc_32nth_b Finished : blackscholes finished");
+    
+
+    init_app_info(&app[0]);
+    launch_bodytrack(nthreads,&app[0],map_file2);
+    schedule_affine_map(app,1);
+    PRINTSCHED("exp_alloc_32nth_b Finished : bodytrack finished");
+    
+
+    init_app_info(&app[0]);
+    launch_canneal(nthreads,&app[0],map_file2);
+    schedule_affine_map(app,1);
+    PRINTSCHED("exp_alloc_32nth_b Finished : canneal finished");
+    
+
+    init_app_info(&app[0]);
+    launch_dedup(nthreads,&app[0],map_file2);
+    schedule_affine_map(app,1);
+    PRINTSCHED("exp_alloc_32nth_b Finished : dedup finished");
+    
+
+    init_app_info(&app[0]);
+    launch_ferret(nthreads,&app[0],map_file2);
+    schedule_affine_map(app,1);
+    PRINTSCHED("exp_alloc_32nth_b Finished : ferret finished");
+    
+
+    init_app_info(&app[0]);
+    launch_fluidanimate(nthreads,&app[0],map_file2);
+    schedule_affine_map(app,1);
+    PRINTSCHED("exp_alloc_32nth_b Finished : fluidanimate finished");
+    
+
+    init_app_info(&app[0]);
+    launch_raytrace(nthreads,&app[0],map_file2);
+    schedule_affine_map(app,1);
+    PRINTSCHED("exp_alloc_32nth_b Finished : raytrace finished");
+    
+
+    init_app_info(&app[0]);
+    launch_streamcluster(nthreads,&app[0],map_file2);
+    schedule_affine_map(app,1);
+    PRINTSCHED("exp_alloc_32nth_b Finished : streamcluster finished");
+    
+
+    init_app_info(&app[0]);
+    launch_swaptions(nthreads,&app[0],map_file2);
+    schedule_affine_map(app,1);
+    PRINTSCHED("exp_alloc_32nth_b Finished : swaptions finished");
+    
+}
+
+void exp_alloc_32nth() {
+    exp_alloc_32nth_a();
+    exp_alloc_32nth_b();
+}

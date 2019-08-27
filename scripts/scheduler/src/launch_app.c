@@ -11,6 +11,8 @@
 #include "cpu_topology.h"
 #include "pretty_print.h"
 
+static char event_list[] = "CPU_CLK_UNHALTED.THREAD,INST_RETIRED.ANY,MEM_UOPS_RETIRED.ALL_LOADS,OFFCORE_RESPONSE:request=PF_L1_DATA_RD:response=ANY_RESPONSE,OFFCORE_RESPONSE:request=PF_L1_DATA_RD:response=L2_HIT_THIS_TILE_M,OFFCORE_RESPONSE:request=PF_L1_DATA_RD:response=L2_HIT_THIS_TILE_E,OFFCORE_RESPONSE:request=PF_L1_DATA_RD:response=L2_HIT_THIS_TILE_S,OFFCORE_RESPONSE:request=PF_L1_DATA_RD:response=L2_HIT_THIS_TILE_F,OFFCORE_RESPONSE:request=PF_L1_DATA_RD:response=L2_HIT_NEAR_TILE,OFFCORE_RESPONSE:request=PF_L1_DATA_RD:response=L2_HIT_FAR_TILE,OFFCORE_RESPONSE:request=PF_L1_DATA_RD:response=DDR,OFFCORE_RESPONSE:request=PF_L1_DATA_RD:response=L2_MISS,OFFCORE_RESPONSE:request=PF_L1_DATA_RD:response=L2_MISS,OFFCORE_RESPONSE:request=PF_L1_DATA_RD:response=L2_MISS,OFFCORE_RESPONSE:request=DEMAND_DATA_RD:response=L2_HIT_THIS_TILE_E,OFFCORE_RESPONSE:request=DEMAND_DATA_RD:response=L2_HIT_THIS_TILE_E,OFFCORE_RESPONSE:request=DEMAND_DATA_RD:response=L2_HIT_THIS_TILE_E,OFFCORE_RESPONSE:request=DEMAND_DATA_RD:response=L2_HIT_NEAR_TILE,OFFCORE_RESPONSE:request=DEMAND_DATA_RD:response=L2_HIT_FAR_TILE,OFFCORE_RESPONSE:request=DEMAND_DATA_RD:response=DDR,OFFCORE_RESPONSE:request=DEMAND_DATA_RD:response=L2_MISS";
+
 void init_app_info(app_info_t *app) {
     app->pid        = -1;
     app->numthreads = 0;
@@ -61,20 +63,23 @@ int launch_blackscholes(unsigned int nt, app_info_t *app, const char *map_file) 
     if(!fc) {
 		PRINTERROR("Map File not found");
     }
-    //PRINTSCHED("Obtaining a static thread<---->CPU map");
     unsigned int i, cpu;
     char line[BUFSIZ];
 	for(i=0; i<MAX_CPUS;i++) {
 		if (fgets(line,BUFSIZ,fc) > 0) {
-			//PRINTTOPO(line);
 			sscanf(line,"%d,%d\n",&cpu,&app->thr2cpuMap[i]);
-		}
+		} /* Do you need an else condition ? */
     }
 
     /* Fork the process */
     pid_t pid = launch_app(binary,arg);
     app->pid  = pid;
-    sprintf(log,"Started blackscholes with pid@%d\n",pid);
+#ifdef VTUNE_PROFILE
+    sprintf(log,"amplxe-cl -r log/%s_rpt2 -collect-with runsa -knob event-config=%s -target-pid %d &","blackscholes",event_list,pid);
+    if (system(log) < 0) {
+        PRINTERROR("VTune Launch Failed");
+    }
+#endif
     return pid;
 }
 
@@ -112,7 +117,8 @@ int launch_blackscholes_simsmall(unsigned int nt, app_info_t *app, const char *m
     /* Fork the process */
     pid_t pid = launch_app(binary,arg);
     app->pid  = pid;
-    sprintf(log,"Started blackscholes with pid@%d\n",pid);
+
+    //sprintf(log,"Started blackscholes with pid@%d\n",pid);
     return pid;
 }
 
@@ -153,7 +159,14 @@ pid_t launch_bodytrack(unsigned int nt, app_info_t *app, const char *map_file) {
 
     pid_t pid = launch_app(binary,arg);
     app->pid  = pid;
-    sprintf(log,"Started bodytrack with pid@%d\n",pid);
+    //sprintf(log,"Started bodytrack with pid@%d\n",pid);
+#ifdef VTUNE_PROFILE
+    //sprintf(log,"amplxe-cl -r log/%s_rpt2 -collect-with runsa -knob event-config=CPU_CLK_UNHALTED.THREAD,INST_RETIRED.ANY,MEM_UOPS_RETIRED.ALL_LOADS,MEM_UOPS_RETIRED.L1_MISS_LOADS,MEM_UOPS_RETIRED.L2_HIT_LOADS,MEM_UOPS_RETIRED.L2_MISS_LOADS,UNC_M_CAS_COUNT.ALL -target-pid %d &","bodytrack",pid);
+    sprintf(log,"amplxe-cl -r log/%s_rpt2 -collect-with runsa -knob event-config=%s -target-pid %d &","bodytrack",event_list,pid);
+    if (system(log) < 0) {
+        PRINTERROR("VTune Launch Failed");
+    }
+#endif
     return pid;
 }
 
@@ -232,7 +245,14 @@ pid_t launch_canneal(unsigned int nt, app_info_t *app, const char *map_file) {
 
     pid_t pid = launch_app(binary,arg);
     app->pid  = pid;
-    sprintf(log,"Started canneal with pid@%d\n",pid);
+    //sprintf(log,"Started canneal with pid@%d\n",pid);
+#ifdef VTUNE_PROFILE
+    //sprintf(log,"amplxe-cl -r log/%s_rpt2 -collect-with runsa -knob event-config=CPU_CLK_UNHALTED.THREAD,INST_RETIRED.ANY,MEM_UOPS_RETIRED.ALL_LOADS,MEM_UOPS_RETIRED.L1_MISS_LOADS,MEM_UOPS_RETIRED.L2_HIT_LOADS,MEM_UOPS_RETIRED.L2_MISS_LOADS,UNC_M_CAS_COUNT.ALL -target-pid %d &","canneal",pid);
+    sprintf(log,"amplxe-cl -r log/%s_rpt2 -collect-with runsa -knob event-config=%s -target-pid %d &","canneal",event_list,pid);
+    if (system(log) < 0) {
+        PRINTERROR("VTune Launch Failed");
+    }
+#endif
     return pid;
 }
 
@@ -313,7 +333,14 @@ pid_t launch_dedup(unsigned int nt, app_info_t *app, const char *map_file) {
 
     pid_t pid = launch_app(binary,arg);
     app->pid  = pid;
-    sprintf(log,"Started dedup with pid@%d\n",pid);
+    //sprintf(log,"Started dedup with pid@%d\n",pid);
+#ifdef VTUNE_PROFILE
+    //sprintf(log,"amplxe-cl -r log/%s_rpt2 -collect-with runsa -knob event-config=CPU_CLK_UNHALTED.THREAD,INST_RETIRED.ANY,MEM_UOPS_RETIRED.ALL_LOADS,MEM_UOPS_RETIRED.L1_MISS_LOADS,MEM_UOPS_RETIRED.L2_HIT_LOADS,MEM_UOPS_RETIRED.L2_MISS_LOADS,UNC_M_CAS_COUNT.ALL -target-pid %d &","dedup",pid);
+    sprintf(log,"amplxe-cl -r log/%s_rpt2 -collect-with runsa -knob event-config=%s -target-pid %d &","dedup",event_list,pid);
+    if (system(log) < 0) {
+        PRINTERROR("VTune Launch Failed");
+    }
+#endif
     return pid;
 }
 
@@ -396,7 +423,13 @@ pid_t launch_ferret(unsigned int nt, app_info_t *app, const char *map_file) {
 
     pid_t pid = launch_app(binary,arg);
     app->pid  = pid;
-    sprintf(log,"Started ferret with pid@%d\n",pid);
+    //sprintf(log,"Started ferret with pid@%d\n",pid);
+#ifdef VTUNE_PROFILE
+    sprintf(log,"amplxe-cl -r log/%s_rpt2 -collect-with runsa -knob event-config=%s -target-pid %d &","ferret",event_list,pid);
+    if (system(log) < 0) {
+        PRINTERROR("VTune Launch Failed");
+    }
+#endif
     return pid;
 }
 
@@ -552,7 +585,13 @@ pid_t launch_raytrace(unsigned int nt, app_info_t *app, const char *map_file) {
 
     pid_t pid = launch_app(binary,arg);
     app->pid  = pid;
-    sprintf(log,"Started raytrace with pid@%d\n",pid);
+    //sprintf(log,"Started raytrace with pid@%d\n",pid);
+#ifdef VTUNE_PROFILE
+    sprintf(log,"amplxe-cl -r log/%s_rpt2 -collect-with runsa -knob event-config=%s -target-pid %d &","raytrace",event_list,pid);
+    if (system(log) < 0) {
+        PRINTERROR("VTune Launch Failed");
+    }
+#endif
     return pid;
 }
 
@@ -633,7 +672,13 @@ pid_t launch_swaptions(unsigned int nt, app_info_t *app, const char *map_file) {
 
     pid_t pid = launch_app(binary,arg);
     app->pid  = pid;
-    sprintf(log,"Started swaptions with pid@%d\n",pid);
+    //sprintf(log,"Started swaptions with pid@%d\n",pid);
+#ifdef VTUNE_PROFILE
+    sprintf(log,"amplxe-cl -r log/%s_rpt2 -collect-with runsa -knob event-config=%s -target-pid %d &","swaptions",event_list,pid);
+    if (system(log) < 0) {
+        PRINTERROR("VTune Launch Failed");
+    }
+#endif
     return pid;
 }
 
@@ -714,7 +759,13 @@ pid_t launch_streamcluster(unsigned int nt, app_info_t *app, const char *map_fil
 
     pid_t pid = launch_app(binary,arg);
     app->pid  = pid;
-    sprintf(log,"Started streamcluster with pid@%d\n",pid);
+    //sprintf(log,"Started streamcluster with pid@%d\n",pid);
+#ifdef VTUNE_PROFILE
+    sprintf(log,"amplxe-cl -r log/%s_rpt2 -collect-with runsa -knob event-config=%s -target-pid %d &","streamcluster",event_list,pid);
+    if (system(log) < 0) {
+        PRINTERROR("VTune Launch Failed");
+    }
+#endif
     return pid;
 }
 
@@ -779,4 +830,21 @@ bool waitapp(const app_info_t *apps, int num_apps) {
         }
     }
     return all_apps_finished;
+}
+
+/* Schedule a list of apps */
+void schedule_affine_map(app_info_t *app, unsigned int num) {
+    unsigned int i, j = 0;
+    while(1) {
+        for(i = 0; i < num; i++) 
+            affine_app(&app[i]);
+        
+        /* Check if all the child processes has exited */
+        /* Non blocking wait for all the child processes */
+        if (waitapp(app,num)) 
+            break;
+        
+        /* Sleep for rest of scheduling epoch */
+        usleep(SCHED_EPOCH_LENGTH);
+    }
 }

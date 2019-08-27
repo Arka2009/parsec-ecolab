@@ -340,9 +340,6 @@ int main (int argc, char **argv) {
    __parsec_bench_begin(__parsec_blackscholes);
 #endif
 /************************************* New ROI start Location (To account for memory allocation) ********************************/
-#ifdef ENABLE_PARSEC_HOOKS
-    __parsec_roi_begin();
-#endif
    if (argc != 4)
         {
                 printf("Usage:\n\t%s <nthreads> <inputFile> <outputFile>\n", argv[0]);
@@ -426,6 +423,9 @@ int main (int argc, char **argv) {
 
 
 /************************************* Original ROI start Location ********************************/
+#ifdef ENABLE_PARSEC_HOOKS
+    __parsec_roi_begin();
+#endif
 #ifdef ENABLE_THREADS
 #ifdef WIN32
     HANDLE *threads;
