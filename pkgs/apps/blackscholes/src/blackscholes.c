@@ -281,6 +281,7 @@ int bs_thread(void *tid_ptr) {
     int tid = *(int *)tid_ptr;
 #ifdef ECOLABKNL_HOOKS
     //ecolab_set_cpu_affinity(tid+1);
+    printf("[parsec.blackscholes] : creating slave-thread@%d\n",tid+1);
 #endif //ECOLABKNL_HOOKS
     int start = tid * (numOptions / nThreads);
     int end = start + (numOptions / nThreads);

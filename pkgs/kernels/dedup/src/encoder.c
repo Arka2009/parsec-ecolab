@@ -398,6 +398,7 @@ void *Compress(void * targs) {
   struct thread_args *args = (struct thread_args *)targs;
 #ifdef ECOLABKNL_HOOKS
     //ecolab_set_cpu_affinity2(args->tid+1,"ECOLAB.parsec.dedup : Compress Stage");
+    printf("[parsec.dedup.Compress-Stage] : creating slave-thread@%d\n",args->tid+1);
 #endif //ECOLABKNL_HOOKS
   const int qid = args->tid / MAX_THREADS_PER_QUEUE;
   chunk_t * chunk;
@@ -526,6 +527,7 @@ void *Deduplicate(void * targs) {
   struct thread_args *args = (struct thread_args *)targs;
 #ifdef ECOLABKNL_HOOKS
     //ecolab_set_cpu_affinity2(args->tid+1,"ECOLAB.parsec.dedup : Deduplicate Stage");
+    printf("[parsec.dedup.Deduplicate-Stage] : creating slave-thread@%d\n",args->tid+1);
 #endif //ECOLABKNL_HOOKS
   const int qid = args->tid / MAX_THREADS_PER_QUEUE;
   chunk_t *chunk;
@@ -628,6 +630,7 @@ void *FragmentRefine(void * targs) {
   struct thread_args *args = (struct thread_args *)targs;
 #ifdef ECOLABKNL_HOOKS
     //ecolab_set_cpu_affinity2(args->tid+1,"ECOLAB.parsec.dedup : FragmentRefine Stage");
+    printf("[parsec.dedup.FragmentRedefine-Stage] : creating slave-thread@%d\n",args->tid+1);
 #endif //ECOLABKNL_HOOKS
   const int qid = args->tid / MAX_THREADS_PER_QUEUE;
   ringbuffer_t recv_buf, send_buf;
@@ -989,6 +992,7 @@ void *Fragment(void * targs){
   struct thread_args *args = (struct thread_args *)targs;
 #ifdef ECOLABKNL_HOOKS
     //ecolab_set_cpu_affinity2(args->tid+1,"ECOLAB.parsec.dedup : Fragment Stage");
+    printf("[parsec.dedup.Fragment-Stage] : creating slave-thread@%d\n",args->tid+1);
 #endif //ECOLABKNL_HOOKS
   size_t preloading_buffer_seek = 0;
   int qid = 0;
@@ -1206,6 +1210,7 @@ void *Reorder(void * targs) {
   struct thread_args *args = (struct thread_args *)targs;
 #ifdef ECOLABKNL_HOOKS
     //ecolab_set_cpu_affinity2(args->tid+1,"ECOLAB.parsec.dedup : Reorder Stage");
+    printf("[parsec.dedup.Reorder-Stage] : creating slave-thread@%d\n",args->tid+1);
 #endif //ECOLABKNL_HOOKS
   int qid = 0;
   int fd = 0;

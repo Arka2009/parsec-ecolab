@@ -170,6 +170,7 @@ void* entry_pt_wrapper(void* arg) {
 	ecolabknl_canneal_targ_t *targ = static_cast<ecolabknl_canneal_targ_t*>(arg);
 	//printf("       Canneal.Thr_id@%d\n",targ->tid);
 	//ecolab_set_cpu_affinity(targ->tid);
+	printf("[parsec.canneal] : creating slave-thread@%d\n",targ->tid);
 	entry_pt(targ->thr_data);
 }
 #endif /* ECOLABKNL_HOOKS */

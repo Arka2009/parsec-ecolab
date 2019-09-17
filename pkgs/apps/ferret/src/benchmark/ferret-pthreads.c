@@ -209,6 +209,7 @@ void *t_load (void *dummy)
 {
 #ifdef ECOLABKNL_HOOKS
     //ecolab_set_cpu_affinity2(0,"ECOLAB.parsec.ferret : Load Stage"); /* Where to Affine this ? */
+	printf("[parsec.ferret.load-stage] : creating slave-thread@%d\n",1);
 #endif //ECOLABKNL_HOOKS
 	const char *dir = (const char *)dummy;
 
@@ -234,6 +235,7 @@ void *t_seg (void *dummy)
 #ifdef ECOLABKNL_HOOKS
 	unsigned int *tid = (unsigned int*)dummy;
     //ecolab_set_cpu_affinity2(*tid,"ECOLAB.parsec.ferret : Seg Stage");
+	printf("[parsec.ferret.seg-stage] : creating slave-thread@%d\n",*tid);
 #endif //ECOLABKNL_HOOKS
 
 	while(1)
@@ -269,6 +271,7 @@ void *t_extract (void *dummy)
 #ifdef ECOLABKNL_HOOKS
 	unsigned int *tid = (unsigned int*)dummy;
     //ecolab_set_cpu_affinity2(*tid,"ECOLAB.parsec.ferret : Extract Stage");
+	printf("[parsec.ferret.extract-stage] : creating slave-thread@%d\n",*tid);
 #endif //ECOLABKNL_HOOKS
 
 	while (1)
@@ -299,6 +302,7 @@ void *t_vec (void *dummy)
 #ifdef ECOLABKNL_HOOKS
 	unsigned int *tid = (unsigned int*)dummy;
     //ecolab_set_cpu_affinity2(*tid,"ECOLAB.parsec.ferret : Vec Stage");
+	printf("[parsec.ferret.vec-stage] : creating slave-thread@%d\n",*tid);
 #endif //ECOLABKNL_HOOKS
 	struct extract_data *extract;
 	struct vec_query_data *vec;
@@ -344,6 +348,7 @@ void *t_rank (void *dummy)
 #ifdef ECOLABKNL_HOOKS
 	unsigned int *tid = (unsigned int*)dummy;
     //ecolab_set_cpu_affinity2(*tid,"ECOLAB.parsec.ferret : Rank Stage");
+	printf("[parsec.ferret.rank-stage] : creating slave-thread@%d\n",*tid);
 #endif //ECOLABKNL_HOOKS
 	struct vec_query_data *vec;
 	struct rank_data *rank;
@@ -396,6 +401,7 @@ void *t_out (void *dummy)
 #ifdef ECOLABKNL_HOOKS
 	unsigned int *tid = (unsigned int*)dummy;
     //ecolab_set_cpu_affinity2(*tid,"ECOLAB.parsec.ferret : Out Stage");
+	printf("[parsec.ferret.out-stage] : creating slave-thread@%d\n",*tid);
 #endif //ECOLABKNL_HOOKS
 	struct rank_data *rank;
 	while (1)

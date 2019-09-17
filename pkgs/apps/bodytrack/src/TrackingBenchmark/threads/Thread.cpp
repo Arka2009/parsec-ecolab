@@ -43,7 +43,7 @@ extern "C" {
   static void *thread_entry_wrapper(void *arg) {
     ecolab_bodytrack_thread_t *targ = static_cast<ecolab_bodytrack_thread_t *>(arg);
     /* Add the ECOLAB CPU Affinity Code here (tobj->tid)*/
-    //std::cout << "[DATE2019-BodyTrack] : Creating Thread@"<<targ->tid<<std::endl;
+    std::cout << "[parsec.bodytrack] : creating slave-thread@"<<targ->tid<<std::endl;
     //ecolab_set_cpu_affinity(targ->tid);
     thread_entry((void *)&targ->tobj);
 

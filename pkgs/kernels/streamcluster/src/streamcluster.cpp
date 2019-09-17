@@ -1696,7 +1696,8 @@ void* localSearchSub(void* arg_) {
   pkmedian_arg_t* arg= (pkmedian_arg_t*)arg_;
 #ifdef ECOLABKNL_HOOKS
   //ecolab_set_cpu_affinity(arg->pid+1);
-  printf(STREAMCLUSTER_PREFIX" : creating slave-thread@%d\n",arg->pid+1);
+  // printf(STREAMCLUSTER_PREFIX" : creating slave-thread@%d\n",arg->pid+1);
+  printf("[parsec.streamcluster] : creating slave-thread@%d\n",arg->pid+1);
 #endif
   pkmedian(arg->points,arg->kmin,arg->kmax,arg->kfinal,arg->pid,arg->barrier);
 

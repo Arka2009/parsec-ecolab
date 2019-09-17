@@ -1157,6 +1157,7 @@ void *AdvanceFramesMT(void *args)
 
 #ifdef ECOLABKNL_HOOKS
   //ecolab_set_cpu_affinity(targs->tid+1);
+  printf("[parsec.fluidanimate] : creating slave-thread%d\n",targs->tid+1);
 #endif
   for(int i = 0; i < targs->frames; ++i) {
     AdvanceFrameMT(targs->tid);
@@ -1172,6 +1173,7 @@ void *AdvanceFramesMT(void *args)
 
 #ifdef ECOLABKNL_HOOKS
   //ecolab_set_cpu_affinity(targs->tid+1);
+  printf("[parsec.fluidanimate] : creating slave-thread%d\n",targs->tid+1);
 #endif
 #if 1
   while(1)

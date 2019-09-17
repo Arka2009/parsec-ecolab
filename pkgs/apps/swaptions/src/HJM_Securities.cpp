@@ -86,6 +86,7 @@ void * worker(void *arg){
 
 #ifdef ECOLABKNL_HOOKS
   //ecolab_set_cpu_affinity(tid+1);
+  printf("[parsec.swaptions] : creating slave-thread%d\n",tid+1);
 #endif
 
   int beg, end, chunksize;
