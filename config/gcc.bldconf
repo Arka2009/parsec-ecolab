@@ -79,7 +79,7 @@ export CXXFLAGS="-O3 -funroll-loops -fprefetch-loop-arrays -fpermissive -fno-exc
 export CPPFLAGS=""
 export CXXCPPFLAGS=""
 export LDFLAGS="-L${CC_HOME}/lib64 -L${CC_HOME}/lib -L/opt/intel/vtune_amplifier_2018/lib64"
-export LIBS="-littnotify -ldl"
+export LIBS="-lecotools -ldl"
 export EXTRA_LIBS=""
 export PARMACS_MACRO_FILE="pthreads"
 
